@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:sec="http://www.springframework.org/security/facelets/tags">
+	
+<h:form id="form" enctype="multipart/form-data">
+
+	<h:panelGrid style="width:90%; padding: 10px;">
+	
+		<h:panelGrid style="margin-left: auto; margin-right: auto; margin-top: 5px;">
+					
+			<h:panelGrid columns="1" width="100%">
+	
+				<h:outputLabel value="Importar / Exportar Dados" style="font-size:24px"/>
+	
+			</h:panelGrid>
+	
+		</h:panelGrid>
+		
+		<p:spacer height="20" />
+			
+		<h:panelGrid columns="2" cellpadding="10">
+			
+			<h:outputLabel value="Tipo de Operação:" />
+			
+			<p:selectOneMenu value="#{importacaoController.importacao}">  
+			
+	            <f:selectItem itemLabel="Exportação" itemValue="false" />
+	            
+	            <f:selectItem itemLabel="Importação" itemValue="true" />
+	            
+	            <p:ajax update="@all" listener="#{importacaoController.mudaRendered()}"/> 
+	                
+	        </p:selectOneMenu>
+	        
+	        <h:panelGrid id="docente" rendered="#{importacaoController.renderedDocente}" >
+			
+				<h:outputLabel value="Docente:" />
+			
+			</h:panelGrid>
+			
+			<h:panelGrid id="menuDocente" rendered="#{importacaoController.renderedDocente}" >
+			
+				<p:selectOneMenu rendered="#{importacaoController.renderedDocente}"  >  
+		            <f:selectItem itemLabel="Selecione" itemValue="null" />  
+		            <f:selectItem itemLabel="Ciclano" itemValue="idCiclano" />  
+		            <f:selectItem itemLabel="Beutrano" itemValue="idBeutrano" />  
+		        </p:selectOneMenu>
+	        
+	        </h:panelGrid>
+	        
+	        <h:outputLabel value="Arquivo:" /> 
+	        
+	        <p:fileUpload value="#{importacaoController.arquivo}" mode="simple"/>   
+		
+		</h:panelGrid>
+		
+		<h:panelGrid style="margin-left: auto; margin-right: auto; margin-top: 50px;">
+					
+			<h:panelGrid columns="1" width="100%">
+	
+				<p:commandButton ajax="false" action="#{importacaoController.upload()}" value="#{importacaoController.importacao ? 'Importação' : 'Exportação'}" style="width:120px;"/>
+	
+			</h:panelGrid>
+	
+		</h:panelGrid>
+	
+	</h:panelGrid>
+	
+</h:form>
+
+</html>

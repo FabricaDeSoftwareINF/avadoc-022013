@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:sec="http://www.springframework.org/security/facelets/tags">
+
+<ui:composition template="/templates/template.xhtml">
+
+	<ui:define name="icones">
+
+		<div style="position: relative;margin-top: -50px;margin-right: 10px;">
+
+			<h:panelGrid columns="2" style="margin-left: auto;"
+				styleClass="noPrint">
+
+				<h:outputText value="Bem vindo, #{secAuth.usuarioLogado.nome}"
+					style="margin-right: 100px; color: white;" />
+
+				<h:outputLink
+					value="#{facesContext.externalContext.requestContextPath}/j_spring_security_logout">
+
+					<h:panelGrid columns="2">
+
+						<h:outputText value="Sair" />
+
+						<h:graphicImage value="/img/sair.png" width="48" height="48" />
+
+					</h:panelGrid>
+
+				</h:outputLink>
+
+			</h:panelGrid>
+
+		</div>
+
+	</ui:define>
+	
+	<ui:define name="menu">
+	
+		<h:form id="menus" style="width:100%">
+	
+		 	<p:menu style="width:98%">  
+		 
+	            <p:menuitem value="Inicio" update=":form" actionListener="#{navegacaoController.navegacaoIndex()}" style="margin: 8px 0 !important"/> 
+	             
+	            <p:menuitem value="Avaliação do Docente" update=":form" actionListener="#{navegacaoController.navegacaoAvaliacao()}" style="margin: 8px 0 !important"/>
+	            
+	            <p:menuitem value="Informação do Docente" update=":form" actionListener="#{navegacaoController.navegacaoInformacao()}" style="margin: 8px 0 !important"/>
+	            
+	            <p:menuitem value="Historico do Docente" update=":form" actionListener="#{navegacaoController.navegacaoHistorico()}" style="margin: 8px 0 !important"/>
+	            
+	            <p:menuitem value="Importar/Exportar Dados" update=":form" actionListener="#{navegacaoController.navegacaoImportacao()}" style="margin: 8px 0 !important"/>
+	            
+	            <p:menuitem value="Configurações" update=":form" actionListener="#{navegacaoController.navegacaoConfiguracao()}" style="margin: 8px 0 !important"/>
+	            
+	            <p:menuitem value="Ajuda" update=":form" actionListener="#{navegacaoController.navegacaoAjuda()}" style="margin: 8px 0 !important"/>
+	            
+	 	   </p:menu>
+	    
+	    </h:form>
+	
+	</ui:define>
+
+	<ui:define name="conteudo">
+		
+		<h:form id="form" enctype="multipart/form-data">
+			
+			<ui:include	src="#{navegacaoController.paginaSelecionada}" />
+			
+		</h:form>
+			
+	</ui:define>
+
+</ui:composition>
+
+</html>
