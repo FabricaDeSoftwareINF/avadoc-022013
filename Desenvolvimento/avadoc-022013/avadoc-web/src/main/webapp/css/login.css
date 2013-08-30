@@ -1,0 +1,8 @@
+.container{position: absolute; top: 15%; left: 15%;}
+.form-login{float: left; padding: 35px; border: #000000 solid thin; -webkit-border-radius: 10px;-moz-border-radius: 10px;border-radius: 10px;}
+.logo{margin-bottom: 5%;}
+.logo img{float: left; margin-right: 30px;}
+.form-login label{font-weight: bold;}
+.form-login .form-login-input{width: 325px;}
+#form-submit{left: 25%; width: 50%;}
+

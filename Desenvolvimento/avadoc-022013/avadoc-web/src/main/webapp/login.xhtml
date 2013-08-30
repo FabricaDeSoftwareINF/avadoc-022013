@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:sec="http://www.springframework.org/security/facelets/tags">
+	
+	<ui:composition template="/templates/template.xhtml">
+		
+		<ui:define name="conteudo">
+		
+		<link href="#{facesContext.externalContext.requestContextPath}/css/login.css" rel="stylesheet" />
+		
+			<script type="text/javascript">
+
+				jQuery('.panelLogin').ready(function () {
+
+					jQuery('#j_username').focus();
+					
+				});
+
+			</script>
+			
+			<div class="container"  style="padding-left:10%">
+			
+	            <div class="form-login">
+	            
+	                <div class="logo">
+	                
+<!-- 	                    <h:graphicImage value="/img/logo_vertical.png"/> -->
+	                    
+						<h:outputLabel value="Area restrita" style="font-size: 20px;"/>
+	                    
+	                </div>
+	                
+		       		<form action="j_spring_security_check" method="post">
+					
+						<h:panelGrid style="text-align: center; margin-top: 10px; margin-bottom: 15px;">
+						
+							<h:outputText value="Fazer Login" style="font-size: 16px;"/>
+	
+						</h:panelGrid>
+						
+						<h:panelGrid style="font-size: 14px; width: 100%;  margin-top: 10px;">
+							
+							<h:panelGrid style="margin-left: 55px; margin-right: auto;">
+							
+								<h:panelGrid columns="2">
+								
+									<h:panelGrid columns="2">
+										
+										<h:outputLabel value="Login:" />
+										
+										<h:outputLabel value="*" styleClass="obrigatorio" style="margin-left: 8px !important;"/>
+										
+									</h:panelGrid>
+								
+									<p:inputText id="j_username" style="width: 205px; margin-left: 5px;" />
+		
+								</h:panelGrid>
+							
+								<h:panelGrid columns="2" style="margin-top: 5px;">
+		
+									<h:panelGrid columns="2">
+										
+										<h:outputLabel value="Senha:" />
+										
+										<h:outputLabel value="*" styleClass="obrigatorio"/>
+										
+									</h:panelGrid>
+								
+									<p:password id="j_password" style="width: 205px; margin-left: 6px !important;" />
+									
+								</h:panelGrid>
+								
+								<h:panelGrid columns="2" cellpadding="10" style="margin-left: 35%; ">
+									
+									<h:selectBooleanCheckbox id="_spring_security_remember_me"/>
+										 
+		                       		<h:outputLabel value="Lembrar senha" for="_spring_security_remember_me"/>
+	                       			
+	                       		</h:panelGrid>
+								
+							</h:panelGrid>
+	
+						</h:panelGrid>
+						
+						<h:panelGrid style="margin-top: 10px;">
+						
+							<h:outputText value="Campos Obrigatorios (*)" />
+						
+						</h:panelGrid>
+					
+						<h:panelGrid style="text-align: center; width: 100%; margin-top: 15px;">
+						
+							<h:commandButton value="Entrar" style="width: 130px; height: 30px; font-weight: bold;" type="submit"/>
+							
+						</h:panelGrid>
+						
+					</form>
+				
+				</div>
+				
+        	</div>
+			
+			<h:form id="formAlerta">
+			
+				<p:dialog id="alertDialog" appendToBody="true" header="Alerta" visible="#{visibleAlertDialog}" widgetVar="dialogAlerta"  closable="false" resizable="false" draggable="false" modal="true" onShow="jQuery('.btnOK').focus();">
+		
+					<h:panelGrid columns="1" styleClass="alerta" style="text-align:center; width: 320px !important; height: 100px;">
+					
+						<h:outputText value="#{badCredentialsMessage}" />
+						
+						<p:spacer height="10"/>	
+						
+						<p:commandButton id="btnOk" styleClass="btnOK" value="Ok" onclick="dialogAlerta.hide();" ajax="false" style="width: 100px;" oncomplete="alertDialog.hide()"> 
+						 	
+						 	<f:setPropertyActionListener target="#{visibleAlertDialog}" value="false" />
+
+						</p:commandButton>
+			
+					</h:panelGrid>
+					
+				</p:dialog>		
+
+			</h:form>
+		
+		</ui:define>
+	
+	</ui:composition>
+
+</html>
