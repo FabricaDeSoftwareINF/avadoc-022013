@@ -5,87 +5,72 @@
       xmlns:p="http://primefaces.org/ui">
 
     <f:view contentType="text/html; charset=UTF-8" encoding="UTF-8">
-    
-        <h:head>
-        
-            <f:facet name="first">
-            
-                <meta content='text/html; charset=UTF-8' http-equiv="Content-Type" />
-                
-                <meta name="author" content="Wilker Machado" />
-                
-                <title>Avadoc</title>
-                
-            </f:facet>
-            
-        </h:head>
-        
-        <h:body>
-        
-            <p:layout fullPage="true">
-            
-                <p:layoutUnit position="north" size="140">
-                
-                    <h:form style="padding-top:10px; padding-left:20px">
-                    
+    <link type="text/css" rel="stylesheet" media="all" href="/avadoc-web/css/site.css"/>
+    <link type="text/css" rel="stylesheet" media="all" href="/avadoc-web/css/barra-governo.css"/>
+    <link type="text/css" rel="stylesheet" media="all" href="/avadoc-web/css/foundation.min.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes"></meta>
+        <h:head>        
+            <f:facet name="first">            
+                <meta content='text/html; charset=UTF-8' http-equiv="Content-Type" />                
+                <title>Avadoc</title>                
+            </f:facet>            
+        </h:head>        
+        <h:body>        
+            <p:layout id="conteudo" fullPage="true" style="padding-top: 0;margin-top: -1px !important;">
+                <p:layoutUnit id="cabecalho" position="north" style="padding-top: 0;">
+                    <h:form id="conteudo_cabecalho">        
                     	<h:panelGroup>
-	                    
-	                    	<p:graphicImage width="50" height="70" value="/img/ufg.jpg"/>
-	                    	
-	                    	<p:spacer width="5"/>
-	                       
-							<h:outputLabel style="font-size:50px" value="Sistema de Avaliação dos Docentes" />
-                    
-                    	</h:panelGroup>
-                    	   
-                    	<ui:insert name="icones" />
-						
-                    </h:form>
-                    
+                            <div style="background-color: white;">
+	                    <div id="sidebar1">
+                                <div id="barra-governo-destaque">
+                                    <div class="barra_governo">
+                                        <div class="listras">
+                                            <div class="logobrasil">
+                                                <a href="http://www.brasil.gov.br/" rel="externo" title="Este link abre uma nova aba ou janela" class="sem-icone" target="_blank"></a>
+                                            </div>
+                                            <div class="ai">
+                                                <a href="http://www.acessoainformacao.gov.br" rel="externo" title="Este link abre uma nova aba ou janela" class="sem-icone" target="_blank"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nomeSistema small-12 large-12 columns">
+                                <div id="logo_ufg" class="small-2 large-2 columns">
+                                    <p:graphicImage width="50" height="70" value="/img/ufg.jpg"/>
+                                </div>
+                                <div class="small-9 large-9 columns" style="line-height: 78px;float:left;" >
+                                    <h:outputLabel class="textoNomeSistema" value="Sistema de Avaliação dos Docentes" />
+                                </div>
+                            </div>
+                            </div>
+                    	</h:panelGroup>                    	   
+                    	<ui:insert name="icones" />						
+                    </h:form>                    
                 </p:layoutUnit>
                 
-                <p:layoutUnit position="west" size="250" >  
-			        
-			         <ui:insert name="menu" />
-			         
-			    </p:layoutUnit> 
+                <p:layoutUnit position="west" size="250" id="menu_lateral" >			        
+                    <ui:insert name="menu" />			         
+		</p:layoutUnit> 
 
-                <p:layoutUnit styleClass="ui-widget" position="south" size="70">
-                
-                	<p:ajaxStatus style="width:64px;height:64px;position:fixed;right:5px;bottom:5px">  
-                	
-					    <f:facet name="start">  
-					    
-					        <p:graphicImage value="/img/loading.gif" />  
-					        
-					    </f:facet>  
-					  
-					    <f:facet name="complete">  
-					    
-					        <h:outputText value="" />  
-					        
-					    </f:facet>  
-					    
-					</p:ajaxStatus>  
-                
+                <p:layoutUnit styleClass="ui-widget" position="south" size="70" id="rodape">                
+                	<p:ajaxStatus style="width:64px;height:64px;position:fixed;right:5px;bottom:5px">                  	
+					    <f:facet name="start">  					    
+					        <p:graphicImage value="/img/loading.gif" />  					        
+					    </f:facet>  					  
+					    <f:facet name="complete">  					    
+					        <h:outputText value="" />  					        
+					    </f:facet>  					    
+					</p:ajaxStatus>                
                 </p:layoutUnit>
 
-                <p:layoutUnit position="center">
-                
-                	<h:form>
-                	
-                		<p:messages id="messages" showDetail="true" autoUpdate="true" closable="true" />  
-                		
-                	</h:form>
-                	
-                    <ui:insert name="conteudo" />
-                    
-                </p:layoutUnit>
-                
-            </p:layout>
-            
-        </h:body>
-        
-    </f:view>
-    
+                <p:layoutUnit position="center" id="conteudo_central">                
+                    <h:form>                	
+                        <p:messages id="messages" showDetail="true" autoUpdate="true" closable="true" />                  		
+                    </h:form>                	
+                    <ui:insert name="conteudo" />                    
+                </p:layoutUnit>                
+            </p:layout>            
+        </h:body>        
+    </f:view>    
 </html>
