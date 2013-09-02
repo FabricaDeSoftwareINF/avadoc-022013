@@ -26,12 +26,13 @@ form {
     border-radius: 4px;
 }
 
-.ui-selectonemenu, .ui-spinner-input {
-    width: 200px !important;
+.ui-selectonemenu .ui-selectonemenu-trigger {
+    width: 28px !important;
+    height: 30px !important;
 }
 
-.ui-selectonemenu .ui-selectonemenu-trigger {
-    width: 2em !important;
+.ui-selectonemenu, .ui-spinner-input {
+    width: 200px !important;
 }
 
 #cabecalho{
