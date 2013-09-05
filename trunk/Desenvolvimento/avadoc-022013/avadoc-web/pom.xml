@@ -3,7 +3,7 @@
   
   <parent>
     <groupId>br.inf.ufg.avadoc</groupId>
-    <artifactId>avadoc-012013</artifactId>
+    <artifactId>avadoc-022013</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   
@@ -22,8 +22,8 @@
 		<spring-security.version>3.0.0.M1</spring-security.version>
 
 		<spring.version>3.0.5.RELEASE</spring.version>
-
-	</properties>
+    <netbeans.hint.deploy.server>Tomcat</netbeans.hint.deploy.server>
+  </properties>
 
 	<dependencies>
 	

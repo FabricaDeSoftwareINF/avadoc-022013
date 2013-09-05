@@ -3,7 +3,7 @@
   
   <parent>
     <groupId>br.inf.ufg.avadoc</groupId>
-    <artifactId>avadoc-012013</artifactId>
+    <artifactId>avadoc-022013</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   
