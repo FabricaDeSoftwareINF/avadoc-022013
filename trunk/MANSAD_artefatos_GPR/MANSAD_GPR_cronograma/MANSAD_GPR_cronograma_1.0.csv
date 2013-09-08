@@ -1,0 +1,27 @@
+#;Tipo;Prioridade;Título;Atribuído para;Categoria;Início;Previsão
+1276;Execução/Confecção;Normal;Manter GCO;Gustavo Martins T. Borges;GERENCIA DE CONFIGURAÇÃO;02/09/2013;13/09/2013
+1275;Execução/Confecção;Normal;Definir plano de Gerencia de Configuração;Gustavo Martins T. Borges;GERENCIA DE CONFIGURAÇÃO;23/08/2013;02/09/2013
+1274;Configuração;Normal;Realizar integração;Danillo Pinheiro Neto;INTEGRAÇÃO;23/08/2013;13/09/2013
+1273;Análise/Estudo;Normal;Monitorar escopo;Artur Pascualote Santos;ESCOPO;23/08/2013;13/09/2013
+1272;Execução/Confecção;Normal;Definir escopo;Artur Pascualote Santos;ESCOPO;05/09/2013;05/09/2013
+1271;Execução/Confecção;Normal;Gerar plano de testes;Gabriel Benício;TESTES;10/09/2013;13/09/2013
+1270;Teste;Normal;Execução dos testes funcionais;Gabriel Benício;TESTES;05/09/2013;13/09/2013
+1269;Teste;Normal;Definir testes funcionais;Augusto Cesar;TESTES;05/09/2013;10/09/2013
+1268;Execução/Confecção;Alta;Gerar arquitetura de software;Bruno César;ARQUITETURA;23/08/2013;07/09/2013
+1267;Funcionalidade;Alta;Implementar os componentes;Claudio Cavalcante Tonhá;DESENVOLVIMENTO;23/08/2013;13/09/2013
+1265;Execução/Confecção;Normal;Garantir qualidade do processo;Bruno Luz;QUALIDADE;23/08/2013;13/09/2013
+1264;Execução/Confecção;Alta;Garantir qualidade do produto;Bruno Luz;QUALIDADE;23/08/2013;13/09/2013
+1238;Execução/Confecção;Normal;Monitorar aderencia ao MPSBR;Bruno Luz;QUALIDADE;23/08/2013;12/09/2013
+1237;Execução/Confecção;Normal;Definir metricas;Bruno Luz;QUALIDADE;29/08/2013;06/09/2013
+1236;Execução/Confecção;Alta;Definir plano de garantia de qualidade;Bruno Luz;QUALIDADE;29/08/2013;06/09/2013
+1235;Análise/Estudo;Alta;Criar matriz de rastreabilidade;Andressa Goncalves;REQUISITOS;29/08/2013;06/09/2013
+1234;Análise/Estudo;Normal;Validar requisitos;Emerson José Porfírio;REQUISITOS;29/08/2013;08/09/2013
+1233;Análise/Estudo;Alta;Elicitar requisitos;Emerson José Porfírio;REQUISITOS;29/08/2013;01/09/2013
+1232;Análise/Estudo;Normal;Definir Regras de  négocio;Emerson José Porfírio;REQUISITOS;29/08/2013;31/08/2013
+1231;Execução/Confecção;Normal;Acompanhar o andamento do projeto;Daniella  de Oliveira Costa;GERENCIA DE PROJETO;23/08/2013;13/09/2013
+1230;Execução/Confecção;Normal;Gerenciar as reuniões do projeto;Daniella  de Oliveira Costa;GERENCIA DE PROJETO;23/08/2013;13/09/2013
+1229;Execução/Confecção;Alta;Gerenciar os riscos do projeto;Daniella  de Oliveira Costa;GERENCIA DE PROJETO;23/08/2013;13/09/2013
+1228;Execução/Confecção;Normal;Definir Planos de Projeto;Daniella  de Oliveira Costa;GERENCIA DE PROJETO;29/08/2013;06/09/2013
+1227;Execução/Confecção;Alta;Criar EAP;Daniella  de Oliveira Costa;GERENCIA DE PROJETO;29/08/2013;31/08/2013
+1226;Execução/Confecção;Alta;Definir Cronograma;Daniella  de Oliveira Costa;GERENCIA DE PROJETO;29/08/2013;03/09/2013
+1225;Execução/Confecção;Alta;Criar termo de abertura;Daniella  de Oliveira Costa;GERENCIA DE PROJETO;29/08/2013;05/09/2013
