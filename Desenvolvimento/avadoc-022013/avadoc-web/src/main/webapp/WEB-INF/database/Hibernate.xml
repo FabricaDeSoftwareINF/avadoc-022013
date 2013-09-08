@@ -25,17 +25,17 @@
 
 		<property name="annotatedClasses">
 			<list>
-				<value>br.ufg.inf.avadoc.modelo.Docente</value>
-				<value>br.ufg.inf.avadoc.modelo.Usuario</value>
-				<value>br.ufg.inf.avadoc.modelo.Nota</value>
-				<value>br.ufg.inf.avadoc.modelo.atividade.Produto</value>
-				<value>br.ufg.inf.avadoc.modelo.atividade.Producao</value>
-				<value>br.ufg.inf.avadoc.modelo.atividade.AtividadeEnsino</value>
-				<value>br.ufg.inf.avadoc.modelo.atividade.ProducaoIntelectual</value>
-				<value>br.ufg.inf.avadoc.modelo.atividade.AtividadePesquisaExtensao</value>
-				<value>br.ufg.inf.avadoc.modelo.atividade.AtividadeAdministrativaRepresentacao</value>
-				<value>br.ufg.inf.avadoc.modelo.atividade.AtividadeOutra</value>
-				<value>br.ufg.inf.avadoc.modelo.atividade.ExtratoAtividades</value>
+				<value>br.ufg.inf.avadoc.entity.Docente</value>
+				<value>br.ufg.inf.avadoc.entity.Usuario</value>
+				<value>br.ufg.inf.avadoc.entity.Nota</value>
+				<value>br.ufg.inf.avadoc.entity.Produto</value>
+				<value>br.ufg.inf.avadoc.entity.Producao</value>
+				<value>br.ufg.inf.avadoc.entity.AtividadeEnsino</value>
+				<value>br.ufg.inf.avadoc.entity.ProducaoIntelectual</value>
+				<value>br.ufg.inf.avadoc.entity.AtividadePesquisaExtensao</value>
+				<value>br.ufg.inf.avadoc.entity.AtividadeAdministrativaRepresentacao</value>
+				<value>br.ufg.inf.avadoc.entity.AtividadeOutra</value>
+				<value>br.ufg.inf.avadoc.entity.ExtratoAtividades</value>
 			</list>
 		</property>
 

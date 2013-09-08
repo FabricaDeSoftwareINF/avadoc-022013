@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.web.context.support.WebApplicationContextUtils;
 
-import br.ufg.inf.avadoc.modelo.Usuario;
+import br.ufg.inf.avadoc.entity.Usuario;
 import br.ufg.inf.avadoc.util.UtilObjeto;
 
 /**
