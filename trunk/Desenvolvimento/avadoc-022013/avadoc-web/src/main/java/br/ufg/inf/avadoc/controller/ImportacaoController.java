@@ -12,7 +12,6 @@ import org.primefaces.model.UploadedFile;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-import br.ufg.inf.avadoc.modelo.atividade.ExtratoAtividades;
 import br.ufg.inf.avadoc.xml.XmlExtratoAtividades;
 
 @Scope("session")
@@ -30,74 +29,58 @@ public class ImportacaoController extends Controller {
 	private UploadedFile arquivo;
 
 	public void upload() {
+		if (this.importacao) {
 
-		if (importacao) {
-
-			if (arquivo != null) {
-				
-				String fileName = arquivo.getFileName();
-
-				byte[] bytes = arquivo.getContents();
-
-				InputStream is = new ByteArrayInputStream(bytes);
-				
+			if (this.arquivo != null) {
+				this.arquivo.getFileName();
+				final byte[] bytes = this.arquivo.getContents();
+				final InputStream is = new ByteArrayInputStream(bytes);
 				String xmlStr = "";
 
 				try {
-					
 					xmlStr = IOUtils.toString(is);
-					
-				} catch (IOException e) {
-					
+				} catch (final IOException e) {
 					e.printStackTrace();
-					
 				}
-				
-				ExtratoAtividades extrato = XmlExtratoAtividades.getExtrato(xmlStr);
 
-				// XmlExtratoAtividades xml = new XmlExtratoAtividades(xmlStr);
-				//
-				// Thread th = new Thread(xml);
-				//
-				// th.start();
-				
-				FacesMessage msg = new FacesMessage("Succesful",arquivo.getFileName() + " is uploaded.");
+				XmlExtratoAtividades.getExtrato(xmlStr);
+
+				final FacesMessage msg = new FacesMessage("Succesful", this.arquivo.getFileName() + " is uploaded.");
 
 				FacesContext.getCurrentInstance().addMessage(null, msg);
-
 			}
 		}
 	}
 
 	public void mudaRendered() {
-		if (importacao) {
-			renderedDocente = Boolean.FALSE;
+		if (this.importacao) {
+			this.renderedDocente = Boolean.FALSE;
 		} else {
-			renderedDocente = Boolean.TRUE;
+			this.renderedDocente = Boolean.TRUE;
 		}
 	}
 
 	public Boolean getRenderedDocente() {
-		return renderedDocente;
+		return this.renderedDocente;
 	}
 
-	public void setRenderedDocente(Boolean renderedDocente) {
+	public void setRenderedDocente(final Boolean renderedDocente) {
 		this.renderedDocente = renderedDocente;
 	}
 
 	public Boolean getImportacao() {
-		return importacao;
+		return this.importacao;
 	}
 
-	public void setImportacao(Boolean importacao) {
+	public void setImportacao(final Boolean importacao) {
 		this.importacao = importacao;
 	}
 
 	public UploadedFile getArquivo() {
-		return arquivo;
+		return this.arquivo;
 	}
 
-	public void setArquivo(UploadedFile arquivo) {
+	public void setArquivo(final UploadedFile arquivo) {
 		this.arquivo = arquivo;
 	}
 

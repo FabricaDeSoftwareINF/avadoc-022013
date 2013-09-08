@@ -17,8 +17,6 @@ import javax.servlet.http.HttpServletResponse;
  * <b>Description:</b> Classe responsável pelo fluxo de navegação do sistema. <br />
  * </p>
  * 
- * @autor Wilker Machado
- * 
  * @version 1.0
  */
 public abstract class Controller implements Serializable {
@@ -30,11 +28,8 @@ public abstract class Controller implements Serializable {
 	/**
 	 * @{link Inherited}
 	 */
-
 	public String abreIniciar() {
-
 		this.iniciarDados();
-
 		return this.getNavigationAbreIniciar();
 	}
 
@@ -43,7 +38,6 @@ public abstract class Controller implements Serializable {
 	 */
 
 	public String abreDetalhar() {
-
 		return this.getNavigationAbreDetalhar();
 	}
 
@@ -52,7 +46,6 @@ public abstract class Controller implements Serializable {
 	 */
 
 	public String abreIncluir() {
-
 		return this.getNavigationAbreIncluir();
 	}
 
@@ -61,7 +54,6 @@ public abstract class Controller implements Serializable {
 	 */
 
 	public String abreAlterar() {
-
 		return this.getNavigationAbreAlterar();
 	}
 
@@ -69,25 +61,20 @@ public abstract class Controller implements Serializable {
 	 * Obtem o objeto de requisição
 	 */
 	public HttpServletRequest getRequest() {
-
-		return ((HttpServletRequest) this.getFacesContext()
-				.getExternalContext().getRequest());
+		return (HttpServletRequest) this.getFacesContext().getExternalContext().getRequest();
 	}
 
 	/**
 	 * Obtem o objeto de resposta
 	 */
 	public HttpServletResponse getResponse() {
-
-		return ((HttpServletResponse) this.getFacesContext()
-				.getExternalContext().getResponse());
+		return (HttpServletResponse) this.getFacesContext().getExternalContext().getResponse();
 	}
 
 	/**
 	 * Obtem o objeto corrente do FacesContext
 	 */
 	public FacesContext getFacesContext() {
-
 		return FacesContext.getCurrentInstance();
 	}
 
@@ -97,7 +84,6 @@ public abstract class Controller implements Serializable {
 	 * @param parameter
 	 */
 	public <T> String getParameterFromRequest(final String parameter) {
-
 		return this.getRequest().getParameter(parameter);
 	}
 
@@ -112,14 +98,9 @@ public abstract class Controller implements Serializable {
 	 */
 	@SuppressWarnings("unchecked")
 	public <T> T getFromSessao(final String key, final Class<T> clazz) {
-
 		try {
-
-			return ((T) this.getFacesContext().getExternalContext()
-					.getSessionMap().get(key));
-
+			return (T) this.getFacesContext().getExternalContext().getSessionMap().get(key);
 		} catch (final Exception e) {
-
 			this.logger.log(Level.SEVERE, e.getMessage());
 		}
 
@@ -133,7 +114,6 @@ public abstract class Controller implements Serializable {
 	 */
 	public void iniciarDados() {
 
-		return;
 	}
 
 	/**
@@ -143,7 +123,6 @@ public abstract class Controller implements Serializable {
 	 * @return <i>navigation-rule</i>
 	 */
 	protected String getNavigationAbreIniciar() {
-
 		return this.getClass().getSimpleName() + "/inicial";
 	}
 
@@ -154,7 +133,6 @@ public abstract class Controller implements Serializable {
 	 * @return <i>navigation-rule</i>
 	 */
 	protected String getNavigationAbreIncluir() {
-
 		return this.getClass().getSimpleName() + "/incluir";
 	}
 
@@ -165,7 +143,6 @@ public abstract class Controller implements Serializable {
 	 * @return <i>navigation-rule</i>
 	 */
 	protected String getNavigationAbreAlterar() {
-
 		return this.getClass().getSimpleName() + "/alterar";
 	}
 
@@ -176,7 +153,6 @@ public abstract class Controller implements Serializable {
 	 * @return <i>navigation-rule</i>
 	 */
 	protected String getNavigationAbreDetalhar() {
-
 		return this.getClass().getSimpleName() + "/detalhar";
 	}
 
@@ -186,7 +162,6 @@ public abstract class Controller implements Serializable {
 	 * @return String indicando qual <i>recurso</i> será seguido.
 	 */
 	protected String voltarInicio() {
-
 		return this.abreIniciar();
 	}
 

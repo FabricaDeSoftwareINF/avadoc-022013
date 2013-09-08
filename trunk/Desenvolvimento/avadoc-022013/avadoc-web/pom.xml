@@ -11,6 +11,12 @@
 
 	<dependencies>
 		<dependency>
+			<groupId>br.inf.ufg.avadoc</groupId>
+			<artifactId>avadoc-server</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
+		<dependency>
 			<groupId>com.sun.el</groupId>
 			<artifactId>el-ri</artifactId>
 			<version>1.0</version>
@@ -68,12 +74,6 @@
 			<groupId>org.primefaces.themes</groupId>
 			<artifactId>all-themes</artifactId>
 			<version>1.0.9</version>
-		</dependency>
-
-		<dependency>
-			<groupId>br.inf.ufg.avadoc</groupId>
-			<artifactId>avadoc-controller</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 
 		<dependency>

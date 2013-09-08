@@ -15,8 +15,8 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.GrantedAuthorityImpl;
 
-import br.ufg.inf.avadoc.enums.EnumTipoUsuario;
-import br.ufg.inf.avadoc.modelo.Usuario;
+import br.ufg.inf.avadoc.entity.Usuario;
+import br.ufg.inf.avadoc.model.enums.EnumTipoUsuario;
 import br.ufg.inf.avadoc.util.UtilObjeto;
 import br.ufg.inf.avadoc.util.UtilString;
 

@@ -10,64 +10,58 @@
 <h:panelGrid style="width:90%; padding: 10px;">
 
 	<h:panelGrid style="margin-left: auto; margin-right: auto; margin-top: 5px;">
-				
 		<h:panelGrid columns="1" width="100%">
-
-			<h:outputLabel value="Informações do Docente" style="font-size:24px"/>
-
+			<h:outputLabel value="Informações do Docente" style="font-size:24px" />
 		</h:panelGrid>
-
 	</h:panelGrid>
-	
+
 	<p:spacer height="20" />
-		
-	<h:panelGrid columns="2" cellpadding="10">
-		
-		<h:outputLabel value="Nome" />
-		
-		<h:outputText value="Nome do Professor" />
-		
-		<h:outputLabel value="Tipo de Regime" />
-		
-		<p:selectOneMenu >  
-            <f:selectItem itemLabel="Selecione" itemValue="null" />  
-            <f:selectItem itemLabel="40 Horas" itemValue="40" />  
-            <f:selectItem itemLabel="20 Horas" itemValue="20" />  
-        </p:selectOneMenu>
-		
-		<h:outputLabel value="Matrícula SIAP" />
-		
-		<h:outputText value="2143321432" /> 
-		
-		<h:outputLabel value="Matrícula UFG" />
-		
-		<h:outputText value="4387492" /> 
-		
-		<h:outputLabel value="Data de Ingresso" />
-		
-		<h:outputText value="01/01/2013" />
-		
-		<h:outputLabel value="Lotação" />
-		
-		<p:selectOneMenu >  
-            <f:selectItem itemLabel="Selecione" itemValue="null" />  
-            <f:selectItem itemLabel="Instituto de Informática - INF" itemValue="inf" />  
-            <f:selectItem itemLabel="Instituto de Fisíca" itemValue="fisica" />  
-        </p:selectOneMenu>
-        
-        <h:outputLabel value="Classe" />
-		
-		<p:selectOneMenu >  
-            <f:selectItem itemLabel="Selecione" itemValue="null" />  
-            <f:selectItem itemLabel="Associado" itemValue="1" />  
-        </p:selectOneMenu> 
-        
-        <h:outputLabel value="Nível" />
-		
-		<p:spinner min="0" size="5" max="10000"/>     
-	
-	</h:panelGrid>
 
+	<h:panelGrid columns="2" cellpadding="10">
+		<h:outputLabel value="Nome" />
+
+		<h:outputText value="Nome do Professor" />
+
+		<h:outputLabel value="Tipo de Regime" />
+
+		<p:selectOneMenu>
+			<f:selectItem itemLabel="Selecione" itemValue="null" />
+			<f:selectItem itemLabel="40 Horas" itemValue="40" />
+			<f:selectItem itemLabel="20 Horas" itemValue="20" />
+		</p:selectOneMenu>
+
+		<h:outputLabel value="Matrícula SIAP" />
+
+		<h:outputText value="2143321432" />
+
+		<h:outputLabel value="Matrícula UFG" />
+
+		<h:outputText value="4387492" />
+
+		<h:outputLabel value="Data de Ingresso" />
+
+		<h:outputText value="01/01/2013" />
+
+		<h:outputLabel value="Lotação" />
+
+		<p:selectOneMenu>
+			<f:selectItem itemLabel="Selecione" itemValue="null" />
+			<f:selectItem itemLabel="Instituto de Informática - INF" itemValue="inf" />
+			<f:selectItem itemLabel="Instituto de Fisíca" itemValue="fisica" />
+		</p:selectOneMenu>
+
+		<h:outputLabel value="Classe" />
+
+		<p:selectOneMenu>
+			<f:selectItem itemLabel="Selecione" itemValue="null" />
+			<f:selectItem itemLabel="Associado" itemValue="1" />
+		</p:selectOneMenu>
+
+		<h:outputLabel value="Nível" />
+
+		<p:spinner min="0" size="5" max="10000" />
+
+	</h:panelGrid>
 </h:panelGrid>
 
 </html>

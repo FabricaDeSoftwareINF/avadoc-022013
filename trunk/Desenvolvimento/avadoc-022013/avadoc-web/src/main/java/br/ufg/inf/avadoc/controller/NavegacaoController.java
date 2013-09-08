@@ -3,10 +3,6 @@ package br.ufg.inf.avadoc.controller;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-/**
- * @author Wilker Machado
- * 
- */
 @Scope("session")
 @Component(NavegacaoController.KEY_COMPONENT)
 public class NavegacaoController extends Controller {
@@ -46,10 +42,10 @@ public class NavegacaoController extends Controller {
 	}
 
 	public String getPaginaSelecionada() {
-		return paginaSelecionada;
+		return this.paginaSelecionada;
 	}
 
-	public void setPaginaSelecionada(String paginaSelecionada) {
+	public void setPaginaSelecionada(final String paginaSelecionada) {
 		this.paginaSelecionada = paginaSelecionada;
 	}
 

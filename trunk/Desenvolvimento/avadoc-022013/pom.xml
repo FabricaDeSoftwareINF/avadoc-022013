@@ -185,8 +185,7 @@
 	</repositories>
 
 	<modules>
-		<module>avadoc-modelo</module>
-		<module>avadoc-controller</module>
+		<module>avadoc-server</module>
 		<module>avadoc-web</module>
 	</modules>
 

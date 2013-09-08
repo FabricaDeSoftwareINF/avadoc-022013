@@ -10,46 +10,39 @@
 <h:panelGrid style="width:90%; padding: 10px;">
 
 	<h:panelGrid style="margin-left: auto; margin-right: auto; margin-top: 5px;">
-				
 		<h:panelGrid columns="1" width="100%">
-
-			<h:outputLabel value="Configurações" style="font-size:24px"/>
-
+			<h:outputLabel value="Configurações" style="font-size:24px" />
 		</h:panelGrid>
 
 	</h:panelGrid>
-	
+
 	<p:spacer height="20" />
-		
+
 	<h:panelGrid columns="5" cellpadding="10">
-	
-        <p:selectBooleanCheckbox />
-        
-		<h:outputLabel value="Gerar log de importação e exportação" />  
-		
-		<p:spacer width="20"/>
-		
-		<h:outputLabel value="Tipo de Conexão:" />
-		
-		<p:selectOneMenu >  
-            <f:selectItem itemLabel="Selecione" itemValue="null" />  
-            <f:selectItem itemLabel="Online" itemValue="online" />  
-        </p:selectOneMenu>
-		
+
 		<p:selectBooleanCheckbox />
-		
-		<h:outputLabel value="Mostrar versão no topo da página " />  
-	
+
+		<h:outputLabel value="Gerar log de importação e exportação" />
+
+		<p:spacer width="20" />
+
+		<h:outputLabel value="Tipo de Conexão:" />
+
+		<p:selectOneMenu>
+			<f:selectItem itemLabel="Selecione" itemValue="null" />
+			<f:selectItem itemLabel="Online" itemValue="online" />
+		</p:selectOneMenu>
+
+		<p:selectBooleanCheckbox />
+
+		<h:outputLabel value="Mostrar versão no topo da página " />
+
 	</h:panelGrid>
-	
+
 	<h:panelGrid style="margin-left: auto; margin-right: auto; margin-top: 50px;">
-				
 		<h:panelGrid columns="1" width="100%">
-
-			<p:commandButton value="Salvar" style="width:120px;"/>
-
+			<p:commandButton value="Salvar" style="width:120px;" />
 		</h:panelGrid>
-
 	</h:panelGrid>
 
 </h:panelGrid>
