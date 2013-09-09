@@ -1,15 +1,15 @@
-package br.ufg.inf.avadoc.controller;
+package br.ufg.inf.avadoc.managedbean;
 
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Scope("session")
-@Component(NavegacaoController.KEY_COMPONENT)
-public class NavegacaoController extends Controller {
+@Component(NavegacaoManagedBean.KEY_COMPONENT)
+public class NavegacaoManagedBean extends AbstractManagedBean {
 
 	private static final long serialVersionUID = -2655198545850791277L;
 
-	public static final String KEY_COMPONENT = "navegacaoController";
+	public static final String KEY_COMPONENT = "navegacaoManagedBean";
 
 	private String paginaSelecionada;
 

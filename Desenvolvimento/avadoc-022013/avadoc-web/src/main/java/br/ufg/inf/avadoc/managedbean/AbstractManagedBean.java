@@ -1,4 +1,4 @@
-package br.ufg.inf.avadoc.controller;
+package br.ufg.inf.avadoc.managedbean;
 
 import java.io.Serializable;
 import java.util.logging.Level;
@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServletResponse;
  * 
  * @version 1.0
  */
-public abstract class Controller implements Serializable {
+public abstract class AbstractManagedBean implements Serializable {
 
 	private static final long serialVersionUID = -7859663056918687753L;
 

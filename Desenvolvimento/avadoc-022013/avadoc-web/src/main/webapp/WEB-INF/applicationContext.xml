@@ -1,51 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
-	xmlns:context="http://www.springframework.org/schema/context"
-	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:tx="http://www.springframework.org/schema/tx"
-	xmlns:sec="http://www.springframework.org/schema/security" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
-		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
-		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-2.5.xsd
-		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
-		http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.0.xsd
-		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd"
-	default-lazy-init="true" default-autowire="byName">
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd"
+	default-lazy-init="true" >
 
 	<context:annotation-config />
-	
-	<context:component-scan base-package="br.ufg.inf.avadoc" />
-	
-	<sec:http auto-config="true" use-expressions="true">
-		
-		<sec:form-login login-page="/login.jsf" login-processing-url="/j_spring_security_check" default-target-url="/paginas/portal/inicial.jsf" authentication-failure-url="/login.jsf"/>		
 
-		<sec:logout logout-success-url="/login.jsf"	invalidate-session="true" />
+	<context:component-scan base-package="br.ufg.inf.avadoc.managedbean" />
 
-		<sec:access-denied-handler error-page="/login.jsf" />
-
-		<sec:session-management invalid-session-url="/login.jsf" session-authentication-error-url="/login.jsf" />
-
- 		<sec:intercept-url pattern="/paginas/**" access="isAuthenticated()" />
-        
-        <sec:intercept-url pattern="/**" access="permitAll" />
-       
-	</sec:http>
-	
-	<sec:authentication-manager>
-
-        <sec:authentication-provider ref="secAuth" />
-        	
-    </sec:authentication-manager>
-    
-    <bean id="secAuth" class="br.ufg.inf.avadoc.listener.Authenticator" scope="session">
-		
-		<aop:scoped-proxy />
-		
-	</bean>
-	
-	<!-- Database Configuration -->
-	<import resource="database/DataSource.xml"/>
-	<import resource="database/Hibernate.xml"/>
+	<!-- data configuration -->
+	<import resource="classpath:META-INF/spring/applicationContext-data.xml"/>
+	<import resource="classpath:META-INF/spring/applicationContext-service.xml"/>
+	<import resource="classpath:META-INF/spring/applicationContext-security.xml"/>
 </beans>
