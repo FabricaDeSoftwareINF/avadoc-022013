@@ -1,13 +1,13 @@
-package br.ufg.inf.avadoc.controller;
+package br.ufg.inf.avadoc.managedbean;
 
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Scope("session")
-@Component(AvaliacaoController.KEY_COMPONENT)
-public class AvaliacaoController extends Controller {
+@Component(AvaliacaoManagedBean.KEY_COMPONENT)
+public class AvaliacaoManagedBean extends AbstractManagedBean {
 
-	public static final String KEY_COMPONENT = "avaliacaoController";
+	public static final String KEY_COMPONENT = "avaliacaoManagedBean";
 
 	private static final long serialVersionUID = -7047823076987573930L;
 

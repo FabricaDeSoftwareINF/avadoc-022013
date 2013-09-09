@@ -22,21 +22,21 @@
 		<h:panelGrid columns="2" cellpadding="10">
 			<h:outputLabel value="Tipo de Operação:" />
 
-			<p:selectOneMenu value="#{importacaoController.importacao}">
+			<p:selectOneMenu value="#{importacaoManagedBean.importacao}">
 				<f:selectItem itemLabel="Exportação" itemValue="false" />
 
 				<f:selectItem itemLabel="Importação" itemValue="true" />
 
-				<p:ajax update="@all" listener="#{importacaoController.mudaRendered()}" />
+				<p:ajax update="@all" listener="#{importacaoManagedBean.mudaRendered()}" />
 			</p:selectOneMenu>
 
-			<h:panelGrid id="docente" rendered="#{importacaoController.renderedDocente}">
+			<h:panelGrid id="docente" rendered="#{importacaoManagedBean.renderedDocente}">
 				<h:outputLabel value="Docente:" />
 			</h:panelGrid>
 
-			<h:panelGrid id="menuDocente" rendered="#{importacaoController.renderedDocente}">
+			<h:panelGrid id="menuDocente" rendered="#{importacaoManagedBean.renderedDocente}">
 
-				<p:selectOneMenu rendered="#{importacaoController.renderedDocente}">
+				<p:selectOneMenu rendered="#{importacaoManagedBean.renderedDocente}">
 					<f:selectItem itemLabel="Selecione" itemValue="null" />
 					<f:selectItem itemLabel="Ciclano" itemValue="idCiclano" />
 					<f:selectItem itemLabel="Beutrano" itemValue="idBeutrano" />
@@ -46,13 +46,13 @@
 
 			<h:outputLabel value="Arquivo:" />
 
-			<p:fileUpload value="#{importacaoController.arquivo}" mode="simple" />
+			<p:fileUpload value="#{importacaoManagedBean.arquivo}" mode="simple" />
 		</h:panelGrid>
 
 		<h:panelGrid style="margin-left: auto; margin-right: auto; margin-top: 50px;">
 			<h:panelGrid columns="1" width="100%">
-				<p:commandButton ajax="false" action="#{importacaoController.upload()}"
-					value="#{importacaoController.importacao ? 'Importação' : 'Exportação'}" style="width:120px;" />
+				<p:commandButton ajax="false" action="#{importacaoManagedBean.upload()}"
+					value="#{importacaoManagedBean.importacao ? 'Importação' : 'Exportação'}" style="width:120px;" />
 			</h:panelGrid>
 		</h:panelGrid>
 

@@ -1,4 +1,4 @@
-package br.ufg.inf.avadoc.controller;
+package br.ufg.inf.avadoc.managedbean;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -15,12 +15,12 @@ import org.springframework.stereotype.Component;
 import br.ufg.inf.avadoc.xml.XmlExtratoAtividades;
 
 @Scope("session")
-@Component(ImportacaoController.KEY_COMPONENT)
-public class ImportacaoController extends Controller {
+@Component(ImportacaoManagedBean.KEY_COMPONENT)
+public class ImportacaoManagedBean extends AbstractManagedBean {
 
 	private static final long serialVersionUID = 7444607033271769749L;
 
-	public static final String KEY_COMPONENT = "importacaoController";
+	public static final String KEY_COMPONENT = "importacaoManagedBean";
 
 	private Boolean importacao = Boolean.FALSE;
 
