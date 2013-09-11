@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
+       <xs:element name="Extrato">
+              <xs:complexType>
+                     <xs:sequence>
+                            <xs:element type="xs:long" name="MatriculaDocente"/>
+                            <xs:element type="xs:date" name="DataInicial"/>
+                            <xs:element type="xs:date" name="DataFinal"/>
+                            <xs:element name="AtividadeEnsino">
+                                   <xs:complexType>
+                                          <xs:sequence>
+                                                 <xs:element type="xs:integer" name="HorasSemanaisGraduacaoPresencial"/>
+                                                 <xs:element type="xs:integer" name="HorasSemanaisGraduacaoDistancia"/>
+                                                 <xs:element type="xs:integer" name="HorasSemanaisPosPresencial"/>
+                                                 <xs:element type="xs:integer" name="HorasSemanaisPosDistancia"/>
+                                             </xs:sequence>
+                                      </xs:complexType>
+                               </xs:element>
+                            <xs:element name="ProducaoIntelectual">
+                                   <xs:complexType>
+                                          <xs:sequence>
+                                                 <xs:element name="Cientifica">
+                                                        <xs:complexType>
+                                                               <xs:choice maxOccurs="unbounded" minOccurs="0">
+                                                                      <xs:element name="Atividade">
+                                                                             <xs:complexType>
+                                                                                    <xs:sequence>
+                                                                                           <xs:element type="xs:string" name="Id"/>
+                                                                                       </xs:sequence>
+                                                                                </xs:complexType>
+                                                                         </xs:element>
+                                                                  </xs:choice>
+                                                           </xs:complexType>
+                                                    </xs:element>
+                                                 <xs:element name="ArtisticaCultural">
+                                                        <xs:complexType>
+                                                               <xs:sequence>
+                                                                      <xs:element name="Atividade" maxOccurs="unbounded" minOccurs="0">
+                                                                             <xs:complexType>
+                                                                                    <xs:sequence>
+                                                                                           <xs:element type="xs:string" name="Id"/>
+                                                                                       </xs:sequence>
+                                                                                </xs:complexType>
+                                                                         </xs:element>
+                                                                  </xs:sequence>
+                                                           </xs:complexType>
+                                                    </xs:element>
+                                                 <xs:element name="TecnicaTecnologica">
+                                                        <xs:complexType>
+                                                               <xs:sequence>
+                                                                      <xs:element name="Atividade" maxOccurs="unbounded" minOccurs="0">
+                                                                             <xs:complexType>
+                                                                                    <xs:sequence>
+                                                                                           <xs:element type="xs:string" name="Id"/>
+                                                                                           <xs:element type="xs:integer" name="Anos"/>
+                                                                                       </xs:sequence>
+                                                                                </xs:complexType>
+                                                                         </xs:element>
+                                                                  </xs:sequence>
+                                                           </xs:complexType>
+                                                    </xs:element>
+                                                 <xs:element name="Outro">
+                                                        <xs:complexType>
+                                                               <xs:sequence>
+                                                                      <xs:element name="Atividade" maxOccurs="unbounded" minOccurs="0">
+                                                                             <xs:complexType>
+                                                                                    <xs:sequence>
+                                                                                           <xs:element type="xs:string" name="Id"/>
+                                                                                       </xs:sequence>
+                                                                                </xs:complexType>
+                                                                         </xs:element>
+                                                                  </xs:sequence>
+                                                           </xs:complexType>
+                                                    </xs:element>
+                                             </xs:sequence>
+                                      </xs:complexType>
+                               </xs:element>
+                            <xs:element name="AtividadePesquisaExtensao">
+                                   <xs:complexType>
+                                          <xs:sequence>
+                                                 <xs:element name="Pesquisa">
+                                                        <xs:complexType>
+                                                               <xs:sequence>
+                                                                      <xs:element name="Atividade" maxOccurs="unbounded" minOccurs="0">
+                                                                             <xs:complexType>
+                                                                                    <xs:sequence>
+                                                                                           <xs:element type="xs:string" name="Id"/>
+                                                                                           <xs:element type="xs:integer" name="Anos"/>
+                                                                                       </xs:sequence>
+                                                                                </xs:complexType>
+                                                                         </xs:element>
+                                                                  </xs:sequence>
+                                                           </xs:complexType>
+                                                    </xs:element>
+                                                 <xs:element name="Extensao">
+                                                        <xs:complexType>
+                                                               <xs:sequence>
+                                                                      <xs:element name="Atividade" maxOccurs="unbounded" minOccurs="0">
+                                                                             <xs:complexType>
+                                                                                    <xs:sequence>
+                                                                                           <xs:element type="xs:string" name="Id"/>
+                                                                                           <xs:element type="xs:integer" name="Anos"/>
+                                                                                       </xs:sequence>
+                                                                                </xs:complexType>
+                                                                         </xs:element>
+                                                                  </xs:sequence>
+                                                           </xs:complexType>
+                                                    </xs:element>
+                                             </xs:sequence>
+                                      </xs:complexType>
+                               </xs:element>
+                            <xs:element name="AtividadeAdministrativaRepresentacao">
+                                   <xs:complexType>
+                                          <xs:sequence>
+                                                 <xs:element name="DirecaoFuncaoGratificada">
+                                                        <xs:complexType>
+                                                               <xs:sequence>
+                                                                      <xs:element name="Atividade" maxOccurs="unbounded" minOccurs="0">
+                                                                             <xs:complexType>
+                                                                                    <xs:sequence>
+                                                                                           <xs:element type="xs:string" name="Id"/>
+                                                                                           <xs:element type="xs:integer" name="Meses"/>
+                                                                                       </xs:sequence>
+                                                                                </xs:complexType>
+                                                                         </xs:element>
+                                                                  </xs:sequence>
+                                                           </xs:complexType>
+                                                    </xs:element>
+                                                 <xs:element name="Administrativa">
+                                                        <xs:complexType>
+                                                               <xs:sequence>
+                                                                      <xs:element name="Atividade" maxOccurs="unbounded" minOccurs="0">
+                                                                             <xs:complexType>
+                                                                                    <xs:sequence>
+                                                                                           <xs:element type="xs:string" name="Id"/>
+                                                                                           <xs:element type="xs:integer" name="Anos"/>
+                                                                                           <xs:element type="xs:integer" name="Horas"/>
+                                                                                       </xs:sequence>
+                                                                                </xs:complexType>
+                                                                         </xs:element>
+                                                                  </xs:sequence>
+                                                           </xs:complexType>
+                                                    </xs:element>
+                                                 <xs:element name="OutraAdministrativa">
+                                                        <xs:complexType>
+                                                               <xs:sequence>
+                                                                      <xs:element name="Atividade" maxOccurs="unbounded" minOccurs="0">
+                                                                             <xs:complexType>
+                                                                                    <xs:sequence>
+                                                                                           <xs:element type="xs:string" name="Id"/>
+                                                                                           <xs:element type="xs:integer" name="Meses"/>
+                                                                                       </xs:sequence>
+                                                                                </xs:complexType>
+                                                                         </xs:element>
+                                                                  </xs:sequence>
+                                                           </xs:complexType>
+                                                    </xs:element>
+                                                 <xs:element name="RepresentacaoFora">
+                                                        <xs:complexType>
+                                                               <xs:sequence>
+                                                                      <xs:element name="Atividade" maxOccurs="unbounded" minOccurs="0">
+                                                                             <xs:complexType>
+                                                                                    <xs:sequence>
+                                                                                           <xs:element type="xs:string" name="Id"/>
+                                                                                           <xs:element type="xs:integer" name="Anos"/>
+                                                                                           <xs:element type="xs:integer" name="Horas"/>
+                                                                                       </xs:sequence>
+                                                                                </xs:complexType>
+                                                                         </xs:element>
+                                                                  </xs:sequence>
+                                                           </xs:complexType>
+                                                    </xs:element>
+                                             </xs:sequence>
+                                      </xs:complexType>
+                               </xs:element>
+                            <xs:element name="AtividadeOutra">
+                                   <xs:complexType>
+                                          <xs:sequence>
+                                                 <xs:element name="Orientacao">
+                                                        <xs:complexType>
+                                                               <xs:sequence>
+                                                                      <xs:element name="Atividade" maxOccurs="unbounded" minOccurs="0">
+                                                                             <xs:complexType>
+                                                                                    <xs:sequence>
+                                                                                           <xs:element type="xs:string" name="Id"/>
+                                                                                       </xs:sequence>
+                                                                                </xs:complexType>
+                                                                         </xs:element>
+                                                                  </xs:sequence>
+                                                           </xs:complexType>
+                                                    </xs:element>
+                                                 <xs:element name="BancaCurso">
+                                                        <xs:complexType>
+                                                               <xs:sequence>
+                                                                      <xs:element name="Atividade" maxOccurs="unbounded" minOccurs="0">
+                                                                             <xs:complexType>
+                                                                                    <xs:sequence>
+                                                                                           <xs:element type="xs:string" name="Id"/>
+                                                                                       </xs:sequence>
+                                                                                </xs:complexType>
+                                                                         </xs:element>
+                                                                  </xs:sequence>
+                                                           </xs:complexType>
+                                                    </xs:element>
+                                                 <xs:element name="AprendizadoAperfeicoamento">
+                                                        <xs:complexType>
+                                                               <xs:sequence>
+                                                                      <xs:element name="Atividade" maxOccurs="unbounded" minOccurs="0">
+                                                                             <xs:complexType>
+                                                                                    <xs:sequence>
+                                                                                           <xs:element type="xs:string" name="Id"/>
+                                                                                       </xs:sequence>
+                                                                                </xs:complexType>
+                                                                         </xs:element>
+                                                                  </xs:sequence>
+                                                           </xs:complexType>
+                                                    </xs:element>
+                                             </xs:sequence>
+                                      </xs:complexType>
+                               </xs:element>
+                        </xs:sequence>
+                 </xs:complexType>
+          </xs:element>
+   </xs:schema>
