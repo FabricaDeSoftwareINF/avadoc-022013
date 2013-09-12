@@ -1,0 +1,92 @@
+body {    
+    margin: 0px 2px !important;
+}
+
+form {
+    margin: 0 !important;
+}
+
+.ui-widget-content {
+    border: none !important;
+}
+
+.ui-menu.ui-widget {
+    width: 100% !important;
+}
+
+.ui-layout-unit .ui-layout-unit-content {
+    border: 1px solid #CADDEC !important;
+}
+
+.ui-layout-unit .ui-layout-unit-content {
+    padding: 0 !important;
+    margin-top: -1 !important;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.ui-selectonemenu .ui-selectonemenu-trigger {
+    width: 28px !important;
+    height: 30px !important;
+}
+
+.ui-selectonemenu, .ui-spinner-input {
+    width: 200px !important;
+}
+
+#cabecalho{
+    padding: 0;
+    height: 130px !important;
+}
+.nomeSistema {
+    text-align: center; 
+}
+
+#logo_ufg {    
+    padding-top: 0.5em;
+}
+
+.textoNomeSistema {
+    font-size:3em; 
+    font-weight: bold; 
+    color: #005CA1;
+    vertical-align: middle;
+}
+
+.paddingTop1EM {
+    padding-top: 1em;
+}
+
+.botaoSimples {
+    width: 80px;
+    height: 26px;
+    font-family: Arial;
+    font-size: 11px;
+    font-weight: bold;
+    border-width: 1px;
+    border-style: solid;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    position: relative;
+    text-align: center !important;
+}
+
+.botaoSimples:hover {
+    border-width: 2px;
+}
+
+.botaoCancelar {
+    color: #6A6A6A;
+    border-color: #CCCCCC;
+    background: #FCFCFC;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#FCFCFC), to(#D7D7D7));
+    background: -webkit-linear-gradient(#FCFCFC, #D7D7D7);
+    background: -moz-linear-gradient(#FCFCFC, #D7D7D7);
+    background: -ms-linear-gradient(#FCFCFC, #D7D7D7);
+    background: -o-linear-gradient(#FCFCFC, #D7D7D7);
+    background: linear-gradient(#FCFCFC, #D7D7D7);
+    -pie-background: linear-gradient(#FCFCFC, #D7D7D7);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FCFCFC', endColorstr='#D7D7D7');
+}

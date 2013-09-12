@@ -1,0 +1,990 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<atividades>
+	<!-- II Produção Intelectual -->
+	<atividade id="1.1">
+		<subatividade>ProducaoCientifica</subatividade>
+		<pontos>26</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="1.2">
+		<subatividade>ProducaoCientifica</subatividade>
+		<pontos>24</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="1.3">
+		<subatividade>ProducaoCientifica</subatividade>
+		<pontos>22</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="1.4">
+		<subatividade>ProducaoCientifica</subatividade>
+		<pontos>20</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="1.5">
+		<subatividade>ProducaoCientifica</subatividade>
+		<pontos>18</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="1.6">
+		<subatividade>ProducaoCientifica</subatividade>
+		<pontos>16</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="1.7">
+		<subatividade>ProducaoCientifica</subatividade>
+		<pontos>14</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="1.8">
+		<subatividade>ProducaoCientifica</subatividade>
+		<pontos>8</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="1.9">
+		<subatividade>ProducaoCientifica</subatividade>
+		<pontos>4</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="2">
+		<subatividade>ProducaoCientifica</subatividade>
+		<pontos>5</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="3">
+		<subatividade>ProducaoCientifica</subatividade>
+		<pontos>5</pontos>
+		<maximo>10</maximo>
+	</atividade>
+	<atividade id="4.1">
+		<subatividade>ProducaoCientifica</subatividade>
+		<pontos>8</pontos>
+		<maximo>10</maximo>
+	</atividade>
+	<atividade id="4.2">
+		<subatividade>ProducaoCientifica</subatividade>
+		<pontos>6</pontos>
+		<maximo>10</maximo>
+	</atividade>
+	<atividade id="4.3">
+		<subatividade>ProducaoCientifica</subatividade>
+		<pontos>4</pontos>
+		<maximo>10</maximo>
+	</atividade>
+	<atividade id="5.1">
+		<subatividade>ProducaoCientifica</subatividade>
+		<pontos>4</pontos>
+		<maximo>10</maximo>
+	</atividade>
+	<atividade id="5.2">
+		<subatividade>ProducaoCientifica</subatividade>
+		<pontos>3</pontos>
+		<maximo>10</maximo>
+	</atividade>
+	<atividade id="5.3">
+		<subatividade>ProducaoCientifica</subatividade>
+		<pontos>2</pontos>
+		<maximo>10</maximo>
+	</atividade>
+	<atividade id="6.1">
+		<subatividade>ProducaoCientifica</subatividade>
+		<pontos>22</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="6.2">
+		<subatividade>ProducaoCientifica</subatividade>
+		<pontos>20</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="6.3">
+		<subatividade>ProducaoCientifica</subatividade>
+		<pontos>18</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="6.4">
+		<subatividade>ProducaoCientifica</subatividade>
+		<pontos>16</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="6.5">
+		<subatividade>ProducaoCientifica</subatividade>
+		<pontos>14</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="6.6">
+		<subatividade>ProducaoCientifica</subatividade>
+		<pontos>12</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="6.7">
+		<subatividade>ProducaoCientifica</subatividade>
+		<pontos>10</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="6.8">
+		<subatividade>ProducaoCientifica</subatividade>
+		<pontos>8</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="6.9">
+		<subatividade>ProducaoCientifica</subatividade>
+		<pontos>6</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="7">
+		<subatividade>ProducaoCientifica</subatividade>
+		<pontos>40</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="8">
+		<subatividade>ProducaoCientifica</subatividade>
+		<pontos>5</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="9">
+		<subatividade>ProducaoCientifica</subatividade>
+		<pontos>18</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="10">
+		<subatividade>ProducaoCientifica</subatividade>
+		<pontos>12</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="11">
+		<subatividade>ProducaoCientifica</subatividade>
+		<pontos>10</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="12">
+		<subatividade>ProducaoCientifica</subatividade>
+		<pontos>22</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="13">
+		<subatividade>ProducaoCientifica</subatividade>
+		<pontos>5</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="14">
+		<subatividade>ProducaoCientifica</subatividade>
+		<pontos>10</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="15">
+		<subatividade>ProducaoCientifica</subatividade>
+		<pontos>15</pontos>
+		<maximo>0</maximo>
+	</atividade>
+
+	<atividade id="1">
+		<subatividade>ProducaoArtisticaCultural</subatividade>
+		<pontos>22</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="2">
+		<subatividade>ProducaoArtisticaCultural</subatividade>
+		<pontos>22</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="3">
+		<subatividade>ProducaoArtisticaCultural</subatividade>
+		<pontos>18</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="4">
+		<subatividade>ProducaoArtisticaCultural</subatividade>
+		<pontos>15</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="5">
+		<subatividade>ProducaoArtisticaCultural</subatividade>
+		<pontos>18</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="6">
+		<subatividade>ProducaoArtisticaCultural</subatividade>
+		<pontos>20</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="7">
+		<subatividade>ProducaoArtisticaCultural</subatividade>
+		<pontos>20</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="8">
+		<subatividade>ProducaoArtisticaCultural</subatividade>
+		<pontos>18</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="9">
+		<subatividade>ProducaoArtisticaCultural</subatividade>
+		<pontos>5</pontos>
+		<maximo>20</maximo>
+	</atividade>
+	<atividade id="10.1">
+		<subatividade>ProducaoArtisticaCultural</subatividade>
+		<pontos>16</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="10.2">
+		<subatividade>ProducaoArtisticaCultural</subatividade>
+		<pontos>5</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="11.1">
+		<subatividade>ProducaoArtisticaCultural</subatividade>
+		<pontos>20</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="11.2">
+		<subatividade>ProducaoArtisticaCultural</subatividade>
+		<pontos>10</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="12.1">
+		<subatividade>ProducaoArtisticaCultural</subatividade>
+		<pontos>22</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="12.2">
+		<subatividade>ProducaoArtisticaCultural</subatividade>
+		<pontos>15</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="13.1">
+		<subatividade>ProducaoArtisticaCultural</subatividade>
+		<pontos>22</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="13.2">
+		<subatividade>ProducaoArtisticaCultural</subatividade>
+		<pontos>20</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="13.3">
+		<subatividade>ProducaoArtisticaCultural</subatividade>
+		<pontos>18</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="13.4">
+		<subatividade>ProducaoArtisticaCultural</subatividade>
+		<pontos>16</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="14.1">
+		<subatividade>ProducaoArtisticaCultural</subatividade>
+		<pontos>10</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="14.2">
+		<subatividade>ProducaoArtisticaCultural</subatividade>
+		<pontos>15</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="14.3">
+		<subatividade>ProducaoArtisticaCultural</subatividade>
+		<pontos>22</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="15">
+		<subatividade>ProducaoArtisticaCultural</subatividade>
+		<pontos>10</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="16">
+		<subatividade>ProducaoArtisticaCultural</subatividade>
+		<pontos>5</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="17">
+		<subatividade>ProducaoArtisticaCultural</subatividade>
+		<pontos>5</pontos>
+		<maximo>0</maximo>
+	</atividade>
+
+	<atividade id="1">
+		<subatividade>ProducaoTecnicaTecnologica</subatividade>
+		<pontos>22</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="2">
+		<subatividade>ProducaoTecnicaTecnologica</subatividade>
+		<pontos>14</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="3">
+		<subatividade>ProducaoTecnicaTecnologica</subatividade>
+		<pontos>5</pontos>
+		<maximo>10</maximo>
+	</atividade>
+	<atividade id="4">
+		<subatividade>ProducaoTecnicaTecnologica</subatividade>
+		<pontos>22</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="5">
+		<subatividade>ProducaoTecnicaTecnologica</subatividade>
+		<pontos>22</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="6">
+		<subatividade>ProducaoTecnicaTecnologica</subatividade>
+		<pontos>22</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="7">
+		<subatividade>ProducaoTecnicaTecnologica</subatividade>
+		<pontos>22</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="8">
+		<subatividade>ProducaoTecnicaTecnologica</subatividade>
+		<pontos>4</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="9">
+		<subatividade>ProducaoTecnicaTecnologica</subatividade>
+		<pontos>22</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="10.1">
+		<subatividade>ProducaoTecnicaTecnologica</subatividade>
+		<pontos>16</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="10.2">
+		<subatividade>ProducaoTecnicaTecnologica</subatividade>
+		<pontos>20</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="10.3">
+		<subatividade>ProducaoTecnicaTecnologica</subatividade>
+		<pontos>22</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="11">
+		<subatividade>ProducaoTecnicaTecnologica</subatividade>
+		<pontos>10</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="12">
+		<subatividade>ProducaoTecnicaTecnologica</subatividade>
+		<pontos>5</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="13">
+		<subatividade>ProducaoTecnicaTecnologica</subatividade>
+		<pontos>3</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="14.1">
+		<subatividade>ProducaoTecnicaTecnologica</subatividade>
+		<pontos>10</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="14.2">
+		<subatividade>ProducaoTecnicaTecnologica</subatividade>
+		<pontos>5</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="15">
+		<subatividade>ProducaoTecnicaTecnologica</subatividade>
+		<pontos>10</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="16">
+		<subatividade>ProducaoTecnicaTecnologica</subatividade>
+		<pontos>1</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="17">
+		<subatividade>ProducaoTecnicaTecnologica</subatividade>
+		<pontos>5</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="18">
+		<subatividade>ProducaoTecnicaTecnologica</subatividade>
+		<pontos>10</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="19">
+		<subatividade>ProducaoTecnicaTecnologica</subatividade>
+		<pontos>5</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="20.1">
+		<subatividade>ProducaoTecnicaTecnologica</subatividade>
+		<pontos>22</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="20.2">
+		<subatividade>ProducaoTecnicaTecnologica</subatividade>
+		<pontos>10</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="21">
+		<subatividade>ProducaoTecnicaTecnologica</subatividade>
+		<pontos>5</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="22.1">
+		<subatividade>ProducaoTecnicaTecnologica</subatividade>
+		<pontos>22</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="22.2">
+		<subatividade>ProducaoTecnicaTecnologica</subatividade>
+		<pontos>3</pontos>
+		<maximo>9</maximo>
+	</atividade>
+
+	<atividade id="1">
+		<subatividade>ProducaoOutro</subatividade>
+		<pontos>1</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="2">
+		<subatividade>ProducaoOutro</subatividade>
+		<pontos>2</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="3">
+		<subatividade>ProducaoOutro</subatividade>
+		<pontos>3</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="4">
+		<subatividade>ProducaoOutro</subatividade>
+		<pontos>3</pontos>
+		<maximo>9</maximo>
+	</atividade>
+	<atividade id="5">
+		<subatividade>ProducaoOutro</subatividade>
+		<pontos>1</pontos>
+		<maximo>3</maximo>
+	</atividade>
+	<atividade id="6">
+		<subatividade>ProducaoOutro</subatividade>
+		<pontos>5</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="7">
+		<subatividade>ProducaoOutro</subatividade>
+		<pontos>8</pontos>
+		<maximo>0</maximo>
+	</atividade>
+
+	<!-- III ATIVIDADES DE PESQUISA E EXTENSÃO -->
+	<atividade id="1">
+		<subatividade>AtividadePesquisa</subatividade>
+		<pontos>10</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="2">
+		<subatividade>AtividadePesquisa</subatividade>
+		<pontos>10</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="3">
+		<subatividade>AtividadePesquisa</subatividade>
+		<pontos>5</pontos>
+		<maximo>10</maximo>
+	</atividade>
+
+	<atividade id="1">
+		<subatividade>AtividadeExtensao</subatividade>
+		<pontos>10</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="2">
+		<subatividade>AtividadeExtensao</subatividade>
+		<pontos>5</pontos>
+		<maximo>15</maximo>
+	</atividade>
+	<atividade id="3">
+		<subatividade>AtividadeExtensao</subatividade>
+		<pontos>5</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="4">
+		<subatividade>AtividadeExtensao</subatividade>
+		<pontos>3</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="5">
+		<subatividade>AtividadeExtensao</subatividade>
+		<pontos>3</pontos>
+		<maximo>15</maximo>
+	</atividade>
+	<atividade id="6">
+		<subatividade>AtividadeExtensao</subatividade>
+		<pontos>5</pontos>
+		<maximo>15</maximo>
+	</atividade>
+	<atividade id="7">
+		<subatividade>AtividadeExtensao</subatividade>
+		<pontos>2</pontos>
+		<maximo>10</maximo>
+	</atividade>
+	<atividade id="8.1">
+		<subatividade>AtividadeExtensao</subatividade>
+		<pontos>5</pontos>
+		<maximo>15</maximo>
+	</atividade>
+	<atividade id="8.2">
+		<subatividade>AtividadeExtensao</subatividade>
+		<pontos>4</pontos>
+		<maximo>12</maximo>
+	</atividade>
+	<atividade id="8.3">
+		<subatividade>AtividadeExtensao</subatividade>
+		<pontos>3</pontos>
+		<maximo>9</maximo>
+	</atividade>
+	<atividade id="9.1">
+		<subatividade>AtividadeExtensao</subatividade>
+		<pontos>4</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="9.2">
+		<subatividade>AtividadeExtensao</subatividade>
+		<pontos>2</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="10.1">
+		<subatividade>AtividadeExtensao</subatividade>
+		<pontos>6</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="10.2">
+		<subatividade>AtividadeExtensao</subatividade>
+		<pontos>3</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="11.1">
+		<subatividade>AtividadeExtensao</subatividade>
+		<pontos>8</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="11.2">
+		<subatividade>AtividadeExtensao</subatividade>
+		<pontos>4</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="12.1">
+		<subatividade>AtividadeExtensao</subatividade>
+		<pontos>10</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="12.2">
+		<subatividade>AtividadeExtensao</subatividade>
+		<pontos>5</pontos>
+		<maximo>0</maximo>
+	</atividade>
+
+	<!-- IV ATIVIDADES ADMINISTRATIVAS E DE REPRESENTAÇÃO -->
+	<atividade id="1">
+		<subatividade>DirecaoFuncaoGratificada</subatividade>
+		<pontos>12</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="2">
+		<subatividade>DirecaoFuncaoGratificada</subatividade>
+		<pontos>10</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="3">
+		<subatividade>DirecaoFuncaoGratificada</subatividade>
+		<pontos>10</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="4">
+		<subatividade>DirecaoFuncaoGratificada</subatividade>
+		<pontos>10</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="5">
+		<subatividade>DirecaoFuncaoGratificada</subatividade>
+		<pontos>10</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="6">
+		<subatividade>DirecaoFuncaoGratificada</subatividade>
+		<pontos>10</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="7">
+		<subatividade>DirecaoFuncaoGratificada</subatividade>
+		<pontos>8</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="8">
+		<subatividade>DirecaoFuncaoGratificada</subatividade>
+		<pontos>8</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="9">
+		<subatividade>DirecaoFuncaoGratificada</subatividade>
+		<pontos>8</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="10">
+		<subatividade>DirecaoFuncaoGratificada</subatividade>
+		<pontos>8</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="11">
+		<subatividade>DirecaoFuncaoGratificada</subatividade>
+		<pontos>8</pontos>
+		<maximo>0</maximo>
+	</atividade>
+
+	<atividade id="1">
+		<subatividade>AtividadeAdministrativa</subatividade>
+		<pontos>5</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="2">
+		<subatividade>AtividadeAdministrativa</subatividade>
+		<pontos>10</pontos>
+		<maximo>10</maximo>
+	</atividade>
+	<atividade id="3">
+		<subatividade>AtividadeAdministrativa</subatividade>
+		<pontos>10</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="4">
+		<subatividade>AtividadeAdministrativa</subatividade>
+		<pontos>10</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="5">
+		<subatividade>AtividadeAdministrativa</subatividade>
+		<pontos>10</pontos>
+		<maximo>0</maximo>
+	</atividade>
+
+	<atividade id="1">
+		<subatividade>AtividadeAdministrativaOutra</subatividade>
+		<pontos>7</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="2">
+		<subatividade>AtividadeAdministrativaOutra</subatividade>
+		<pontos>5</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="3">
+		<subatividade>AtividadeAdministrativaOutra</subatividade>
+		<pontos>5</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="4">
+		<subatividade>AtividadeAdministrativaOutra</subatividade>
+		<pontos>5</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="5">
+		<subatividade>AtividadeAdministrativaOutra</subatividade>
+		<pontos>5</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="6">
+		<subatividade>AtividadeAdministrativaOutra</subatividade>
+		<pontos>5</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="7">
+		<subatividade>AtividadeAdministrativaOutra</subatividade>
+		<pontos>3</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="8">
+		<subatividade>AtividadeAdministrativaOutra</subatividade>
+		<pontos>3</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="9">
+		<subatividade>AtividadeAdministrativaOutra</subatividade>
+		<pontos>3</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="10">
+		<subatividade>AtividadeAdministrativaOutra</subatividade>
+		<pontos>3</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="11">
+		<subatividade>AtividadeAdministrativaOutra</subatividade>
+		<pontos>3</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="12">
+		<subatividade>AtividadeAdministrativaOutra</subatividade>
+		<pontos>3</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="13">
+		<subatividade>AtividadeAdministrativaOutra</subatividade>
+		<pontos>3</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="14">
+		<subatividade>AtividadeAdministrativaOutra</subatividade>
+		<pontos>3</pontos>
+		<maximo>0</maximo>
+	</atividade>
+
+	<atividade id="1">
+		<subatividade>AtividadeRepresentacaoFora</subatividade>
+		<pontos>10</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="2">
+		<subatividade>AtividadeRepresentacaoFora</subatividade>
+		<pontos>10</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="3">
+		<subatividade>AtividadeRepresentacaoFora</subatividade>
+		<pontos>3</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="4">
+		<subatividade>AtividadeRepresentacaoFora</subatividade>
+		<pontos>10</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="5">
+		<subatividade>AtividadeRepresentacaoFora</subatividade>
+		<pontos>10</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="6">
+		<subatividade>AtividadeRepresentacaoFora</subatividade>
+		<pontos>10</pontos>
+		<maximo>0</maximo>
+	</atividade>
+
+	<!-- V OUTRAS ATIVIDADES -->
+	<atividade id="1">
+		<subatividade>Orientacao</subatividade>
+		<pontos>20</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="2">
+		<subatividade>Orientacao</subatividade>
+		<pontos>10</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="3">
+		<subatividade>Orientacao</subatividade>
+		<pontos>15</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="4">
+		<subatividade>Orientacao</subatividade>
+		<pontos>8</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="5">
+		<subatividade>Orientacao</subatividade>
+		<pontos>8</pontos>
+		<maximo>24</maximo>
+	</atividade>
+	<atividade id="6">
+		<subatividade>Orientacao</subatividade>
+		<pontos>4</pontos>
+		<maximo>12</maximo>
+	</atividade>
+	<atividade id="7">
+		<subatividade>Orientacao</subatividade>
+		<pontos>5</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="8">
+		<subatividade>Orientacao</subatividade>
+		<pontos>3</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="9">
+		<subatividade>Orientacao</subatividade>
+		<pontos>3</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="10">
+		<subatividade>Orientacao</subatividade>
+		<pontos>5</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="11">
+		<subatividade>Orientacao</subatividade>
+		<pontos>3</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="12">
+		<subatividade>Orientacao</subatividade>
+		<pontos>6</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="13">
+		<subatividade>Orientacao</subatividade>
+		<pontos>5</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="14">
+		<subatividade>Orientacao</subatividade>
+		<pontos>5</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="15">
+		<subatividade>Orientacao</subatividade>
+		<pontos>5</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="16">
+		<subatividade>Orientacao</subatividade>
+		<pontos>5</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="17">
+		<subatividade>Orientacao</subatividade>
+		<pontos>5</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="18">
+		<subatividade>Orientacao</subatividade>
+		<pontos>5</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="19">
+		<subatividade>Orientacao</subatividade>
+		<pontos>3</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="20">
+		<subatividade>Orientacao</subatividade>
+		<pontos>2</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="21">
+		<subatividade>Orientacao</subatividade>
+		<pontos>1</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="22">
+		<subatividade>Orientacao</subatividade>
+		<pontos>8</pontos>
+		<maximo>0</maximo>
+	</atividade>
+
+	<atividade id="1.1">
+		<subatividade>BancaCurso</subatividade>
+		<pontos>4</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="1.2">
+		<subatividade>BancaCurso</subatividade>
+		<pontos>6</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="2">
+		<subatividade>BancaCurso</subatividade>
+		<pontos>2</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="3.1">
+		<subatividade>BancaCurso</subatividade>
+		<pontos>4</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="3.2">
+		<subatividade>BancaCurso</subatividade>
+		<pontos>6</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="4.1">
+		<subatividade>BancaCurso</subatividade>
+		<pontos>6</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="4.2">
+		<subatividade>BancaCurso</subatividade>
+		<pontos>8</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="5.1">
+		<subatividade>BancaCurso</subatividade>
+		<pontos>3</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="5.2">
+		<subatividade>BancaCurso</subatividade>
+		<pontos>4</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="6.1">
+		<subatividade>BancaCurso</subatividade>
+		<pontos>5</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="6.2">
+		<subatividade>BancaCurso</subatividade>
+		<pontos>6</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="7">
+		<subatividade>BancaCurso</subatividade>
+		<pontos>2</pontos>
+		<maximo>10</maximo>
+	</atividade>
+	<atividade id="8.1">
+		<subatividade>BancaCurso</subatividade>
+		<pontos>8</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="8.2">
+		<subatividade>BancaCurso</subatividade>
+		<pontos>6</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="9">
+		<subatividade>BancaCurso</subatividade>
+		<pontos>2</pontos>
+		<maximo>0</maximo>
+	</atividade>
+
+	<atividade id="1">
+		<subatividade>AtividadeAprendizadoAperfeicoamento</subatividade>
+		<pontos>12</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="2">
+		<subatividade>AtividadeAprendizadoAperfeicoamento</subatividade>
+		<pontos>12</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="3">
+		<subatividade>AtividadeAprendizadoAperfeicoamento</subatividade>
+		<pontos>12</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="4">
+		<subatividade>AtividadeAprendizadoAperfeicoamento</subatividade>
+		<pontos>3</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="5">
+		<subatividade>AtividadeAprendizadoAperfeicoamento</subatividade>
+		<pontos>1</pontos>
+		<maximo>0</maximo>
+	</atividade>
+	<atividade id="6">
+		<subatividade>AtividadeAprendizadoAperfeicoamento</subatividade>
+		<pontos>1</pontos>
+		<maximo>3</maximo>
+	</atividade>
+
+</atividades>
