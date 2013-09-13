@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+    <div class="small-12 large-12 columns" style="padding: 10px;">
+        <div class="small-12 large-12 columns"
+             style="margin-top: 5px; text-align: center">
+            <h:outputLabel value="#{avaliacaoManagedBean.tipoAvaliacao} - #{avaliacaoManagedBean.docente.nome}" style="font-size:24px" />
+        </div>
+
+        <h:panelGrid columns="3" style="text-align: right;">
+            <h:outputLabel value="Nota das atividades (N1):"/>
+            <p:inputText />
+            <h:commandButton value="Detalhes" onclick="detalhesDialog.show();" type="button"/>
+
+            <h:outputLabel value="Nota da diretoria (N2):"/>
+            <p:inputText />
+            <!-- -->
+
+            <h:outputLabel value="Nota do corpo discente (N3):"/>
+            <p:inputText />
+            <!-- -->
+        </h:panelGrid>
+
+        <hr/>
+
+        <h:panelGrid columns="2" cellspacing="5" >
+            <h:outputLabel value="Nota parcial:"/>
+            <h:outputText  />
+
+            <h:outputLabel value="Período avaliado:"/>
+            <h:outputText />
+        </h:panelGrid>
+
+        <p:dialog id="dialog" header="Nota das atividades" widgetVar="detalhesDialog">  
+            <h:panelGrid columns="3" style="text-align: right;">
+                <h:outputLabel value="Item I - Atividades de Ensino"/>
+                <p:inputText />
+                <h:commandButton value="Detalhes" type="button"/>
+
+                <h:outputLabel value="Item II - Produção Intelectual"/>
+                <p:inputText  />
+                <h:commandButton value="Detalhes" type="button"/>
+
+                <h:outputLabel value="Item III - Atividades de Pesquisa e Extensão"/>
+                <p:inputText  />
+                <h:commandButton value="Detalhes" type="button"/>
+
+                <h:outputLabel value="Item IV - Atividades Administrativas e de Representação"/>
+                <p:inputText  />
+                <h:commandButton value="Detalhes" type="button"/>
+
+                <h:outputLabel value="Item V - Outras Atividades"/>
+                <p:inputText  />
+                <h:commandButton value="Detalhes" type="button"/>
+            </h:panelGrid> 
+        </p:dialog> 
+
+        <div class="small-12 large-12 columns"
+             style="margin-top: 5px; text-align: center">
+            <p:commandButton value="Finalizar Avaliação"/>
+        </div>
+    </div>
+</html>
