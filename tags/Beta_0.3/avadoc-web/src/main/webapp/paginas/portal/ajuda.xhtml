@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:sec="http://www.springframework.org/security/facelets/tags">
+
+<h:panelGrid style="width:90%; padding: 10px;">
+
+	<h:panelGrid style="margin-left: auto; margin-right: auto; margin-top: 5px;">
+
+		<h:panelGrid columns="1" width="100%">
+			<h:outputLabel value="Ajuda" style="font-size:24px" />
+		</h:panelGrid>
+
+	</h:panelGrid>
+
+	<p:spacer height="10" />
+
+	<p:panel style="width:100%; height: 400px">
+
+		<h:outputText value=" - A página inicial do sistema contem as estatisticas de quantos docentes estão sendo avaliados pelo sistema." />
+		<br />
+		<br />
+		<h:outputText value=" - A página Avaliação do docente é onde o usuário seleciona o docente a ser avaliado e efetua a avaliação." />
+		<br />
+		<br />
+		<h:outputText value=" - A página Informação do docente é onde mostra todos os dados do docente." />
+		<br />
+		<br />
+		<h:outputText value=" - A página Historico do docente contem toda a base histórica dos dados gerados sobre o docente." />
+		<br />
+		<br />
+		<h:outputText value=" - A página Importar/Exportar dados executa as tarefas de exportar para uma planilha os dados de determinado docente, e também tem a função de importar arquivos XML dos dados gerados pelo SICAD." />
+		<br />
+		<br />
+		<h:outputText value=" - A página Configurações é onde o usuário define se deseja que o sistema deve gerar log de importação e exportação, se deseja que a versão corrente seja mostrada na página e também define o tipo de conexão." />
+	</p:panel>
+
+	<h:panelGroup>
+		<h:outputLabel value="Link da Resolução:" />
+		<p:spacer width="45" />
+
+		<a href="#" onclick="window.open('http://cavi.prodirh.ufg.br/uploads/65/original_Resolucao_CONSUNI_2009_0021.pdf', 'Consuni');">Consuni 21/2009</a>
+	</h:panelGroup>
+
+</h:panelGrid>
+
+</html>

@@ -1,0 +1,18 @@
+.container{margin: 0 auto;width: 95%;}
+
+.form-login{float: left; padding: 20px;width: 95%;text-align: center;}
+
+.form-login label{font-weight: bold;}
+.form-login .form-login-input{width: 325px;}
+#form-submit{left: 25%; width: 50%;}
+    
+#menu_lateral {
+    height: 0 !important;
+    width: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+#conteudo_central {
+    left: 3 !important;
+}
