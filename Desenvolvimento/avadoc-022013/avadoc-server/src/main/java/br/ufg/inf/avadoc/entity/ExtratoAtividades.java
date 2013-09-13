@@ -19,6 +19,12 @@ import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import br.ufg.inf.avadoc.model.AtividadeAdministrativaRepresentacao;
+import br.ufg.inf.avadoc.model.AtividadeEnsino;
+import br.ufg.inf.avadoc.model.AtividadeOutra;
+import br.ufg.inf.avadoc.model.AtividadePesquisaExtensao;
+import br.ufg.inf.avadoc.model.ProducaoIntelectual;
+
 
 /**
  * ExtratoAtividades
@@ -37,7 +43,7 @@ public class ExtratoAtividades extends AbstractEntity implements Serializable {
 	@Column(name = "id_extrato_atividades")
 	private Long id;
 
-	@ManyToOne(cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
+	@ManyToOne(cascade = CascadeType.MERGE)
 	@JoinColumn(name = "id_docente", nullable = false)
 	private Docente docente;
 	/**
@@ -53,36 +59,36 @@ public class ExtratoAtividades extends AbstractEntity implements Serializable {
 	/**
 	 * Atividades de ensino
 	 */
-	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "id_atividade_ensino")
 	private AtividadeEnsino atividadeEnsino;
 	/**
 	 * Atividades de produção intelectual
 	 */
-	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "id_producao_intelectual")
 	private ProducaoIntelectual producaoIntelectual;
 	/**
 	 * Atividades de pesquisa e extensão
 	 */
-	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "id_atividade_pesquisa_extensao")
 	private AtividadePesquisaExtensao atividadePesquisaExtensao;
 	/**
 	 * Atividades administrativas e de representação
 	 */
-	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-	@JoinColumn(name = "id_atividade_administrativa_representacao")
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "id_atividade_admin_represent")
 	private AtividadeAdministrativaRepresentacao atividadeAdministrativaRepresentacao;
 	/**
 	 * Outras atividades
 	 */
-	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "id_atividade_outra")
 	private AtividadeOutra atividadeOutra;
-
-	public ExtratoAtividades() {
-	}
+	
+	@Column (name = "pontos")
+	private double pontos;
 
 	/**
 	 * Retorna Docente avaliado
@@ -230,16 +236,12 @@ public class ExtratoAtividades extends AbstractEntity implements Serializable {
 		this.atividadeOutra = atividadeOutra;
 	}
 
-	/**
-	 * Retorna quantidade total de pontos
-	 * 
-	 * @return pontos
-	 */
-	public int getPontos() {
-		return atividadeEnsino.getPontos() + producaoIntelectual.getPontos()
-				+ atividadePesquisaExtensao.getPontos()
-				+ atividadeAdministrativaRepresentacao.getPontos()
-				+ atividadeOutra.getPontos();
+	public double getPontos() {
+		return pontos;
+	}
+
+	public void setPontos(double pontos) {
+		this.pontos = pontos;
 	}
 
 	public Long getId() {

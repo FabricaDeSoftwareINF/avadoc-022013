@@ -28,14 +28,17 @@ public class Produto extends AbstractEntity implements Serializable {
 	/**
 	 * Código do artefato/atividade.
 	 */
+	@Column (name ="codigo", nullable = false)
 	private String codigo;
 	/**
 	 * Pontos do produto.
 	 */
-	private int pontos;
+	@Column (name ="pontos")
+	private double pontos;
 	/**
 	 * Pontuação máxima do artefato/atividade
 	 */
+	@Column (name ="pontuacao_maxima")
 	private int pontuacaoMaxima;
 
 	/**
@@ -44,9 +47,6 @@ public class Produto extends AbstractEntity implements Serializable {
 	@ManyToOne
 	@JoinColumn(name = "id_producao")
 	private Producao producao;
-
-	public Produto() {
-	}
 
 	/**
 	 * Retorna o código do artefato/atividade.
@@ -71,7 +71,7 @@ public class Produto extends AbstractEntity implements Serializable {
 	 * 
 	 * @return pontos
 	 */
-	public int getPontos() {
+	public double getPontos() {
 		return pontos;
 	}
 
@@ -80,7 +80,7 @@ public class Produto extends AbstractEntity implements Serializable {
 	 * 
 	 * @param pontos
 	 */
-	public void setPontos(int pontos) {
+	public void setPontos(double pontos) {
 		this.pontos = pontos;
 	}
 

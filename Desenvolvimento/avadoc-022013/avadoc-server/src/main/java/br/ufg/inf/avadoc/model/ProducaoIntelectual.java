@@ -1,4 +1,4 @@
-package br.ufg.inf.avadoc.entity;
+package br.ufg.inf.avadoc.model;
 
 import java.io.Serializable;
 
@@ -11,6 +11,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
+import br.ufg.inf.avadoc.entity.AbstractEntity;
+import br.ufg.inf.avadoc.entity.IAtividade;
+import br.ufg.inf.avadoc.entity.Producao;
 import br.ufg.inf.avadoc.model.enums.EnumTipoAtividade;
 import br.ufg.inf.avadoc.model.enums.EnumTipoProducao;
 
@@ -20,7 +23,6 @@ import br.ufg.inf.avadoc.model.enums.EnumTipoProducao;
  * Atividades e artefatos referentes a Produção Intelectual
  * 
  */
-@Entity
 public class ProducaoIntelectual extends AbstractEntity implements IAtividade,
 		Serializable {
 	private static final long serialVersionUID = -8781139957824478900L;
@@ -58,7 +60,7 @@ public class ProducaoIntelectual extends AbstractEntity implements IAtividade,
 	}
 
 	@Override
-	public int getPontos() {
+	public double getPontos() {
 		return producaoCientifica.getPontos()
 				+ producaoArtisticaCultural.getPontos()
 				+ producaoTecnicaTecnologica.getPontos()

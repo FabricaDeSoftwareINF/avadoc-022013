@@ -14,18 +14,18 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import br.ufg.inf.avadoc.entity.AtividadeAdministrativaRepresentacao;
-import br.ufg.inf.avadoc.entity.AtividadeEnsino;
-import br.ufg.inf.avadoc.entity.AtividadeOutra;
-import br.ufg.inf.avadoc.entity.AtividadePesquisaExtensao;
 import br.ufg.inf.avadoc.entity.Docente;
 import br.ufg.inf.avadoc.entity.ExtratoAtividades;
 import br.ufg.inf.avadoc.entity.Producao;
-import br.ufg.inf.avadoc.entity.ProducaoIntelectual;
 import br.ufg.inf.avadoc.entity.Produto;
-import br.ufg.inf.avadoc.entity.ProdutoPontosAnuais;
-import br.ufg.inf.avadoc.entity.ProdutoPontosHora;
-import br.ufg.inf.avadoc.entity.ProdutoPontosMensais;
+import br.ufg.inf.avadoc.model.AtividadeAdministrativaRepresentacao;
+import br.ufg.inf.avadoc.model.AtividadeEnsino;
+import br.ufg.inf.avadoc.model.AtividadeOutra;
+import br.ufg.inf.avadoc.model.AtividadePesquisaExtensao;
+import br.ufg.inf.avadoc.model.ProducaoIntelectual;
+import br.ufg.inf.avadoc.model.ProdutoPontosAnuais;
+import br.ufg.inf.avadoc.model.ProdutoPontosHora;
+import br.ufg.inf.avadoc.model.ProdutoPontosMensais;
 import br.ufg.inf.avadoc.model.enums.EnumTipoProducao;
 import br.ufg.inf.avadoc.report.OdsGerador;
 

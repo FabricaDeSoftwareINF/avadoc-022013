@@ -1,6 +1,6 @@
 package br.ufg.inf.avadoc.model.helper;
 
-import br.ufg.inf.avadoc.entity.Nota;
+import br.ufg.inf.avadoc.model.Nota;
 import br.ufg.inf.avadoc.model.enums.EnumJornadaTrabalho;
 
 /**

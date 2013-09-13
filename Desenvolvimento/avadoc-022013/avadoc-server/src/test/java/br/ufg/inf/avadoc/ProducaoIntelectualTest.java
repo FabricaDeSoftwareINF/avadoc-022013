@@ -7,7 +7,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import br.ufg.inf.avadoc.entity.Producao;
-import br.ufg.inf.avadoc.entity.ProducaoIntelectual;
+import br.ufg.inf.avadoc.model.ProducaoIntelectual;
 import br.ufg.inf.avadoc.xml.XmlAtividades;
 
 public class ProducaoIntelectualTest {

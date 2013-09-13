@@ -6,8 +6,8 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import br.ufg.inf.avadoc.entity.AtividadePesquisaExtensao;
 import br.ufg.inf.avadoc.entity.Producao;
+import br.ufg.inf.avadoc.model.AtividadePesquisaExtensao;
 import br.ufg.inf.avadoc.xml.XmlAtividades;
 
 public class AtividadePesquisaExtensaoTest {

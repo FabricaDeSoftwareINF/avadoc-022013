@@ -1,10 +1,13 @@
-package br.ufg.inf.avadoc.entity;
+package br.ufg.inf.avadoc.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
+import br.ufg.inf.avadoc.entity.AbstractEntity;
+import br.ufg.inf.avadoc.entity.IAtividade;
 
 
 /**
@@ -13,7 +16,7 @@ import javax.persistence.Id;
  * Atividades de ensino
  * 
  */
-@Entity
+
 public class AtividadeEnsino extends AbstractEntity implements IAtividade {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -36,16 +39,13 @@ public class AtividadeEnsino extends AbstractEntity implements IAtividade {
 	 */
 	private int posGradHorasAulaSemanaisDistancia;
 
-	public AtividadeEnsino() {
-	}
-
 	/**
 	 * Retorna pontuação referente à atividade.
 	 * 
 	 * @return (total de horas semanais) * 10
 	 */
 	@Override
-	public int getPontos() {
+	public double getPontos() {
 		return 10 * (graduacaoHorasAulaSemanaisPresenciais
 				+ graduacaoHorasAulaSemanaisDistancia
 				+ posGradHorasAulaSemanaisPresenciais + posGradHorasAulaSemanaisDistancia);

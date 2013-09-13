@@ -27,13 +27,13 @@ import br.ufg.inf.avadoc.model.enums.EnumTipoProducao;
 @Entity
 public class Producao extends AbstractEntity implements Serializable {
 
+	private static final long serialVersionUID = 3041614986590545497L;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id_producao")
 	private Long id;
 	
-	private static final long serialVersionUID = 3041614986590545497L;
-
 	/**
 	 * Produtos da produção
 	 */
@@ -51,23 +51,20 @@ public class Producao extends AbstractEntity implements Serializable {
 	 */
 	@Enumerated(EnumType.STRING)
 	private EnumTipoProducao tipoProducao;
-
-	public Producao() {
-		produtos = new ArrayList<Produto>();
-	}
+	
+	private double pontos;
 
 	/**
 	 * Total de pontos
 	 * 
 	 * @return pontos
 	 */
-	public int getPontos() {
-		int pontos = 0;
-		for (Produto p : produtos){
-			pontos += p.getPontos();
-		}
-
+	public double getPontos() {
 		return pontos;
+	}
+
+	public void setPontos(double pontos) {
+		this.pontos = pontos;
 	}
 
 	/**

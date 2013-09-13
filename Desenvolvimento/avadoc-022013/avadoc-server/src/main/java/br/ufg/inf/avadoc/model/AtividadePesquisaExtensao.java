@@ -1,4 +1,4 @@
-package br.ufg.inf.avadoc.entity;
+package br.ufg.inf.avadoc.model;
 
 import java.io.Serializable;
 
@@ -11,6 +11,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
+import br.ufg.inf.avadoc.entity.AbstractEntity;
+import br.ufg.inf.avadoc.entity.IAtividade;
+import br.ufg.inf.avadoc.entity.Producao;
 import br.ufg.inf.avadoc.model.enums.EnumTipoAtividade;
 import br.ufg.inf.avadoc.model.enums.EnumTipoProducao;
 
@@ -20,35 +23,30 @@ import br.ufg.inf.avadoc.model.enums.EnumTipoProducao;
  * Atividades e artefatos referentes a Pesquisa e Extensão
  * 
  */
-@Entity
 public class AtividadePesquisaExtensao extends AbstractEntity implements
 		IAtividade, Serializable {
 	private static final long serialVersionUID = -7628360259213604614L;
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id_atividade_pesquisa_extensao")
 	private Long id;
 
 	/**
 	 * Atividades de pesquisa
 	 */
-	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	private Producao pesquisa;
 	/**
 	 * Atividades de Extensão
 	 */
-	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	private Producao extensao;
 
-	public AtividadePesquisaExtensao() {
-		pesquisa = new Producao();
-		extensao = new Producao();
+	private double pontos;
+	
+	@Override
+	public double getPontos() {
+		return pontos;
 	}
 
-	@Override
-	public int getPontos() {
-		return pesquisa.getPontos() + extensao.getPontos();
+	public void setPontos(double pontos) {
+		this.pontos = pontos;
 	}
 
 	/**
