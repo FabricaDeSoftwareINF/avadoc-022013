@@ -1,4 +1,4 @@
-package br.ufg.inf.avadoc.entity;
+package br.ufg.inf.avadoc.model;
 
 import java.io.Serializable;
 
@@ -11,6 +11,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
+import br.ufg.inf.avadoc.entity.AbstractEntity;
+import br.ufg.inf.avadoc.entity.IAtividade;
+import br.ufg.inf.avadoc.entity.Producao;
 import br.ufg.inf.avadoc.model.enums.EnumTipoAtividade;
 import br.ufg.inf.avadoc.model.enums.EnumTipoProducao;
 
@@ -20,29 +23,22 @@ import br.ufg.inf.avadoc.model.enums.EnumTipoProducao;
  * Outras atividades
  * 
  */
-@Entity
 public class AtividadeOutra extends AbstractEntity implements IAtividade,
 		Serializable {
 	private static final long serialVersionUID = 5832616413995668556L;
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id_atividade_outra")
 	private Long id;
 	/**
 	 * Atividades Acadêmicas - Orientação
 	 */
-	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	private Producao orientacao;
 	/**
 	 * Atividades Acadêmicas – Bancas e Cursos
 	 */
-	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	private Producao bancaCurso;
 	/**
 	 * Atividades de Aprendizado e Aperfeiçoamento
 	 */
-	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	private Producao aprendizadoAperfeicoamento;
 
 	public AtividadeOutra() {
@@ -52,7 +48,7 @@ public class AtividadeOutra extends AbstractEntity implements IAtividade,
 	}
 
 	@Override
-	public int getPontos() {
+	public double getPontos() {
 		return orientacao.getPontos() + bancaCurso.getPontos()
 				+ aprendizadoAperfeicoamento.getPontos();
 	}

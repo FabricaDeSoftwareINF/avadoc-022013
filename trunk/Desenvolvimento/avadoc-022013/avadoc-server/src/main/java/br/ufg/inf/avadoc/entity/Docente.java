@@ -37,14 +37,6 @@ public class Docente extends AbstractEntity implements Serializable {
 	private String nome;
 
 	/**
-	 * Construtor
-	 */
-	public Docente() {
-		matricula = "";
-		nome = "";
-	}
-
-	/**
 	 * Retorna matrícula do docente
 	 * 
 	 * @return matricula

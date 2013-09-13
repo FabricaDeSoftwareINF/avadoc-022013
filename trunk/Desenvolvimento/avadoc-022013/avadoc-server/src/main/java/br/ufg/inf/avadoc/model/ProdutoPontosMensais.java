@@ -1,4 +1,6 @@
-package br.ufg.inf.avadoc.entity;
+package br.ufg.inf.avadoc.model;
+
+import br.ufg.inf.avadoc.entity.Produto;
 
 /**
  * ProdutoPontosMensais
@@ -39,7 +41,7 @@ public class ProdutoPontosMensais extends Produto {
 	 * Retorna pontuação do produto * quantidade de meses exercendo atividade.
 	 */
 	@Override
-	public int getPontos() {
+	public double getPontos() {
 		return meses * super.getPontos();
 	}
 }

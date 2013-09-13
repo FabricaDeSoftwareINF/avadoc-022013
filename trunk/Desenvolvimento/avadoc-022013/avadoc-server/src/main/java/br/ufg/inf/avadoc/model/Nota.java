@@ -1,4 +1,4 @@
-package br.ufg.inf.avadoc.entity;
+package br.ufg.inf.avadoc.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -6,7 +6,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-@Entity
+import br.ufg.inf.avadoc.entity.AbstractEntity;
+
 public class Nota extends AbstractEntity{
 	/**
 	 * Id da nota

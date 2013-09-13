@@ -25,11 +25,11 @@ public class Usuario extends AbstractEntity implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id_usuario")
 	private Long id;
-
+	@Column (name = "nome", length = 45, nullable = false)
 	private String nome;
-
+	@Column (name = "login", length = 45, nullable = false)
 	private String login;
-
+	@Column (name = "nome", length = 45, nullable = false)
 	private String senha;
 
 	@ElementCollection(targetClass = EnumTipoUsuario.class)
@@ -37,23 +37,6 @@ public class Usuario extends AbstractEntity implements Serializable {
 	@Enumerated(EnumType.STRING)
 	@Column(name = "tp_role", nullable = false)
 	private List<EnumTipoUsuario> tipoUsuario;
-
-	public Usuario() {
-
-		super();
-	}
-
-	public Usuario(String nome, String login, String senha,
-			List<EnumTipoUsuario> tipoUsuario) {
-
-		this.nome = nome;
-
-		this.login = login;
-
-		this.senha = senha;
-
-		this.tipoUsuario = tipoUsuario;
-	}
 
 	/**
 	 * Retorna o valor do atributo <code>login</code>
@@ -64,7 +47,6 @@ public class Usuario extends AbstractEntity implements Serializable {
 
 		return login;
 	}
-
 	/**
 	 * Define o valor do atributo <code>login</code>.
 	 * 
@@ -74,7 +56,6 @@ public class Usuario extends AbstractEntity implements Serializable {
 
 		this.login = login;
 	}
-
 	/**
 	 * Retorna o valor do atributo <code>senha</code>
 	 * 
@@ -84,7 +65,6 @@ public class Usuario extends AbstractEntity implements Serializable {
 
 		return senha;
 	}
-
 	/**
 	 * Define o valor do atributo <code>senha</code>.
 	 * 
@@ -94,7 +74,6 @@ public class Usuario extends AbstractEntity implements Serializable {
 
 		this.senha = senha;
 	}
-
 	/**
 	 * Retorna o valor do atributo <code>tipoUsuario</code>
 	 * 
@@ -104,7 +83,6 @@ public class Usuario extends AbstractEntity implements Serializable {
 
 		return tipoUsuario;
 	}
-
 	/**
 	 * Define o valor do atributo <code>tipoUsuario</code>.
 	 * 

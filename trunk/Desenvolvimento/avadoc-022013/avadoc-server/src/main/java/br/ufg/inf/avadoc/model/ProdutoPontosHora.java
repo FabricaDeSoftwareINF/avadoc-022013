@@ -1,4 +1,6 @@
-package br.ufg.inf.avadoc.entity;
+package br.ufg.inf.avadoc.model;
+
+import br.ufg.inf.avadoc.entity.Produto;
 
 /**
  * ProdutoPontosHora
@@ -45,7 +47,7 @@ public class ProdutoPontosHora extends Produto {
 	 * correspondência de 10 pontos para 150 horas.
 	 */
 	@Override
-	public int getPontos() {
+	public double getPontos() {
 		return (int) ((horas * super.getPontos()) / HORAS_ANUAIS);
 	}
 

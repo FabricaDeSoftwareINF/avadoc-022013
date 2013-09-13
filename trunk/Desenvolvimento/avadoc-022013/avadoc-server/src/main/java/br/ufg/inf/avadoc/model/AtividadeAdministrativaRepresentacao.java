@@ -1,4 +1,4 @@
-package br.ufg.inf.avadoc.entity;
+package br.ufg.inf.avadoc.model;
 
 import java.io.Serializable;
 
@@ -11,6 +11,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
+import br.ufg.inf.avadoc.entity.AbstractEntity;
+import br.ufg.inf.avadoc.entity.IAtividade;
+import br.ufg.inf.avadoc.entity.Producao;
 import br.ufg.inf.avadoc.model.enums.EnumTipoAtividade;
 import br.ufg.inf.avadoc.model.enums.EnumTipoProducao;
 
@@ -21,34 +24,27 @@ import br.ufg.inf.avadoc.model.enums.EnumTipoProducao;
  * representação
  * 
  */
-@Entity
+
 public class AtividadeAdministrativaRepresentacao extends AbstractEntity
 		implements IAtividade, Serializable {
 	private static final long serialVersionUID = -7989496005881283847L;
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id_atividade_administrativa_representacao")
 	private Long id;
 	/**
 	 * Atividades de direção ou de função gratificada
 	 */
-	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	private Producao direcaoFuncaoGratificada;
 	/**
 	 * Atividades administrativas
 	 */
-	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	private Producao administrativa;
 	/**
 	 * Outras atividades administrativas
 	 */
-	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	private Producao outraAdministrativa;
 	/**
 	 * Atividades de representação fora da UFG
 	 */
-	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	private Producao representacaoFora;
 
 	public AtividadeAdministrativaRepresentacao() {
@@ -59,7 +55,7 @@ public class AtividadeAdministrativaRepresentacao extends AbstractEntity
 	}
 
 	@Override
-	public int getPontos() {
+	public double getPontos() {
 		return direcaoFuncaoGratificada.getPontos()
 				+ administrativa.getPontos() + outraAdministrativa.getPontos()
 				+ representacaoFora.getPontos();
