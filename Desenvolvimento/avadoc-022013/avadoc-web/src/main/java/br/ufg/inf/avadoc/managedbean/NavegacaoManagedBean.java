@@ -22,7 +22,7 @@ public class NavegacaoManagedBean extends AbstractManagedBean {
 	}
 
 	public void navegacaoAvaliacao() {
-		this.paginaSelecionada = "avaliacaoDocente.xhtml";
+		this.paginaSelecionada = "avaliacaoPassoUm.xhtml";
 	}
 
 	public void navegacaoConfiguracao() {
