@@ -94,3 +94,16 @@ form {
 .textoCentralizado {
 	text-align: center;
 }
+
+.loading, .loading img {
+	width:64px;
+	height:64px;
+	position:fixed;
+	right:5px;
+	bottom:5px;
+	padding-top: 8px;	
+}
+
+.loading img {
+	padding-right: 5px;
+}
