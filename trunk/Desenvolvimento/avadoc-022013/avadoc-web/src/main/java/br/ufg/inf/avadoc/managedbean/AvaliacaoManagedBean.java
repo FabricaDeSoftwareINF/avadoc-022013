@@ -2,7 +2,10 @@ package br.ufg.inf.avadoc.managedbean;
 
 import br.ufg.inf.avadoc.entity.Docente;
 import br.ufg.inf.avadoc.model.enums.EnumTipoAvaliacao;
+import br.ufg.inf.avadoc.util.Mocks;
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
@@ -41,5 +44,26 @@ public class AvaliacaoManagedBean extends AbstractManagedBean implements Seriali
     }
     
     public void metodo() {
+    }
+    
+    /**
+     * Obtém os dados do docente a partir da matrícula informada na tela.
+     */
+    public void getDadosDocente() {
+    	docente = Mocks.obtenhaDocentePorMatricula(getMatriculaSelecionada());
+    }
+
+    /**
+     * Converte um Calendar para uma string em formato de data brasileiro.
+     * @param data Data do tipo calendar.
+     * @return Data formatada como string em formato brasileiro.
+     */
+    public String convertaDataParaString(Calendar data) {
+    	if (data == null) {
+    		return "";
+    	}
+    	
+    	SimpleDateFormat s = new SimpleDateFormat("dd/MM/yyyy");  
+        return s.format(data.getTime());
     }
 }
