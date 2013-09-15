@@ -7,8 +7,8 @@
 	xmlns:p="http://primefaces.org/ui"
 	xmlns:sec="http://www.springframework.org/security/facelets/tags">
 
-<div style="padding: 10px;">
-	<div style="margin-left: auto; margin-right: auto; margin-top: 5px; width: 100%">
+<div class="padding10">
+	<div class="titulo">
 		<h:outputLabel class="textoCentralizado" value="Início" style="font-size:24px;" />
 	</div>
 	<p:spacer height="20" />
@@ -18,7 +18,7 @@
 			<div class="paddingTop1EM">
 				<h:outputLabel value="Há 15 docentes sendo avaliados" class="paddingTop1EM" />
 				<h:outputLabel value=" - 11 em progressão horizontal" class="paddingTop1EM" />
-				<h:outputLabel value=" - 7 em estágio probatorio" class="paddingTop1EM" />
+				<h:outputLabel value=" - 7 em estágio probatório" class="paddingTop1EM" />
 			</div>
 		</div>
 	</div>
@@ -28,24 +28,43 @@
 			<h:outputLabel value="SICAD" />
 		</div>
 		<div class="small-2 large-2 columns textoCentralizado">
-			<p:graphicImage width="50" height="70" value="/resources/img/ufg.jpg" />
-			<h:outputLabel value="UFGNET" />
+			<a href="http://www.ufg.br/" rel="externo" 
+				title="Este link abre uma nova aba ou janela" target="_blank">
+				<p:graphicImage width="50" height="70" value="/resources/img/ufg.jpg" />
+				<label>UFGNET</label>
+			</a>
 		</div>
 		<div class="small-2 large-2 columns textoCentralizado">
-			<p:graphicImage width="50" height="70" value="/resources/img/ufg.jpg" />
-			<h:outputLabel value="EAD" />
+			<a href="https://ead.inf.ufg.br/" rel="externo" 
+				title="Este link abre uma nova aba ou janela" target="_blank">
+				<p:graphicImage width="50" height="70" style="padding-top: 10px;padding-bottom: 18px;"
+					value="/resources/img/ead.png" />
+				<label>EAD</label>
+			</a>
 		</div>
 		<div class="small-2 large-2 columns textoCentralizado">
-			<p:graphicImage width="50" height="70" value="/resources/img/ufg.jpg" />
-			<h:outputLabel value="Webmail" />
+			<a href="https://www.webmail.ufg.br/" rel="externo" 
+				title="Este link abre uma nova aba ou janela" target="_blank">
+				<p:graphicImage width="50" height="70" style="padding-top: 10px;padding-bottom: 18px;"
+					value="/resources/img/email.png" />
+				<label>Webmail UFG</label>
+			</a>
+		</div>
+		<div class="small-2 large-2 columns textoCentralizado">			
+			<a href="http://www.bc.ufg.br/" rel="externo" 
+				title="Este link abre uma nova aba ou janela" target="_blank">
+				<p:graphicImage width="50" height="70" style="padding-bottom: 26px;padding-top: 20px;"
+					value="/resources/img/biblioteca.png" />
+					<label>Biblioteca</label>
+			</a>			
 		</div>
 		<div class="small-2 large-2 columns textoCentralizado">
-			<p:graphicImage width="50" height="70" value="/resources/img/ufg.jpg" />
-			<h:outputLabel value="Biblioteca" />
-		</div>
-		<div class="small-2 large-2 columns textoCentralizado">
-			<p:graphicImage width="50" height="70" value="/resources/img/ufg.jpg" />
-			<h:outputLabel value="Fábrica de Software" />
+			<a href="http://fs.inf.ufg.br/" rel="externo" 
+					title="Este link abre uma nova aba ou janela" target="_blank">
+				<p:graphicImage width="50" height="70" style="padding-bottom: 20px;padding-top: 10px;"
+					value="/resources/img/marca-inf.png"  />
+				<label>Fábrica de Software</label>	
+			</a>					
 		</div>
 	</div>
 </div>
