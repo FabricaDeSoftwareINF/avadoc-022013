@@ -95,6 +95,13 @@ form {
 	text-align: center;
 }
 
+.textoDireita {
+	text-align: right;	
+}
+
+.textoNegrito {
+	font-weight: bold;
+}
 .loading, .loading img {
 	width:64px;
 	height:64px;
@@ -117,4 +124,39 @@ form {
 	margin-right: auto; 
 	margin-top: 5px; 
 	width: 100%"
+}
+
+.botaoAzul {
+	text-shadow: rgba(255, 255, 255, 0.74902) 0px 0px 0px !important;
+	color: white !important;
+}
+
+.botaoAzul span {
+	background-color: #0080C0 !important;
+}
+
+.botaoAzul span:hover {
+	background-color: #006394 !important;
+}
+
+.botaoNormal {
+	font-size: 10pt !important;
+	height: 30px !important;
+	margin: 0 !important;
+}
+
+.botaoBuscar {
+	background: none !important;
+	border: none !important;
+	height: 24px !important;
+}
+
+.botaoBuscar span {
+	background-image: url('/avadoc/resources/img/buscar.png');	
+	padding-left: 10px !important;
+	height: 24px !important;
+}
+
+.matricula td {
+	padding: 0 !important;
 }
