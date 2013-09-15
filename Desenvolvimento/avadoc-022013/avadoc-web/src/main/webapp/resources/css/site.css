@@ -90,3 +90,7 @@ form {
     -pie-background: linear-gradient(#FCFCFC, #D7D7D7);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FCFCFC', endColorstr='#D7D7D7');
 }
+
+.textoCentralizado {
+	text-align: center;
+}

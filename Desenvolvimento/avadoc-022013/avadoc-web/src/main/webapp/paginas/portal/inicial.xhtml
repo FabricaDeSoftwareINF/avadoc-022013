@@ -11,13 +11,15 @@
 	<ui:define name="icones">
 		<div style="position: relative; margin-top: -70px; margin-right: 10px; float: right;">
 			<h:outputLink value="#{request.contextPath}/j_spring_security_logout">
-				<div>
-					<h:outputText value="Sair" />
+				<div>					
 					<h:graphicImage value="/resources/img/sair.png" width="48" height="48" />
+				</div>
+				<div class="textoCentralizado">
+					<h:outputText value="Sair" />
 				</div>
 			</h:outputLink>
 		</div>
-		<div class="small-12 large-12 columns" style="text-align: center; margin-top: -10px !important;">Bem vindo, #{secAuth.usuarioLogado.nome}</div>
+		<div class="small-12 large-12 columns textoCentralizado" style="margin-top: -10px !important;">Bem vindo, #{secAuth.usuarioLogado.nome}</div>
 	</ui:define>
 	<ui:define name="menu">
 		<h:form id="menus" style="width:100%">
