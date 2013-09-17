@@ -35,6 +35,7 @@ public class Docente extends AbstractEntity implements Serializable {
 	/**
 	 * Nome do docente avaliado
 	 */
+	@Column(length=50, nullable=false)
 	private String nome;
 	
 	/**

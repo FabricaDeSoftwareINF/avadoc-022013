@@ -1,14 +1,6 @@
 package br.ufg.inf.avadoc.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
-import br.ufg.inf.avadoc.entity.AbstractEntity;
-import br.ufg.inf.avadoc.entity.IAtividade;
-
+import br.ufg.inf.avadoc.entity.AbstractAtividade;
 
 /**
  * AtividadeEnsino
@@ -17,10 +9,8 @@ import br.ufg.inf.avadoc.entity.IAtividade;
  * 
  */
 
-public class AtividadeEnsino extends AbstractEntity implements IAtividade {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id_atividade_ensino")
+public class AtividadeEnsino extends AbstractAtividade {
+
 	private Long id;
 	/**
 	 * Horas aula semanais para graduação presenciais.
@@ -39,6 +29,10 @@ public class AtividadeEnsino extends AbstractEntity implements IAtividade {
 	 */
 	private int posGradHorasAulaSemanaisDistancia;
 
+	private double pontosGraduacao;
+	
+	private double pontosPosGraduacao;
+
 	/**
 	 * Retorna pontuação referente à atividade.
 	 * 
@@ -48,25 +42,24 @@ public class AtividadeEnsino extends AbstractEntity implements IAtividade {
 	public double getPontos() {
 		return 10 * (graduacaoHorasAulaSemanaisPresenciais
 				+ graduacaoHorasAulaSemanaisDistancia
-				+ posGradHorasAulaSemanaisPresenciais + posGradHorasAulaSemanaisDistancia);
+				+ posGradHorasAulaSemanaisPresenciais 
+				+ posGradHorasAulaSemanaisDistancia);
 	}
 
-	/**
-	 * Retorna pontuação referente à graduação.
-	 * 
-	 * @return (total de horas semanais) * 10
-	 */
-	public int getPontosGraduacao() {
-		return 10 * (graduacaoHorasAulaSemanaisPresenciais + graduacaoHorasAulaSemanaisDistancia);
+	public double getPontosGraduacao() {
+		return pontosGraduacao;
 	}
 
-	/**
-	 * Retorna pontuação referente à pós-graduação.
-	 * 
-	 * @return (total de horas semanais) * 10
-	 */
-	public int getPontosPosGraduacao() {
-		return 10 * (posGradHorasAulaSemanaisPresenciais + posGradHorasAulaSemanaisDistancia);
+	public void setPontosGraduacao(double pontosGraduacao) {
+		this.pontosGraduacao = pontosGraduacao;
+	}
+
+	public double getPontosPosGraduacao() {
+		return pontosPosGraduacao;
+	}
+
+	public void setPontosPosGraduacao(double pontosPosGraduacao) {
+		this.pontosPosGraduacao = pontosPosGraduacao;
 	}
 
 	/**
@@ -166,6 +159,7 @@ public class AtividadeEnsino extends AbstractEntity implements IAtividade {
 
 	/**
 	 * Altera id
+	 * 
 	 * @param id
 	 */
 	public void setId(Long id) {
