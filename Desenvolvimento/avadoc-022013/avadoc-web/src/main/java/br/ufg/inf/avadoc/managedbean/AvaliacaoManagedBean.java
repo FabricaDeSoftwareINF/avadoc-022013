@@ -53,7 +53,7 @@ public class AvaliacaoManagedBean extends AbstractManagedBean implements Seriali
     public void getDadosDocente() {	
     	docente = Mocks.obtenhaDocentePorMatricula(getMatriculaSelecionada());
     	
-    	if (docente == null) {
+    	if (docente == null && getMatriculaSelecionada() != "") {
 			RequestContext context = RequestContext.getCurrentInstance();
     		context.execute("caixaDialogo.show()");
     	}
