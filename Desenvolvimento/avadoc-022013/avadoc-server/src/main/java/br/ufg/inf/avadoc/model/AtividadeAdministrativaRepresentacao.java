@@ -2,17 +2,7 @@ package br.ufg.inf.avadoc.model;
 
 import java.io.Serializable;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
-
-import br.ufg.inf.avadoc.entity.AbstractEntity;
-import br.ufg.inf.avadoc.entity.IAtividade;
+import br.ufg.inf.avadoc.entity.AbstractAtividade;
 import br.ufg.inf.avadoc.entity.Producao;
 import br.ufg.inf.avadoc.model.enums.EnumTipoAtividade;
 import br.ufg.inf.avadoc.model.enums.EnumTipoProducao;
@@ -25,13 +15,15 @@ import br.ufg.inf.avadoc.model.enums.EnumTipoProducao;
  * 
  */
 
-public class AtividadeAdministrativaRepresentacao extends AbstractEntity
-		implements IAtividade, Serializable {
+public class AtividadeAdministrativaRepresentacao extends AbstractAtividade
+		implements Serializable {
+
 	private static final long serialVersionUID = -7989496005881283847L;
 
 	private Long id;
 	/**
-	 * Atividades de direção ou de função gratificada
+	 * Atividades de dire&ccedil;&atilde;o ou de fun&ccedil;&atilde;o
+	 * gratificada
 	 */
 	private Producao direcaoFuncaoGratificada;
 	/**
@@ -43,7 +35,7 @@ public class AtividadeAdministrativaRepresentacao extends AbstractEntity
 	 */
 	private Producao outraAdministrativa;
 	/**
-	 * Atividades de representação fora da UFG
+	 * Atividades de representa&ccedil;&atilde;o fora da UFG
 	 */
 	private Producao representacaoFora;
 
@@ -62,7 +54,8 @@ public class AtividadeAdministrativaRepresentacao extends AbstractEntity
 	}
 
 	/**
-	 * Sub-atividade referente a atividades de direção ou de função gratificada
+	 * Sub-atividade referente a atividades de dire&ccedil;&atilde;o ou de
+	 * fun&ccedil;&atilde;o gratificada
 	 * 
 	 * @return direcaoFuncaoGratificada
 	 */
@@ -71,8 +64,8 @@ public class AtividadeAdministrativaRepresentacao extends AbstractEntity
 	}
 
 	/**
-	 * Altera Sub-atividade referente a atividades de direção ou de função
-	 * gratificada
+	 * Altera Sub-atividade referente a atividades de dire&ccedil;&atilde;o ou
+	 * de fun&ccedil;&atilde;o gratificada
 	 * 
 	 * @param direcaoFuncaoGratificada
 	 */
@@ -161,6 +154,7 @@ public class AtividadeAdministrativaRepresentacao extends AbstractEntity
 
 	/**
 	 * Altera id
+	 * 
 	 * @param id
 	 */
 	public void setId(Long id) {

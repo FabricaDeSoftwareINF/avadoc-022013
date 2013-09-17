@@ -1,6 +1,3 @@
-/**
- * 
- */
 package br.ufg.inf.avadoc.entity;
 
 import java.io.Serializable;
@@ -9,7 +6,6 @@ import java.util.Date;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -25,14 +21,14 @@ import br.ufg.inf.avadoc.model.AtividadeOutra;
 import br.ufg.inf.avadoc.model.AtividadePesquisaExtensao;
 import br.ufg.inf.avadoc.model.ProducaoIntelectual;
 
-
 /**
  * ExtratoAtividades
  * 
  * Extrato com atividades do docente (Radoc)
  */
 @Entity
-public class ExtratoAtividades extends AbstractEntity implements Serializable {
+public class ExtratoAtividades extends AbstractAtividade implements
+		Serializable {
 	private static final long serialVersionUID = -7740600208068664832L;
 
 	/**
@@ -87,9 +83,6 @@ public class ExtratoAtividades extends AbstractEntity implements Serializable {
 	@JoinColumn(name = "id_atividade_outra")
 	private AtividadeOutra atividadeOutra;
 	
-	@Column (name = "pontos")
-	private double pontos;
-
 	/**
 	 * Retorna Docente avaliado
 	 * 
@@ -235,13 +228,18 @@ public class ExtratoAtividades extends AbstractEntity implements Serializable {
 	public void setAtividadeOutra(AtividadeOutra atividadeOutra) {
 		this.atividadeOutra = atividadeOutra;
 	}
-
-	public double getPontos() {
+	/**
+	 * Pontos da atividade.
+	 * */
+	public double getPontos(){
 		return pontos;
 	}
-
-	public void setPontos(double pontos) {
+	/**
+	 * Pontos da atividade.
+	 * */
+	public void setPontos(double pontos){
 		this.pontos = pontos;
+		
 	}
 
 	public Long getId() {

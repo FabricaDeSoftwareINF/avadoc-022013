@@ -2,14 +2,6 @@ package br.ufg.inf.avadoc.entity;
 
 import java.io.Serializable;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-
 
 /**
  * Produto
@@ -17,35 +9,26 @@ import javax.persistence.ManyToOne;
  * Item produzido pelo docente.
  * 
  */
-@Entity
 public class Produto extends AbstractEntity implements Serializable {
 	private static final long serialVersionUID = 5401913319005557356L;
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id_produto")
 	private Long id;
 	/**
 	 * Código do artefato/atividade.
 	 */
-	@Column (name ="codigo", nullable = false)
 	private String codigo;
 	/**
 	 * Pontos do produto.
 	 */
-	@Column (name ="pontos")
 	private double pontos;
 	/**
 	 * Pontuação máxima do artefato/atividade
 	 */
-	@Column (name ="pontuacao_maxima")
 	private int pontuacaoMaxima;
 
 	/**
 	 * Produção a qual o produto faz parte
 	 */
-	@ManyToOne
-	@JoinColumn(name = "id_producao")
 	private Producao producao;
 
 	/**
