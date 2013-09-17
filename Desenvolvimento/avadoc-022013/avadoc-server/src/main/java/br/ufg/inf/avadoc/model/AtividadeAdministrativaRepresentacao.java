@@ -2,6 +2,12 @@ package br.ufg.inf.avadoc.model;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 import br.ufg.inf.avadoc.entity.AbstractAtividade;
 import br.ufg.inf.avadoc.entity.Producao;
 import br.ufg.inf.avadoc.model.enums.EnumTipoAtividade;
@@ -14,12 +20,15 @@ import br.ufg.inf.avadoc.model.enums.EnumTipoProducao;
  * representação
  * 
  */
-
+@Entity
 public class AtividadeAdministrativaRepresentacao extends AbstractAtividade
 		implements Serializable {
 
 	private static final long serialVersionUID = -7989496005881283847L;
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id_atividade_admin_represent")
 	private Long id;
 	/**
 	 * Atividades de dire&ccedil;&atilde;o ou de fun&ccedil;&atilde;o

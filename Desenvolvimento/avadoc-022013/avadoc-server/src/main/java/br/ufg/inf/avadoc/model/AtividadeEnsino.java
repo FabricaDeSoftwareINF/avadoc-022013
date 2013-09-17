@@ -1,5 +1,11 @@
 package br.ufg.inf.avadoc.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 import br.ufg.inf.avadoc.entity.AbstractAtividade;
 
 /**
@@ -9,8 +15,12 @@ import br.ufg.inf.avadoc.entity.AbstractAtividade;
  * 
  */
 
+@Entity
 public class AtividadeEnsino extends AbstractAtividade {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id_atividade_ensino")
 	private Long id;
 	/**
 	 * Horas aula semanais para graduação presenciais.
