@@ -20,7 +20,8 @@
             	<p:inputText value="#{avaliacaoManagedBean.matriculaSelecionada}" >
                 	<p:ajax update="dadosDocente" event="change" listener="#{avaliacaoManagedBean.getDadosDocente}"/>
             	</p:inputText>
-				<p:commandButton value="" actionListener="#{avaliacaoManagedBean.getDadosDocente}" styleClass="botaoNormal botaoBuscar" style="height: 24px !important;"/>
+				<p:commandButton value="" actionListener="#{avaliacaoManagedBean.getDadosDocente}" 
+					styleClass="botaoNormal botaoBuscar" style="height: 24px !important;" update="dadosDocente"/>
             </h:panelGrid>
             <h:outputLabel value="Nome:"/>
             <h:outputText value="#{avaliacaoManagedBean.docente.nome}" />
@@ -58,5 +59,8 @@
                 <p:commandButton styleClass="botaoAzul botaoNormal" value="Iniciar avaliação" actionListener="#{avaliacaoManagedBean.metodo()}"/>
             </div>
         </div>
+        <p:dialog id="modalDialog" header="Aviso" widgetVar="caixaDialogo" modal="false" height="100">  
+    		<h:outputText value="Docente não encontrado." />  
+		</p:dialog> 		
     </div>
 </html>
