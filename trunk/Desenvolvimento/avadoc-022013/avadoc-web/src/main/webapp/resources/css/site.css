@@ -160,3 +160,11 @@ form {
 .matricula td {
 	padding: 0 !important;
 }
+
+.alturaPadrao {
+	line-height: 25px !important;
+}
+
+.margemTop5{
+	margin-top: 5px !important;
+}
