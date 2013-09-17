@@ -6,6 +6,7 @@ import br.ufg.inf.avadoc.util.Mocks;
 import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import org.primefaces.context.RequestContext;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
@@ -49,8 +50,13 @@ public class AvaliacaoManagedBean extends AbstractManagedBean implements Seriali
     /**
      * Obtém os dados do docente a partir da matrícula informada na tela.
      */
-    public void getDadosDocente() {
+    public void getDadosDocente() {	
     	docente = Mocks.obtenhaDocentePorMatricula(getMatriculaSelecionada());
+    	
+    	if (docente == null) {
+			RequestContext context = RequestContext.getCurrentInstance();
+    		context.execute("caixaDialogo.show()");
+    	}
     }
 
     /**
