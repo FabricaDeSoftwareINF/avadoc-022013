@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -21,6 +22,7 @@ import br.ufg.inf.avadoc.model.enums.EnumTipoProducao;
  * Atividades e artefatos referentes a Produção Intelectual
  * 
  */
+@Entity
 public class ProducaoIntelectual extends AbstractAtividade implements Serializable {
 	private static final long serialVersionUID = -8781139957824478900L;
 

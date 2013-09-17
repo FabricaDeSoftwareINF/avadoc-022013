@@ -2,6 +2,12 @@ package br.ufg.inf.avadoc.model;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 import br.ufg.inf.avadoc.entity.AbstractEntity;
 import br.ufg.inf.avadoc.entity.IAtividade;
 import br.ufg.inf.avadoc.entity.Producao;
@@ -14,10 +20,14 @@ import br.ufg.inf.avadoc.model.enums.EnumTipoProducao;
  * Outras atividades
  * 
  */
+@Entity
 public class AtividadeOutra extends AbstractEntity implements IAtividade,
 		Serializable {
 	private static final long serialVersionUID = 5832616413995668556L;
-
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id_atividade_outra")	
 	private Long id;
 	/**
 	 * Atividades Acadêmicas - Orientação

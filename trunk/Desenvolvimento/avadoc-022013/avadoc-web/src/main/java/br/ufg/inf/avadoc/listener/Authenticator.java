@@ -44,8 +44,12 @@ public class Authenticator implements AuthenticationProvider, Serializable {
 	public Authenticator() {
 
 		this.mockUsuarioPerfil = new HashMap<String, Usuario>();
-
-		this.mockUsuarioPerfil.put("admin", new Usuario("Administrador", "admin", "admin", Arrays.asList(EnumTipoUsuario.ADMINISTRADOR)));
+		Usuario usuario = new Usuario();		
+		usuario.setLogin("admin");
+		usuario.setNome("Administrador");
+		usuario.setSenha("admin");
+		usuario.setTipoUsuario(Arrays.asList(EnumTipoUsuario.ADMINISTRADOR));
+		this.mockUsuarioPerfil.put("admin", usuario);
 
 		System.out.println("MOCK DE USUÁRIOS CRIADO COM SUCESSO.");
 	}

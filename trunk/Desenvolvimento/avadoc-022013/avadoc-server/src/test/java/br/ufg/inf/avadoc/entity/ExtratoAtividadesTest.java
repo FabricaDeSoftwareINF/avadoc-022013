@@ -2,18 +2,15 @@ package br.ufg.inf.avadoc.entity;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
-
 import java.util.Date;
-
 import org.junit.Before;
 import org.junit.Test;
-
-import br.ufg.inf.avadoc.entity.AtividadeAdministrativaRepresentacao;
-import br.ufg.inf.avadoc.entity.AtividadeEnsino;
-import br.ufg.inf.avadoc.entity.AtividadeOutra;
-import br.ufg.inf.avadoc.entity.AtividadePesquisaExtensao;
+import br.ufg.inf.avadoc.model.AtividadeAdministrativaRepresentacao;
+import br.ufg.inf.avadoc.model.AtividadeEnsino;
+import br.ufg.inf.avadoc.model.AtividadeOutra;
+import br.ufg.inf.avadoc.model.AtividadePesquisaExtensao;
 import br.ufg.inf.avadoc.entity.ExtratoAtividades;
-import br.ufg.inf.avadoc.entity.ProducaoIntelectual;
+import br.ufg.inf.avadoc.model.ProducaoIntelectual;
 
 public class ExtratoAtividadesTest {
 	ExtratoAtividades extrato;

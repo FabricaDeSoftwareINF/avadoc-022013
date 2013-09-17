@@ -3,6 +3,12 @@ package br.ufg.inf.avadoc.entity;
 import java.io.Serializable;
 import java.util.List;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 import br.ufg.inf.avadoc.model.enums.EnumTipoAtividade;
 import br.ufg.inf.avadoc.model.enums.EnumTipoProducao;
 
@@ -12,11 +18,14 @@ import br.ufg.inf.avadoc.model.enums.EnumTipoProducao;
  * Representa o que foi produzido em uma subatividade.
  * 
  */
-
+@Entity
 public class Producao extends AbstractEntity implements Serializable {
 
 	private static final long serialVersionUID = 3041614986590545497L;
-
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id_producao")
 	private Long id;
 	
 	/**

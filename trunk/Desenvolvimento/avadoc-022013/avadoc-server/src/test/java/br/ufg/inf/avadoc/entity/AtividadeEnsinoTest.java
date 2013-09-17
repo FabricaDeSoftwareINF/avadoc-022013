@@ -1,12 +1,10 @@
 package br.ufg.inf.avadoc.entity;
 
 import static org.junit.Assert.assertEquals;
-
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-
-import br.ufg.inf.avadoc.entity.AtividadeEnsino;
+import br.ufg.inf.avadoc.model.AtividadeEnsino;
 
 public class AtividadeEnsinoTest {
 	private AtividadeEnsino atividadeEnsino;

@@ -6,7 +6,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import br.ufg.inf.avadoc.entity.AtividadeOutra;
+import br.ufg.inf.avadoc.model.AtividadeOutra;
 import br.ufg.inf.avadoc.entity.Produto;
 import br.ufg.inf.avadoc.model.enums.EnumTipoAtividade;
 import br.ufg.inf.avadoc.model.enums.EnumTipoProducao;
