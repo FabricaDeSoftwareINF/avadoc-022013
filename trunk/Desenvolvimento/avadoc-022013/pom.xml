@@ -48,12 +48,12 @@
 		<!-- ************************************************** -->
 		<!-- ************ Default database settings *********** -->
 		<!-- ************************************************** -->
-		<database.user>postgres</database.user>
-		<database.password>postgres</database.password>
+		<database.user>admin</database.user>
+		<database.password>admin</database.password>
 		<database.host>localhost:5432</database.host>
 		<database.name>avadoc</database.name>
 	</properties>
-
+ 
 	<profiles>
 		<profile>
 			<id>oracle</id>
@@ -74,6 +74,11 @@
 
 		<profile>
 			<id>mysql</id>
+			<activation>
+				<property>
+					<name>!oracle !postgres</name>
+				</property>
+			</activation>
 			<properties>
 				<jdbc.groupId>mysql</jdbc.groupId>
 				<jdbc.artifactId>mysql-connector-java</jdbc.artifactId>
@@ -90,11 +95,11 @@
 
 		<profile>
 			<id>postgres</id>
-			<activation>
+			<!--  <activation>
 				<property>
 					<name>!oracle !mysql</name>
 				</property>
-			</activation>
+			</activation> -->
 			<properties>
 				<jdbc.groupId>postgresql</jdbc.groupId>
 				<jdbc.artifactId>postgresql</jdbc.artifactId>
