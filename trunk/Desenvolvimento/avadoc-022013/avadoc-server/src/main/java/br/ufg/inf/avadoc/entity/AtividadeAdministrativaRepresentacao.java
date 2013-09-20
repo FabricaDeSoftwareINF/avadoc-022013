@@ -81,7 +81,8 @@ public class AtividadeAdministrativaRepresentacao extends AbstractAtividade
 				.setTipoAtividade(EnumTipoAtividade.ATIVIDADE_ADMINISTRATIVA_REPRESENTACAO);
 		direcaoFuncaoGratificada
 				.setTipoProducao(EnumTipoProducao.DIRECAO_FUNCAO_GRATIFICADA);
-		this.direcaoFuncaoGratificada = direcaoFuncaoGratificada;
+		this.setPontos(this.getPontos() + direcaoFuncaoGratificada.getPontos());
+		this.direcaoFuncaoGratificada = direcaoFuncaoGratificada;		
 	}
 
 	/**
@@ -103,6 +104,7 @@ public class AtividadeAdministrativaRepresentacao extends AbstractAtividade
 				.setTipoAtividade(EnumTipoAtividade.ATIVIDADE_ADMINISTRATIVA_REPRESENTACAO);
 		administrativa
 				.setTipoProducao(EnumTipoProducao.ATIVIDADE_ADMINISTRATIVA);
+		this.setPontos(this.getPontos() + administrativa.getPontos());
 		this.administrativa = administrativa;
 	}
 
@@ -127,6 +129,7 @@ public class AtividadeAdministrativaRepresentacao extends AbstractAtividade
 				.setTipoAtividade(EnumTipoAtividade.ATIVIDADE_ADMINISTRATIVA_REPRESENTACAO);
 		outraAdministrativa
 				.setTipoProducao(EnumTipoProducao.ATIVIDADE_ADMINISTRATIVA_OUTRAS);
+		this.setPontos(this.getPontos() + outraAdministrativa.getPontos());
 		this.outraAdministrativa = outraAdministrativa;
 	}
 
@@ -149,6 +152,7 @@ public class AtividadeAdministrativaRepresentacao extends AbstractAtividade
 				.setTipoAtividade(EnumTipoAtividade.ATIVIDADE_ADMINISTRATIVA_REPRESENTACAO);
 		representacaoFora
 				.setTipoProducao(EnumTipoProducao.ATIVIDADE_REPRESENTACAO);
+		this.setPontos(this.getPontos() + representacaoFora.getPontos());
 		this.representacaoFora = representacaoFora;
 	}
 

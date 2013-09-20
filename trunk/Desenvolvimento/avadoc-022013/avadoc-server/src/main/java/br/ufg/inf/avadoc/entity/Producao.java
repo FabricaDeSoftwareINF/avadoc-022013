@@ -1,6 +1,7 @@
 package br.ufg.inf.avadoc.entity;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -27,6 +28,10 @@ import br.ufg.inf.avadoc.model.enums.EnumTipoProducao;
 public class Producao extends AbstractEntity implements Serializable {
 
 	private static final long serialVersionUID = 3041614986590545497L;
+	
+	public Producao() {
+		this.produtos = new ArrayList<Produto>();
+	}
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -83,6 +88,7 @@ public class Producao extends AbstractEntity implements Serializable {
 	 */
 	public void addProduto(Produto produto) {
 		produto.setProducao(this);
+		this.pontos += produto.getPontos();
 		this.produtos.add(produto);
 	}
 
@@ -124,6 +130,5 @@ public class Producao extends AbstractEntity implements Serializable {
 
 	public void setId(Long id) {
 		this.id = id;
-	}
-	
+	}	
 }
