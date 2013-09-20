@@ -66,6 +66,7 @@ public class AtividadeOutra extends AbstractAtividade implements Serializable {
 	public void setOrientacao(Producao orientacao) {
 		orientacao.setTipoAtividade(EnumTipoAtividade.ATIVIDADE_OUTRA);
 		orientacao.setTipoProducao(EnumTipoProducao.ATIVIDADE_ACADEMICA_ORIENTACAO);
+		super.setPontos(super.getPontos() + orientacao.getPontos());
 		this.orientacao = orientacao;
 	}
 
@@ -86,6 +87,7 @@ public class AtividadeOutra extends AbstractAtividade implements Serializable {
 	public void setBancaCurso(Producao bancaCurso) {
 		bancaCurso.setTipoAtividade(EnumTipoAtividade.ATIVIDADE_OUTRA);
 		bancaCurso.setTipoProducao(EnumTipoProducao.ATIVIDADE_ACADEMICA_BANCAS_CURSOS);
+		super.setPontos(super.getPontos() + bancaCurso.getPontos());
 		this.bancaCurso = bancaCurso;
 	}
 
@@ -110,6 +112,7 @@ public class AtividadeOutra extends AbstractAtividade implements Serializable {
 				.setTipoAtividade(EnumTipoAtividade.ATIVIDADE_OUTRA);
 		aprendizadoAperfeicoamento
 				.setTipoProducao(EnumTipoProducao.ATIVIDADE_APRENDIZADO_APERFEICOAMENTO);
+		super.setPontos(super.getPontos() + aprendizadoAperfeicoamento.getPontos());
 		this.aprendizadoAperfeicoamento = aprendizadoAperfeicoamento;
 	}
 
