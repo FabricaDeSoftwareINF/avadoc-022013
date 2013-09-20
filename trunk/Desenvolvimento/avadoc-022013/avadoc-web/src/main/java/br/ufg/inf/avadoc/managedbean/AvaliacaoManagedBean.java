@@ -1,14 +1,15 @@
 package br.ufg.inf.avadoc.managedbean;
 
-import br.ufg.inf.avadoc.entity.Docente;
-import br.ufg.inf.avadoc.model.enums.EnumTipoAvaliacao;
-import br.ufg.inf.avadoc.util.Mocks;
 import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+
 import org.primefaces.context.RequestContext;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
+
+import br.ufg.inf.avadoc.entity.Docente;
+import br.ufg.inf.avadoc.util.Mocks;
 
 @Scope("session")
 @Component(AvaliacaoManagedBean.KEY_COMPONENT)
