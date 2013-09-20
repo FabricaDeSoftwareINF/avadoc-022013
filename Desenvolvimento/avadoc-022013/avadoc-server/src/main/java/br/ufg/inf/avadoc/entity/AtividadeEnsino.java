@@ -86,6 +86,7 @@ public class AtividadeEnsino extends AbstractAtividade {
 	 */
 	public void setGraduacaoHorasAulaSemanaisPresenciais(
 			int graduacaoHorasAulaSemanaisPresenciais) {
+		super.setPontos(super.getPontos() + graduacaoHorasAulaSemanaisPresenciais);
 		this.graduacaoHorasAulaSemanaisPresenciais = graduacaoHorasAulaSemanaisPresenciais;
 	}
 
@@ -108,6 +109,7 @@ public class AtividadeEnsino extends AbstractAtividade {
 	 */
 	public void setGraduacaoHorasAulaSemanaisDistancia(
 			int graduacaoHorasAulaSemanaisDistancia) {
+		super.setPontos(super.getPontos() + graduacaoHorasAulaSemanaisDistancia);
 		this.graduacaoHorasAulaSemanaisDistancia = graduacaoHorasAulaSemanaisDistancia;
 	}
 
@@ -130,6 +132,7 @@ public class AtividadeEnsino extends AbstractAtividade {
 	 */
 	public void setPosGradHorasAulaSemanaisPresenciais(
 			int posGradHorasAulaSemanaisPresenciais) {
+		super.setPontos(super.getPontos() + posGradHorasAulaSemanaisPresenciais);
 		this.posGradHorasAulaSemanaisPresenciais = posGradHorasAulaSemanaisPresenciais;
 	}
 
@@ -152,6 +155,7 @@ public class AtividadeEnsino extends AbstractAtividade {
 	 */
 	public void setPosGradHorasAulaSemanaisDistancia(
 			int posGradHorasAulaSemanaisDistancia) {
+		super.setPontos(super.getPontos() + posGradHorasAulaSemanaisDistancia);
 		this.posGradHorasAulaSemanaisDistancia = posGradHorasAulaSemanaisDistancia;
 	}
 
