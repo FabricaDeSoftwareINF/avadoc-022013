@@ -7,6 +7,7 @@ import java.util.List;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
+import org.apache.log4j.Logger;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -72,7 +73,7 @@ public final class XmlAtividades {
 			}
 			return produtos;
 		} catch (Exception e) {
-			System.err.println(e.getMessage());
+			Logger.getLogger(e.getMessage());
 		}
 		return null;
 	}

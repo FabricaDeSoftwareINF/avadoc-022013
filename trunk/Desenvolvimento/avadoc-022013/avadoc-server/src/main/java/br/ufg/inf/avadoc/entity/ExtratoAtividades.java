@@ -226,20 +226,7 @@ public class ExtratoAtividades extends AbstractAtividade implements
 	public void setAtividadeOutra(AtividadeOutra atividadeOutra) {
 		this.atividadeOutra = atividadeOutra;
 	}
-	/**
-	 * Pontos da atividade.
-	 * */
-	public double getPontos(){
-		return super.getPontos();
-	}
-	/**
-	 * Pontos da atividade.
-	 * */
-	public void setPontos(double pontos){
-		super.setPontos(pontos);
-		
-	}
-
+	
 	public Long getId() {
 		return id;
 	}

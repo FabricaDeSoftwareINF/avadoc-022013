@@ -37,7 +37,6 @@ public class Authenticator implements AuthenticationProvider, Serializable {
 
 	/** Atributo mockUsuario. */
 	private final Map<String, Usuario> mockUsuarioPerfil;
-	
 
 	/**
 	 * Responsável pela criação de novas instâncias desta classe.
@@ -45,7 +44,7 @@ public class Authenticator implements AuthenticationProvider, Serializable {
 	public Authenticator() {
 
 		this.mockUsuarioPerfil = new HashMap<String, Usuario>();
-		Usuario usuario = new Usuario();		
+		Usuario usuario = new Usuario();
 		usuario.setLogin("admin");
 		usuario.setNome("Administrador");
 		usuario.setSenha("admin");
@@ -63,30 +62,34 @@ public class Authenticator implements AuthenticationProvider, Serializable {
 	 * @return <code>Authentication</code>
 	 */
 	@Override
-	public Authentication authenticate(final Authentication authentication) throws AuthenticationException {
+	public Authentication authenticate(final Authentication authentication)
+			throws AuthenticationException {
 
 		final String login = (String) authentication.getPrincipal();
 
 		final String senha = (String) authentication.getCredentials();
 
-		String campos = null;
+		String campos = this.isCamposObrigatoriosNaoInformados(login, senha);
 
-		if (!UtilString.isVazio(( campos = this.isCamposObrigatoriosNaoInformados(login, senha) ))) {
+		if (!UtilString.isVazio(campos)) {
 
-			throw new BadCredentialsException("Preencha Campos Obrigatorios, "+ campos);
+			throw new BadCredentialsException("Preencha Campos Obrigatorios, "
+					+ campos);
 		}
 
 		this.usuarioLogado = this.mockUsuarioPerfil.get(login);
 
-		if (!UtilObjeto.isReferencia(this.usuarioLogado) || !UtilString.isStringsIguais(this.usuarioLogado.getSenha(), senha)) {
+		if (!UtilObjeto.isReferencia(this.usuarioLogado)
+				|| !UtilString.isStringsIguais(this.usuarioLogado.getSenha(),
+						senha)) {
 
 			throw new BadCredentialsException("Usuario e Senha Incorretos");
 		}
 
-		return new UsernamePasswordAuthenticationToken(authentication.getPrincipal(), authentication.getCredentials(), this.getAuthorities());
+		return new UsernamePasswordAuthenticationToken(
+				authentication.getPrincipal(), authentication.getCredentials(),
+				this.getAuthorities());
 	}
-
-	
 
 	/**
 	 * Método responsável por validar campos obrigatórios não informados.
@@ -99,15 +102,17 @@ public class Authenticator implements AuthenticationProvider, Serializable {
 	 * 
 	 * @return <code>String</code>
 	 */
-	private String isCamposObrigatoriosNaoInformados(final String login, final String senha) {
+	private String isCamposObrigatoriosNaoInformados(final String login,
+			final String senha) {
 
 		final StringBuilder builderFields = new StringBuilder();
 
 		builderFields.append(UtilString.isVazio(login) ? "Login" : "");
 
-		builderFields.append(UtilString.isVazio(senha) && UtilString.isVazio(login) ? ", " : "");
+		builderFields.append(UtilString.isVazio(senha)
+				&& UtilString.isVazio(login) ? ", " : "");
 
-		builderFields.append(UtilString.isVazio(senha) ? "Senha": "");
+		builderFields.append(UtilString.isVazio(senha) ? "Senha" : "");
 
 		return builderFields.toString();
 	}
@@ -132,8 +137,8 @@ public class Authenticator implements AuthenticationProvider, Serializable {
 	}
 
 	/**
-	 * Método responsável por fornecer suporte a autenticação de usuários através do framework
-	 * Spring-security.
+	 * Método responsável por fornecer suporte a autenticação de usuários
+	 * através do framework Spring-security.
 	 * 
 	 * @author Wilker Machado
 	 * 
