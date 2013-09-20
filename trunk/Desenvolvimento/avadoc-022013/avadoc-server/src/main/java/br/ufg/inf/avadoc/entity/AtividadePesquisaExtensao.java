@@ -59,6 +59,7 @@ public class AtividadePesquisaExtensao extends AbstractAtividade implements
 	public void setPesquisa(Producao pesquisa) {
 		pesquisa.setTipoAtividade(EnumTipoAtividade.ATIVIDADE_PESQUISA_EXTENSAO);
 		pesquisa.setTipoProducao(EnumTipoProducao.ATIVIDADE_PESQUISA);
+		super.setPontos(super.getPontos() + pesquisa.getPontos());
 		this.pesquisa = pesquisa;
 	}
 
@@ -79,6 +80,7 @@ public class AtividadePesquisaExtensao extends AbstractAtividade implements
 	public void setExtensao(Producao extensao) {
 		extensao.setTipoAtividade(EnumTipoAtividade.ATIVIDADE_PESQUISA_EXTENSAO);
 		extensao.setTipoProducao(EnumTipoProducao.ATIVIDADE_EXTENSAO);
+		super.setPontos(super.getPontos() + extensao.getPontos());
 		this.extensao = extensao;
 	}
 
