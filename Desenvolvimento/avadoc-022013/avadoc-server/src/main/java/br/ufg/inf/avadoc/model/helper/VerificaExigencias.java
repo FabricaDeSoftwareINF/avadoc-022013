@@ -81,9 +81,10 @@ public final class VerificaExigencias {
 
 			boolean resultado = true;
 			final boolean exigI = verificaExigenciaI(medAtvEns, ocupaDirecao);
-			if (!exigI)
+			if (!exigI) {
 				resultado = false;
-
+			}
+			
 			final boolean exigII = verificaExigenciaII(medAtvInt, jorTra,
 					medAtvEns);
 			if (!exigII) {
@@ -360,8 +361,7 @@ public final class VerificaExigencias {
 			if (medAtvEns > limiteMinimo && medAtvEns < limiteMaximo) {
 				pontos = topoSubtracao - medAtvEns / DIVISOR;
 			}
-			boolean resultado = true;
-
+			
 			if (!afastado) {
 				return false;
 			}
