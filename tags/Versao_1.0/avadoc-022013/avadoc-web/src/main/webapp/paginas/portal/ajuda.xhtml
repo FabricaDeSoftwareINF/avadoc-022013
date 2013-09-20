@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:sec="http://www.springframework.org/security/facelets/tags">
+
+<div class="small-12 large-12 columns padding10">
+	<div class="titulo">
+		<h:outputLabel class="textoCentralizado" value="Ajuda" style="font-size:24px;" />
+	</div>
+	<br></br><br></br>
+	<div class="padding10">
+		<h:outputLabel value=" - A página inicial do sistema contém as estatísticas de quantos docentes estão sendo avaliados pelo sistema." />
+	</div>
+	<div class="padding10">
+		<h:outputLabel value=" - A página Avaliação do docente é onde o usuário seleciona o docente a ser avaliado e efetua a avaliação." />
+	</div>
+	<div class="padding10">
+		<h:outputLabel value=" - A página Configurações é onde o usuário define se deseja que o sistema deve gerar log de importação e exportação, se deseja que a versão corrente seja mostrada na página e também define o tipo de conexão." />
+	</div>
+	<div class="padding10">
+		<h:outputLabel value="Link da Resolução:" />
+		<p:spacer width="5" />
+
+		<a href="#" onclick="window.open('http://cavi.prodirh.ufg.br/uploads/65/original_Resolucao_CONSUNI_2009_0021.pdf', 'Consuni');">
+			<label style="padding-left: 15px;color: #005CA1;text-decoration: underline;">Consuni 21/2009</label>
+		</a>
+	</div>
+</div>
+</html>

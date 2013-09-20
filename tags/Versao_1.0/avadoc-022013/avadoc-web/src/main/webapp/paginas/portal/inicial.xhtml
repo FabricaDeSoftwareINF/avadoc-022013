@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:sec="http://www.springframework.org/security/facelets/tags">
+
+<ui:composition template="/templates/template.xhtml">
+	<ui:define name="icones">
+		<div style="position: relative; margin-top: -70px; margin-right: 10px; float: right;">
+			<h:outputLink value="#{request.contextPath}/j_spring_security_logout">
+				<div>					
+					<h:graphicImage value="/resources/img/sair.png" width="48" height="48" />
+				</div>
+				<div class="textoCentralizado">
+					<h:outputText value="Sair" />
+				</div>
+			</h:outputLink>
+		</div>
+		<div class="small-12 large-12 columns textoCentralizado" style="margin-top: -10px !important;">Bem vindo, #{secAuth.usuarioLogado.nome}</div>
+	</ui:define>
+	<ui:define name="menu">
+		<h:form id="menus" style="width:100%">
+			<p:menu style="width:98%">
+				<p:menuitem value="Início" update=":form"
+					actionListener="#{navegacaoManagedBean.navegacaoIndex()}"
+					style="margin: 8px 0 !important" />
+				<p:menuitem value="Avaliação do Docente" update=":form"
+					actionListener="#{navegacaoManagedBean.navegacaoAvaliacao()}"
+					style="margin: 8px 0 !important" />
+				<p:menuitem value="Configurações" update=":form"
+					actionListener="#{navegacaoManagedBean.navegacaoConfiguracao()}"
+					style="margin: 8px 0 !important" />
+				<p:menuitem value="Ajuda" update=":form"
+					actionListener="#{navegacaoManagedBean.navegacaoAjuda()}"
+					style="margin: 8px 0 !important" />
+			</p:menu>
+		</h:form>
+	</ui:define>
+	<ui:define name="conteudo">
+		<h:form id="form" enctype="multipart/form-data">
+			<ui:include src="#{navegacaoManagedBean.paginaSelecionada}" />
+		</h:form>
+	</ui:define>
+</ui:composition>
+</html>

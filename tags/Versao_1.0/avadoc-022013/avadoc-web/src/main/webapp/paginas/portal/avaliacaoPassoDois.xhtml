@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+    <h:outputStylesheet library="css" name="site.css"  />
+
+    <div class="small-12 large-12 columns" style="padding: 10px;">
+        <div class="small-12 large-12 columns textoCentralizado"
+             style="margin-top: 5px;">
+            <h:outputLabel value="#{avaliacaoManagedBean.tipoAvaliacao} - #{avaliacaoManagedBean.docente.nome}" style="font-size:24px" />
+        </div>
+
+        <p:panelGrid style="width: 647px;" styleClass="semBorda" >
+
+            <p:row>
+                <p:column colspan="2">
+                    <p:accordionPanel activeIndex="null"> 
+                        <p:tab title="Nota das atividades (N1): "> 
+                            <h:panelGrid columns="3" style="text-align: right;">
+                                <h:outputLabel value="Item I - Atividades de Ensino"/>
+                                <p:inputText />
+                                <h:commandButton class="botaoCancelar botaoSimples" value="Detalhes" type="button"/>
+
+                                <h:outputLabel value="Item II - Produção Intelectual"/>
+                                <p:inputText  />
+                                <h:commandButton class="botaoCancelar botaoSimples" value="Detalhes" type="button"/>
+
+                                <h:outputLabel value="Item III - Atividades de Pesquisa e Extensão"/>
+                                <p:inputText  />
+                                <h:commandButton class="botaoCancelar botaoSimples" value="Detalhes" type="button"/>
+
+                                <h:outputLabel value="Item IV - Atividades Administrativas e de Representação"/>
+                                <p:inputText  />
+                                <h:commandButton class="botaoCancelar botaoSimples" value="Detalhes" type="button"/>
+
+                                <h:outputLabel value="Item V - Outras Atividades"/>
+                                <p:inputText  />
+                                <h:commandButton class="botaoCancelar botaoSimples" value="Detalhes" type="button"/>
+                            </h:panelGrid> 
+                        </p:tab>
+                    </p:accordionPanel>
+                </p:column>
+            </p:row>
+
+            <p:row>
+                <p:column style="text-align: right;"><h:outputLabel value="Nota da diretoria (N2):"/></p:column>
+                <p:column style="width: 450px;"><p:inputText /></p:column>
+            </p:row>
+
+            <p:row>
+                <p:column style="text-align: right;"><h:outputLabel value="Nota do corpo discente (N3):"/></p:column>
+                <p:column><p:inputText /></p:column>
+            </p:row>
+        </p:panelGrid>
+
+        <hr/>
+
+        <h:panelGrid columns="2" cellspacing="5" >
+            <h:outputLabel value="Nota parcial:"/>
+            <h:outputText  />
+
+            <h:outputLabel value="Período avaliado:"/>
+            <h:outputText />
+        </h:panelGrid>
+        
+
+        <div class="small-12 large-12 columns textoCentralizado"
+             style="margin-top: 5px;">
+            <p:commandButton value="Finalizar Avaliação"/>
+        </div>
+    </div>
+</html>

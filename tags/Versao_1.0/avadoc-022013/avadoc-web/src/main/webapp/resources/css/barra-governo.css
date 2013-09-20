@@ -1,0 +1,47 @@
+/*adaptacoes layout a layout*/
+.barra_governo {
+  margin: auto;
+  height: 27px;
+}
+.barra_governo .listras {
+  margin: 0 auto;
+  height: 27px;
+  background: url("../img/governo/listras_logoBrasil.png") left bottom repeat-x;
+}
+
+.barra_governo .listras .ai{
+  background: url("../img/governo/ai.png") no-repeat scroll 0 0 transparent;
+  display: block;
+  float:right;
+  height:22px;
+  margin: -23px 135px 0 0 !important;
+  position: inherit !important;
+  text-indent: -9999px;
+  width:161px;
+}
+
+.barra_governo .listras .ai a {
+  height: 27px;
+  width: 100%;
+  float: right;
+}
+
+
+.barra_governo .listras .logobrasil { 
+  height: 27px; 
+  background: url("../img/governo/logoBrasil.png") right bottom no-repeat;
+}
+.barra_governo .listras .logobrasil a { 
+  height: 27px; 
+  width: 5%; 
+  float: right; 
+}
+
+#sidebar1 {
+  margin: 0pt auto;
+  width: 100%;
+}
+
+#barra-governo-destaque {
+  background-color: #004b82;
+}

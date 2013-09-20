@@ -1,0 +1,288 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>br.inf.ufg.avadoc</groupId>
+	<artifactId>avadoc-022013</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<properties>
+		<commons.io.version>2.4</commons.io.version>
+		<commons.lang.version>3.1</commons.lang.version>
+		<commons.email.version>1.3.1</commons.email.version>
+		<commons.fileupload.version>1.3</commons.fileupload.version>
+		<commons.collections.version>3.2.1</commons.collections.version>
+
+		<commons.io.version>2.4</commons.io.version>
+		<commons.lang.version>3.1</commons.lang.version>
+		<commons.pool.version>1.6</commons.pool.version>
+		<commons.codec.version>1.7</commons.codec.version>
+
+		<commons.digester.version>3.2</commons.digester.version>
+		<commons.beanutils.version>1.8.3</commons.beanutils.version>
+
+		<commons.collections.version>4.0-SNAPSHOT</commons.collections.version>
+
+		<hibernate.version>4.1.9.Final</hibernate.version>
+
+		<spring.security.version>3.1.4.RELEASE</spring.security.version>
+		<spring.data.jpa.version>1.3.4.RELEASE</spring.data.jpa.version>
+		<spring.framework.version>3.2.4.RELEASE</spring.framework.version>
+
+		<slf4j.version>1.6.4</slf4j.version>
+		<jasperreports.version>5.0.1</jasperreports.version>
+
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<build.plugins.plugin.version>2.1.2</build.plugins.plugin.version>
+
+		<!-- ************************************************** -->
+		<!-- *** Hibernate Config - See hibernate.properties ** -->
+		<!-- ************************************************** -->
+		<hibernate.show.sql>true</hibernate.show.sql>
+		<hibernate.format.sql>true</hibernate.format.sql>
+		<hibernate.generate_statistics>true</hibernate.generate_statistics>
+		<hibernate.use_sql_comments>false</hibernate.use_sql_comments>
+		<hibernate.use.second.level.cache>true</hibernate.use.second.level.cache>
+		<hibernate.use.query.cache>true</hibernate.use.query.cache>
+
+		<!-- ************************************************** -->
+		<!-- ************ Default database settings *********** -->
+		<!-- ************************************************** -->
+		<database.user>admin</database.user>
+		<database.password>admin</database.password>
+		<database.host>localhost:5432</database.host>
+		<database.name>avadoc</database.name>
+	</properties>
+ 
+	<profiles>
+		<profile>
+			<id>oracle</id>
+			<properties>
+				<jdbc.groupId>com.oracle</jdbc.groupId>
+				<jdbc.artifactId>ojdbc14</jdbc.artifactId>
+				<jdbc.version>[10.2.0.5,]</jdbc.version>
+				<jdbc.type>oracle</jdbc.type>
+				<jdbc.driver>oracle.jdbc.driver.OracleDriver</jdbc.driver>
+				<jdbc.url>jdbc:oracle:thin:@${database.host}:1521:XE</jdbc.url>
+				<jdbc.catalog>${database.name}</jdbc.catalog>
+				<jdbc.user>${database.user}</jdbc.user>
+				<jdbc.password>${database.password}</jdbc.password>
+				<hibernate.dialect>org.hibernate.dialect.Oracle10gDialect</hibernate.dialect>
+				<sql-maven-plugin.delimiter>/</sql-maven-plugin.delimiter>
+			</properties>
+		</profile>
+
+		<profile>
+			<id>mysql</id>
+			<activation>
+				<property>
+					<name>!oracle !postgres</name>
+				</property>
+			</activation>
+			<properties>
+				<jdbc.groupId>mysql</jdbc.groupId>
+				<jdbc.artifactId>mysql-connector-java</jdbc.artifactId>
+				<jdbc.version>5.1.26</jdbc.version>
+				<jdbc.type>mysql</jdbc.type>
+				<jdbc.driver>com.mysql.jdbc.Driver</jdbc.driver>
+				<jdbc.url>jdbc:mysql://${database.host}/${database.name}</jdbc.url>
+				<jdbc.catalog>${database.name}</jdbc.catalog>
+				<jdbc.user>${database.user}</jdbc.user>
+				<jdbc.password>${database.password}</jdbc.password>
+				<hibernate.dialect>org.hibernate.dialect.MySQLDialect</hibernate.dialect>
+			</properties>
+		</profile>
+
+		<profile>
+			<id>postgres</id>
+			<!--  <activation>
+				<property>
+					<name>!oracle !mysql</name>
+				</property>
+			</activation> -->
+			<properties>
+				<jdbc.groupId>postgresql</jdbc.groupId>
+				<jdbc.artifactId>postgresql</jdbc.artifactId>
+				<jdbc.version>9.2-1002.jdbc4</jdbc.version>
+				<jdbc.type>postgresql</jdbc.type>
+				<jdbc.driver>org.postgresql.Driver</jdbc.driver>
+				<jdbc.url>jdbc:postgresql://${database.host}/${database.name}</jdbc.url>
+				<jdbc.catalog>${database.name}</jdbc.catalog>
+				<jdbc.user>${database.user}</jdbc.user>
+				<jdbc.password>${database.password}</jdbc.password>
+				<hibernate.dialect>org.hibernate.dialect.PostgreSQL82Dialect</hibernate.dialect>
+			</properties>
+		</profile>
+
+		<profile>
+			<id>dev</id>
+			<activation>
+				<property>
+					<name>!prod</name> <!-- Assume prod nao for definido -->
+				</property>
+			</activation>
+			<properties>
+				<log4j.level>warn</log4j.level>
+
+				<hibernate.show.sql>true</hibernate.show.sql>
+				<hibernate.format.sql>true</hibernate.format.sql>
+				<hibernate.generate_statistics>true</hibernate.generate_statistics>
+				<hibernate.use_sql_comments>true</hibernate.use_sql_comments>
+				<hibernate.use.second.level.cache>true</hibernate.use.second.level.cache>
+				<hibernate.use.query.cache>true</hibernate.use.query.cache>
+			</properties>
+		</profile>
+
+		<profile>
+			<id>prod</id>
+			<properties>
+				<log4j.level>debug</log4j.level>
+
+				<hibernate.show.sql>false</hibernate.show.sql>
+				<hibernate.format.sql>false</hibernate.format.sql>
+				<hibernate.generate_statistics>true</hibernate.generate_statistics>
+				<hibernate.use_sql_comments>false</hibernate.use_sql_comments>
+				<hibernate.use.second.level.cache>true</hibernate.use.second.level.cache>
+				<hibernate.use.query.cache>true</hibernate.use.query.cache>
+			</properties>
+		</profile>
+	</profiles>
+
+	<build>
+		<plugins>
+			<!-- http://maven.apache.org/plugins/maven-resources-plugin/ -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.6</version>
+			</plugin>
+
+			<!-- http://maven.apache.org/plugins/maven-compiler-plugin/ -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.0</version>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+
+			<!-- http://maven.apache.org/plugins/maven-site-plugin/ -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-site-plugin</artifactId>
+				<version>3.2</version>
+			</plugin>
+
+			<!-- http://maven.apache.org/plugins/maven-jar-plugin/ -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.4</version>
+				<configuration>
+					<archive>
+						<index>true</index>
+						<manifest>
+							<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
+
+			<!-- http://maven.apache.org/plugins/maven-source-plugin/ -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>2.2.1</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>jar-no-fork</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<!-- http://maven.apache.org/plugins/maven-javadoc-plugin/ -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>2.8</version>
+				<configuration>
+					<use>false</use>
+					<linksource>true</linksource>
+					<verbose>true</verbose>
+					<links>
+						<link>http://java.sun.com/javase/6/docs/api/</link>
+					</links>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.easymock</groupId>
+			<artifactId>easymock</artifactId>
+			<version>3.0</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<repositories>
+		<repository>
+			<id>JBoss Repo</id>
+			<url>http://repository.jboss.com/maven2</url>
+		</repository>
+
+		<repository>
+			<id>maven2-repository.dev.java.net</id>
+			<name>Java.net Repository for Maven</name>
+			<url>http://download.java.net/maven/2</url>
+		</repository>
+
+		<repository>
+			<id>com.springsource.repository.bundles.release</id>
+			<name>EBR Spring Release Repository</name>
+			<url>http://repository.springsource.com/maven/bundles/release</url>
+		</repository>
+
+		<repository>
+			<id>com.springsource.repository.bundles.external</id>
+			<name>EBR External Release Repository</name>
+			<url>http://repository.springsource.com/maven/bundles/external</url>
+		</repository>
+
+		<repository>
+			<id>org.springframework.security.taglibs.facelets</id>
+			<url>http://spring-security-facelets-taglib.googlecode.com/svn/repo/</url>
+		</repository>
+
+		<repository>
+			<id>spring-release</id>
+			<url>http://maven.springframework.org/release</url>
+		</repository>
+
+		<repository>
+			<id>prime-repo</id>
+			<name>Prime Repo</name>
+			<url>http://repository.primefaces.org</url>
+		</repository>
+	</repositories>
+
+	<modules>
+		<module>avadoc-server</module>
+		<module>avadoc-web</module>
+	</modules>
+
+</project>

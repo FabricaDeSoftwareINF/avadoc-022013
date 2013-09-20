@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:sec="http://www.springframework.org/security/facelets/tags">
+
+    
+    <h:outputStylesheet library="css" name="site.css"  />
+    
+    <div class="small-12 large-12 columns padding10">
+        <div class="titulo">
+            <h:outputLabel class="textoCentralizado" value="Avaliação do Docente" style="font-size:24px;" />
+        </div>
+
+        <h:outputLabel styleClass="small-12 large-12 columns paddingTop1EM textoNegrito" value="Informe o docente"/>  
+
+        <h:panelGroup id="avaliacao">
+            <h:panelGrid columns="4" id="dadosDocente">
+                <h:outputLabel value="Matrícula:" styleClass="textoDireita"/>
+                <h:panelGrid columns="2" style="margin: 0;" styleClass="matricula">
+                    <p:inputText value="#{avaliacaoManagedBean.matriculaSelecionada}" >
+                        <p:ajax update="avaliacao" event="change" listener="#{avaliacaoManagedBean.getDadosDocente}"/>
+                    </p:inputText>
+                    <p:commandButton  icon="iconeBotaoBuscar" actionListener="#{avaliacaoManagedBean.getDadosDocente}" 
+                                      style="margin-top: 15px; height: 28px;" update="avaliacao"/>
+                </h:panelGrid>
+                
+                <h:outputLabel value="Nome:" rendered="#{not empty avaliacaoManagedBean.docente}"/>
+                <h:outputText value="#{avaliacaoManagedBean.docente.nome}" rendered="#{not empty avaliacaoManagedBean.docente}"/>
+
+                <h:outputLabel value="Mat. SIAP:" styleClass="textoDireita" rendered="#{not empty avaliacaoManagedBean.docente}"/>
+                <h:outputText value="#{avaliacaoManagedBean.docente.matriculaSIAP}" rendered="#{not empty avaliacaoManagedBean.docente}"/>
+
+                <h:outputLabel value="Data de ingresso:" rendered="#{not empty avaliacaoManagedBean.docente}"/>
+                <h:outputText value="#{avaliacaoManagedBean.convertaDataParaString(avaliacaoManagedBean.docente.dataIngresso)}" rendered="#{not empty avaliacaoManagedBean.docente}"/>
+
+                <h:outputLabel value="Lotação:" styleClass="textoDireita" rendered="#{not empty avaliacaoManagedBean.docente}"/>
+                <h:outputText value="#{avaliacaoManagedBean.docente.lotacao}" rendered="#{not empty avaliacaoManagedBean.docente}"/>
+
+                <h:outputText />
+                <h:outputText />
+
+                <h:outputLabel value="Classe:" styleClass="textoDireita" rendered="#{not empty avaliacaoManagedBean.docente}"/>
+                <h:outputText value="#{avaliacaoManagedBean.docente.classe}" rendered="#{not empty avaliacaoManagedBean.docente}"/>
+
+                <h:outputLabel value="Nível:" rendered="#{not empty avaliacaoManagedBean.docente}"/>
+                <h:outputText value="#{avaliacaoManagedBean.docente.nivel}" rendered="#{not empty avaliacaoManagedBean.docente}"/>
+            </h:panelGrid>
+            <hr></hr>
+            <h:panelGroup layout="block" class="small-12 large-12 columns" rendered="#{not empty avaliacaoManagedBean.docente}">
+                <div class="small-12 large-12 columns">
+                    <h:outputLabel class="large-6 columns textoDireita" style="line-height: 25px;padding-right: 10px;" 
+                                   value="Tipo de Avaliação:" id="tipoAvaliacao"/>
+                    <p:selectOneMenu value="#{avaliacaoManagedBean.tipoAvaliacao}" styleClass="large-6 columsn">
+                        <f:selectItem itemLabel="Selecione" itemValue="null" />
+                        <f:selectItem itemLabel="Estagio Probatório" itemValue="Estágio Probatório" />
+                        <f:selectItem itemLabel="Progressão Horizontal" itemValue="Progressao Horizontal" />
+                    </p:selectOneMenu>
+                </div>
+                <div class="small-12 large-12 columns paddingTop1EM textoCentralizado">
+                    <p:commandButton styleClass="botaoAzul botaoNormal" value="Iniciar avaliação" update=":form"
+                                     actionListener="#{navegacaoManagedBean.navegacaoAvaliacaoPassoDois()}"/>
+                </div>
+            </h:panelGroup>
+        </h:panelGroup>
+        <p:dialog id="modalDialog" header="Aviso" widgetVar="caixaDialogo" modal="false" height="100">  
+            <h:outputText value="Docente não encontrado." />  
+        </p:dialog> 		
+    </div>
+</html>
