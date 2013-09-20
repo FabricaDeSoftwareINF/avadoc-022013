@@ -41,11 +41,11 @@ public class AtividadePesquisaExtensao extends AbstractAtividade implements
 	
 	@Override
 	public double getPontos() {
-		return pontos;
+		return super.getPontos();
 	}
 
 	public void setPontos(double pontos) {
-		this.pontos = pontos;
+		super.setPontos(pontos);
 	}
 
 	/**
