@@ -14,6 +14,6 @@ public interface IAtividade {
 	 * 
 	 * @return pontos
 	 */
-	public double getPontos();
+	double getPontos();
 
 }

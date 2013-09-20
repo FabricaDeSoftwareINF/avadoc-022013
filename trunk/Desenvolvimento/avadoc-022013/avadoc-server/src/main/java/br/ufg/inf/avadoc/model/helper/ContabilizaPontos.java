@@ -8,7 +8,7 @@ import br.ufg.inf.avadoc.entity.AtividadeAdministrativaRepresentacao;
  * */
 public class ContabilizaPontos {
 	
-	AtividadeAdministrativaRepresentacao atividadeAdmRepresent;
+	private AtividadeAdministrativaRepresentacao atividadeAdmRepresent;
 	
 	
 	public ContabilizaPontos(){
