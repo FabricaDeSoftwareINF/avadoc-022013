@@ -23,7 +23,7 @@ public abstract class AbstractManagedBean implements Serializable {
 
 	private static final long serialVersionUID = -7859663056918687753L;
 
-	protected Logger logger = Logger.getLogger(this.getClass().getSimpleName());
+	private Logger logger = Logger.getLogger(this.getClass().getSimpleName());
 
 	/**
 	 * @{link Inherited}

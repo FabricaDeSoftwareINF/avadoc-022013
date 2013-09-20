@@ -60,9 +60,10 @@ public final class UtilString {
 
 			isVazio = false;
 
-			for (int idx = 0; idx < strings.length && (isVazio == false); idx++) {
-
-				isVazio = isVazio(strings[idx]);
+			for (int idx = 0; idx < strings.length; idx++) {
+				if (!isVazio) {
+					isVazio = isVazio(strings[idx]);
+				}
 			}
 		}
 

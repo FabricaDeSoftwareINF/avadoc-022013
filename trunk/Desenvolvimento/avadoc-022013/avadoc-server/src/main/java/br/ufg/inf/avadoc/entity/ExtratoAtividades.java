@@ -2,7 +2,6 @@ package br.ufg.inf.avadoc.entity;
 
 import java.io.Serializable;
 import java.util.Date;
-
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -14,7 +13,6 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-
 import br.ufg.inf.avadoc.model.AtividadeAdministrativaRepresentacao;
 import br.ufg.inf.avadoc.model.AtividadeEnsino;
 import br.ufg.inf.avadoc.model.AtividadeOutra;
@@ -232,13 +230,13 @@ public class ExtratoAtividades extends AbstractAtividade implements
 	 * Pontos da atividade.
 	 * */
 	public double getPontos(){
-		return pontos;
+		return super.getPontos();
 	}
 	/**
 	 * Pontos da atividade.
 	 * */
 	public void setPontos(double pontos){
-		this.pontos = pontos;
+		super.setPontos(pontos);
 		
 	}
 

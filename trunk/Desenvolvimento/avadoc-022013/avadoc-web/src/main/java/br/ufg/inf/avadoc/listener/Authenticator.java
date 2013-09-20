@@ -6,6 +6,7 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.logging.Logger;
 
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -51,7 +52,7 @@ public class Authenticator implements AuthenticationProvider, Serializable {
 		usuario.setTipoUsuario(Arrays.asList(EnumTipoUsuario.ADMINISTRADOR));
 		this.mockUsuarioPerfil.put("admin", usuario);
 
-		System.out.println("MOCK DE USUÁRIOS CRIADO COM SUCESSO.");
+		Logger.getLogger("MOCK DE USUÁRIOS CRIADO COM SUCESSO.");
 	}
 
 	/**

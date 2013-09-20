@@ -7,6 +7,7 @@ import java.net.URL;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 
+import org.apache.log4j.Logger;
 import org.jopendocument.dom.spreadsheet.Sheet;
 import org.jopendocument.dom.spreadsheet.SpreadSheet;
 
@@ -20,6 +21,9 @@ import br.ufg.inf.avadoc.entity.ExtratoAtividades;
  */
 public class OdsGerador {
 
+	private OdsGerador(){		
+	}
+	
 	/**
 	 * Gera a planilha a partir de um template. <BR>
 	 * Retorna planilha com as pontuações obtidas do extrato de atividades
@@ -37,9 +41,9 @@ public class OdsGerador {
 			File file = new File(filePath.toURI());
 			sheet = SpreadSheet.createFromFile(file).getSheet(0);
 		} catch (IOException e) {
-			e.printStackTrace();
+			Logger.getLogger("IOException");
 		} catch (URISyntaxException e1) {
-			e1.printStackTrace();
+			Logger.getLogger("URISyntaxException");
 		}
 
 		sheet.getCellAt("B1").setValue(extrato.getDocente().getNome());

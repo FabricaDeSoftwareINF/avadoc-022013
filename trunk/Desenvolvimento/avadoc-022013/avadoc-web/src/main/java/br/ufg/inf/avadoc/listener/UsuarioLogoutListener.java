@@ -1,6 +1,7 @@
 package br.ufg.inf.avadoc.listener;
 
 import java.io.IOException;
+import java.util.logging.Logger;
 
 import javax.faces.context.ExternalContext;
 import javax.faces.context.FacesContext;
@@ -43,13 +44,14 @@ public class UsuarioLogoutListener implements PhaseListener {
 
 				try {
 
-					this.redirecionar(this.getRequest(facesContext).getContextPath().concat("/login.jsf"), facesContext);
+					this.redirecionar(this.getRequest(facesContext)
+							.getContextPath().concat("/login.jsf"),
+							facesContext);
 
 					facesContext.responseComplete();
 
 				} catch (final IOException e) {
-
-					e.printStackTrace();
+					Logger.getLogger("IOException");
 				}
 			}
 		}
@@ -64,7 +66,8 @@ public class UsuarioLogoutListener implements PhaseListener {
 	 * 
 	 * @throws IOException
 	 */
-	private void redirecionar(final String destino, final FacesContext facesContext) throws IOException {
+	private void redirecionar(final String destino,
+			final FacesContext facesContext) throws IOException {
 
 		this.getResponse(facesContext).sendRedirect(destino);
 	}
@@ -80,7 +83,8 @@ public class UsuarioLogoutListener implements PhaseListener {
 	 */
 	private HttpServletResponse getResponse(final FacesContext facesContext) {
 
-		return (HttpServletResponse) facesContext.getExternalContext().getResponse();
+		return (HttpServletResponse) facesContext.getExternalContext()
+				.getResponse();
 	}
 
 	/**
@@ -94,7 +98,8 @@ public class UsuarioLogoutListener implements PhaseListener {
 	 */
 	private HttpServletRequest getRequest(final FacesContext facesContext) {
 
-		return (HttpServletRequest) facesContext.getExternalContext().getRequest();
+		return (HttpServletRequest) facesContext.getExternalContext()
+				.getRequest();
 	}
 
 	/**
@@ -130,10 +135,15 @@ public class UsuarioLogoutListener implements PhaseListener {
 	 */
 	private Usuario getUsuarioLogado() {
 
-		return WebApplicationContextUtils.getWebApplicationContext(UsuarioLogoutListener.getApplicationScope()).getBean("secAuth", Authenticator.class).getUsuarioLogado();
+		return WebApplicationContextUtils
+				.getWebApplicationContext(
+						UsuarioLogoutListener.getApplicationScope())
+				.getBean("secAuth", Authenticator.class).getUsuarioLogado();
 	}
+
 	/**
-	 * Método responsável por obter uma referência ao escopo <code>context/application</code>
+	 * Método responsável por obter uma referência ao escopo
+	 * <code>context/application</code>
 	 * 
 	 * @author Wilker Machado
 	 * 
@@ -141,7 +151,8 @@ public class UsuarioLogoutListener implements PhaseListener {
 	 */
 	public static ServletContext getApplicationScope() {
 
-		return (ServletContext) UsuarioLogoutListener.getExternalContext().getContext();
+		return (ServletContext) UsuarioLogoutListener.getExternalContext()
+				.getContext();
 	}
 
 	/**

@@ -21,7 +21,7 @@ import br.ufg.inf.avadoc.entity.Produto;
  * 'atividadesPontuacao.xml'.
  * 
  */
-public class XmlAtividades {
+public final class XmlAtividades {
 	private XmlAtividades() {
 	}
 

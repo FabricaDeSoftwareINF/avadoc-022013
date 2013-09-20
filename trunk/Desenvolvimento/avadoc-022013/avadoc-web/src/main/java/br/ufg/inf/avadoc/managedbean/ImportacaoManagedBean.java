@@ -3,6 +3,7 @@ package br.ufg.inf.avadoc.managedbean;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.logging.Logger;
 
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
@@ -40,7 +41,7 @@ public class ImportacaoManagedBean extends AbstractManagedBean {
 				try {
 					xmlStr = IOUtils.toString(is);
 				} catch (final IOException e) {
-					e.printStackTrace();
+					Logger.getLogger("IOException");
 				}
 
 				XmlExtratoAtividades.getExtrato(xmlStr);
