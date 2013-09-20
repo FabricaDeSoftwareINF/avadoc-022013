@@ -17,9 +17,9 @@ public final class VerificaExigencias {
 	/**
 	 * Construtor privado evitando a instanciação.
 	 */
-	private VerificaExigencias(){		
+	private VerificaExigencias() {
 	}
-	
+
 	/**
 	 * Divisor utilizado pra calcular a média.
 	 */
@@ -79,20 +79,29 @@ public final class VerificaExigencias {
 				final double medAtvInt, final double medAtvEns,
 				final EnumJornadaTrabalho jorTra) {
 
+			boolean resultado = true;
 			final boolean exigI = verificaExigenciaI(medAtvEns, ocupaDirecao);
+			if (!exigI)
+				resultado = false;
+
 			final boolean exigII = verificaExigenciaII(medAtvInt, jorTra,
 					medAtvEns);
-			final boolean exigIII = verificaExigenciaIII(mediaN2, mediaN3);
-			final boolean exigIV = verificaExigenciaIV(participaPrograma);
-			final boolean exigV = verificaExigenciaV(notaFinal);
+			if (!exigII)
+				resultado = false;
 
-			if (exigI && exigII) {
-				if (exigIII && exigIV && exigV) {
-					return true;
-				}
-			}
-			
-			return false;
+			final boolean exigIII = verificaExigenciaIII(mediaN2, mediaN3);
+			if (!exigIII)
+				resultado = false;
+
+			final boolean exigIV = verificaExigenciaIV(participaPrograma);
+			if (!exigIV)
+				resultado = false;
+
+			final boolean exigV = verificaExigenciaV(notaFinal);
+			if (!exigV)
+				resultado = false;
+
+			return resultado;
 		}
 
 		/**
@@ -146,8 +155,7 @@ public final class VerificaExigencias {
 					&& !jorTra.equals(EnumJornadaTrabalho.jornada20)
 					|| jorTra.equals(EnumJornadaTrabalho.jornada20)) {
 				return true;
-			} else if (mediaAtvEns > limiteMinimo
-					&& mediaAtvEns < limiteItemUm) {
+			} else if (mediaAtvEns > limiteMinimo && mediaAtvEns < limiteItemUm) {
 				mediaRequerida = limiteMedia - mediaAtvEns / DIVISOR;
 				return (mediaProdIntel >= mediaRequerida);
 			} else {
