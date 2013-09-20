@@ -3,7 +3,10 @@ package br.ufg.inf.avadoc.util;
 import java.util.Calendar;
 import br.ufg.inf.avadoc.entity.Docente;
 
-public class Mocks {
+public final class Mocks {
+	
+	private Mocks() {		
+	}
 	
 	public static Docente obtenhaDocentePorMatricula(String matricula) {
 		Docente docente = new Docente();

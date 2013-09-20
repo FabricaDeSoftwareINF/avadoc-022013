@@ -8,7 +8,7 @@ import java.util.Collection;
  * 
  * @version 1.0
  */
-public class UtilObjeto {
+public final class UtilObjeto {
 
 	/**
 	 * Construtor.
@@ -80,9 +80,10 @@ public class UtilObjeto {
 
 			res = true;
 
-			for (int idx = 0; idx < objetos.length && (res == true); idx++) {
-
-				res = isReferencia(objetos[idx]);
+			for (int idx = 0; idx < objetos.length; idx++) {
+				if (res) {
+					res = isReferencia(objetos[idx]);
+				}
 			}
 		}
 

@@ -4,6 +4,7 @@ import java.io.ByteArrayInputStream;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.logging.Logger;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -123,7 +124,7 @@ public class XmlExtratoAtividades implements Runnable {
 			}
 			return extrato;
 		} catch (Exception e) {
-			System.err.println(e.getMessage());
+			Logger.getLogger("IOException");
 		}
 
 		return extrato;
