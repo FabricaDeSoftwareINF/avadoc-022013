@@ -125,11 +125,7 @@ public final class VerificaExigencias {
 				return true;
 			} else if (mediaAtvEns > 80 && mediaAtvEns < 160) {
 				mediaRequerida = 40 - mediaAtvEns / 4;
-				if (mediaProdIntel >= mediaRequerida) {
-					return true;
-				} else {
-					return false;
-				}
+				return (mediaProdIntel >= mediaRequerida);
 			} else {
 				return false;
 			}
