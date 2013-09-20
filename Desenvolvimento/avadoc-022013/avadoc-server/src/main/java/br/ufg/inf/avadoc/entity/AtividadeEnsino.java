@@ -1,12 +1,10 @@
-package br.ufg.inf.avadoc.model;
+package br.ufg.inf.avadoc.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
-import br.ufg.inf.avadoc.entity.AbstractAtividade;
 
 /**
  * AtividadeEnsino
@@ -25,18 +23,22 @@ public class AtividadeEnsino extends AbstractAtividade {
 	/**
 	 * Horas aula semanais para graduação presenciais.
 	 */
+	@Column(name="gradHorasAulaSemanaisPres")
 	private int graduacaoHorasAulaSemanaisPresenciais;
 	/**
 	 * Horas aula semanais para graduação a distância.
 	 */
+	@Column(name="gradHorasAulaSemanaisDist")
 	private int graduacaoHorasAulaSemanaisDistancia;
 	/**
 	 * Horas aula semanais para pós-graduação presenciais.
 	 */
+	@Column(name="posGradHorasAulaSemanaisPres")
 	private int posGradHorasAulaSemanaisPresenciais;
 	/**
 	 * Horas aula semanais para pós-graduação a distância.
 	 */
+	@Column(name="posGradHorasAulaSemanaisDist")
 	private int posGradHorasAulaSemanaisDistancia;
 
 	private double pontosGraduacao;
@@ -48,13 +50,6 @@ public class AtividadeEnsino extends AbstractAtividade {
 	 * 
 	 * @return (total de horas semanais) * 10
 	 */
-	@Override
-	public double getPontos() {
-		return 10 * (graduacaoHorasAulaSemanaisPresenciais
-				+ graduacaoHorasAulaSemanaisDistancia
-				+ posGradHorasAulaSemanaisPresenciais 
-				+ posGradHorasAulaSemanaisDistancia);
-	}
 
 	public double getPontosGraduacao() {
 		return pontosGraduacao;

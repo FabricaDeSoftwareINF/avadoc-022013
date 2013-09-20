@@ -2,6 +2,7 @@ package br.ufg.inf.avadoc.entity;
 
 import java.io.Serializable;
 import java.util.Date;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -13,11 +14,6 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import br.ufg.inf.avadoc.model.AtividadeAdministrativaRepresentacao;
-import br.ufg.inf.avadoc.model.AtividadeEnsino;
-import br.ufg.inf.avadoc.model.AtividadeOutra;
-import br.ufg.inf.avadoc.model.AtividadePesquisaExtensao;
-import br.ufg.inf.avadoc.model.ProducaoIntelectual;
 
 /**
  * ExtratoAtividades
@@ -226,7 +222,7 @@ public class ExtratoAtividades extends AbstractAtividade implements
 	public void setAtividadeOutra(AtividadeOutra atividadeOutra) {
 		this.atividadeOutra = atividadeOutra;
 	}
-	
+
 	public Long getId() {
 		return id;
 	}

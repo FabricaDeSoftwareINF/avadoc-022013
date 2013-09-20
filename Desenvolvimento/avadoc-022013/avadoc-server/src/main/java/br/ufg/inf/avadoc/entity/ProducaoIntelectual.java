@@ -1,4 +1,4 @@
-package br.ufg.inf.avadoc.model;
+package br.ufg.inf.avadoc.entity;
 
 import java.io.Serializable;
 
@@ -11,8 +11,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
-import br.ufg.inf.avadoc.entity.AbstractAtividade;
-import br.ufg.inf.avadoc.entity.Producao;
 import br.ufg.inf.avadoc.model.enums.EnumTipoAtividade;
 import br.ufg.inf.avadoc.model.enums.EnumTipoProducao;
 
@@ -56,14 +54,6 @@ public class ProducaoIntelectual extends AbstractAtividade implements Serializab
 		producaoArtisticaCultural = new Producao();
 		producaoTecnicaTecnologica = new Producao();
 		producaoOutra = new Producao();
-	}
-
-	@Override
-	public double getPontos() {
-		return producaoCientifica.getPontos()
-				+ producaoArtisticaCultural.getPontos()
-				+ producaoTecnicaTecnologica.getPontos()
-				+ producaoOutra.getPontos();
 	}
 
 	/**

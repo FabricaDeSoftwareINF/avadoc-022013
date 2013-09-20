@@ -1,19 +1,11 @@
 package br.ufg.inf.avadoc.model;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
 import br.ufg.inf.avadoc.entity.AbstractEntity;
 
 public class Nota extends AbstractEntity{
 	/**
 	 * Id da nota
 	 */
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id_nota")
 	private Long id;
 
 	private int quantidadeMeses;
