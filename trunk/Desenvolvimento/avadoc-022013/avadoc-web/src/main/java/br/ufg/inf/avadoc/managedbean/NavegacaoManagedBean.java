@@ -24,6 +24,10 @@ public class NavegacaoManagedBean extends AbstractManagedBean {
 	public void navegacaoAvaliacao() {
 		this.paginaSelecionada = "avaliacaoPassoUm.xhtml";
 	}
+        
+        public void navegacaoAvaliacaoPassoDois() {
+		this.paginaSelecionada = "avaliacaoPassoDois.xhtml";
+	}
 
 	public void navegacaoConfiguracao() {
 		this.paginaSelecionada = "configuracao.xhtml";
