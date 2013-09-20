@@ -21,7 +21,8 @@ import br.ufg.inf.avadoc.model.enums.EnumTipoProducao;
  * 
  */
 @Entity
-public class ProducaoIntelectual extends AbstractAtividade implements Serializable {
+public class ProducaoIntelectual extends AbstractAtividade implements
+		Serializable {
 	private static final long serialVersionUID = -8781139957824478900L;
 
 	@Id
@@ -48,8 +49,8 @@ public class ProducaoIntelectual extends AbstractAtividade implements Serializab
 	 */
 	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	private Producao producaoOutra;
-	
-	public ProducaoIntelectual(){
+
+	public ProducaoIntelectual() {
 		producaoCientifica = new Producao();
 		producaoArtisticaCultural = new Producao();
 		producaoTecnicaTecnologica = new Producao();
@@ -75,6 +76,7 @@ public class ProducaoIntelectual extends AbstractAtividade implements Serializab
 				.setTipoAtividade(EnumTipoAtividade.PRODUCAO_INTELECTUAL);
 		producaoCientifica
 				.setTipoProducao(EnumTipoProducao.PRODUCAO_CIENTIFICA);
+		super.setPontos(super.getPontos() + producaoCientifica.getPontos());
 		this.producaoCientifica = producaoCientifica;
 	}
 
@@ -97,6 +99,8 @@ public class ProducaoIntelectual extends AbstractAtividade implements Serializab
 				.setTipoAtividade(EnumTipoAtividade.PRODUCAO_INTELECTUAL);
 		producaoArtisticaCultural
 				.setTipoProducao(EnumTipoProducao.PRODUCAO_ARTISTICA_CULTURAL);
+		super.setPontos(super.getPontos()
+				+ producaoArtisticaCultural.getPontos());
 		this.producaoArtisticaCultural = producaoArtisticaCultural;
 	}
 
@@ -120,6 +124,8 @@ public class ProducaoIntelectual extends AbstractAtividade implements Serializab
 				.setTipoAtividade(EnumTipoAtividade.PRODUCAO_INTELECTUAL);
 		producaoTecnicaTecnologica
 				.setTipoProducao(EnumTipoProducao.PRODUCAO_TECNICA_TECNOLOGICA);
+		super.setPontos(super.getPontos()
+				+ producaoTecnicaTecnologica.getPontos());
 		this.producaoTecnicaTecnologica = producaoTecnicaTecnologica;
 	}
 
@@ -140,6 +146,7 @@ public class ProducaoIntelectual extends AbstractAtividade implements Serializab
 	public void setProducaoOutra(Producao producaoOutra) {
 		producaoOutra.setTipoAtividade(EnumTipoAtividade.PRODUCAO_INTELECTUAL);
 		producaoOutra.setTipoProducao(EnumTipoProducao.PRODUCAO_OUTRO);
+		super.setPontos(super.getPontos() + producaoOutra.getPontos());
 		this.producaoOutra = producaoOutra;
 	}
 
@@ -152,6 +159,7 @@ public class ProducaoIntelectual extends AbstractAtividade implements Serializab
 
 	/**
 	 * Altera id
+	 * 
 	 * @param id
 	 */
 	public void setId(Long id) {
