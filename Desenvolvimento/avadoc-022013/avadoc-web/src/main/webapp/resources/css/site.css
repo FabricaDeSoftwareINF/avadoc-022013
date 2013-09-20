@@ -77,6 +77,10 @@ form {
     border-width: 2px;
 }
 
+.botaoSimples:active{
+    background: #CCC;
+}
+
 .botaoCancelar {
     color: #6A6A6A;
     border-color: #CCCCCC;
@@ -92,79 +96,84 @@ form {
 }
 
 .textoCentralizado {
-	text-align: center;
+    text-align: center;
 }
 
 .textoDireita {
-	text-align: right;	
+    text-align: right;	
 }
 
 .textoNegrito {
-	font-weight: bold;
+    font-weight: bold;
 }
 .loading, .loading img {
-	width:64px;
-	height:64px;
-	position:fixed;
-	right:5px;
-	bottom:5px;
-	padding-top: 8px;	
+    width:64px;
+    height:64px;
+    position:fixed;
+    right:5px;
+    bottom:5px;
+    padding-top: 8px;	
 }
 
 .loading img {
-	padding-right: 5px;
+    padding-right: 5px;
 }
 
 .padding10{
-	padding: 10px;
+    padding: 10px;
 }
 
 .titulo, .titulo div {	
-	margin-left: auto; 
-	margin-right: auto; 
-	margin-top: 5px; 
-	width: 100%"
+    margin-left: auto; 
+    margin-right: auto; 
+    margin-top: 5px; 
+    width: 100%;
 }
 
 .botaoAzul {
-	text-shadow: rgba(255, 255, 255, 0.74902) 0px 0px 0px !important;
-	color: white !important;
+    text-shadow: rgba(255, 255, 255, 0.74902) 0px 0px 0px !important;
+    color: white !important;
 }
 
 .botaoAzul span {
-	background-color: #0080C0 !important;
+    background-color: #0080C0 !important;
 }
 
 .botaoAzul span:hover {
-	background-color: #006394 !important;
+    background-color: #006394 !important;
 }
 
 .botaoNormal {
-	font-size: 10pt !important;
-	height: 30px !important;
-	margin: 0 !important;
+    font-size: 10pt !important;
+    height: 30px !important;
+    margin: 0 !important;
 }
 
-.botaoBuscar {
-	background: none !important;
-	border: none !important;
-	height: 24px !important;
-}
-
-.botaoBuscar span {
-	background-image: url('/avadoc/resources/img/buscar.png');	
-	padding-left: 10px !important;
-	height: 24px !important;
+.iconeBotaoBuscar {
+    left: 40% !important;
+    top: 30% !important;
+    height: 24px !important;
+    width: 24px !important;
+    background: url("#{resource['img:buscar.png']}") no-repeat !important;
 }
 
 .matricula td {
-	padding: 0 !important;
+    padding: 0 !important;
 }
 
 .alturaPadrao {
-	line-height: 25px !important;
+    line-height: 25px !important;
 }
 
 .margemTop5{
-	margin-top: 5px !important;
+    margin-top: 5px !important;
 }
+
+.semBorda tr, .semBorda td {  
+    border: none !important;  
+}  
+
+td > input {
+    width: 80px !important;
+}
+
