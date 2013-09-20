@@ -42,6 +42,6 @@ public class ProdutoPontosMensais extends Produto {
 	 */
 	@Override
 	public double getPontos() {
-		return meses * super.getPontos();
+		return super.getPontos();
 	}
 }
