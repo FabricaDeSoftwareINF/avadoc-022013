@@ -15,6 +15,11 @@ import br.ufg.inf.avadoc.model.enums.EnumJornadaTrabalho;
 public final class VerificaExigencias {
 
 	/**
+	 * Divisor utilizado pra calcular a média.
+	 */
+	public static final int DIVISOR = 4;
+
+	/**
 	 * Verifica as exigências do docente a qual está em estágio probatório.
 	 */
 	public static final class EstagioProbatorio {
@@ -95,7 +100,8 @@ public final class VerificaExigencias {
 		 */
 		private static boolean verificaExigenciaI(final double mediaAtvEns,
 				final boolean ocupaCargoDirecao) {
-			return ocupaCargoDirecao || mediaAtvEns >= 80.0;
+			final double MEDIA = 80.0;
+			return ocupaCargoDirecao || mediaAtvEns >= MEDIA;
 		}
 
 		/**
@@ -118,13 +124,18 @@ public final class VerificaExigencias {
 		 */
 		private static boolean verificaExigenciaII(final double mediaProdIntel,
 				final EnumJornadaTrabalho jorTra, final double mediaAtvEns) {
+			final int LIMITE_ITEM_UM = 160;
+			final int LIMITE_MINIMO = 80;
+			final int LIMITE_MEDIA = 40;
 			double mediaRequerida = 20;
-			if (mediaAtvEns >= 160
+
+			if (mediaAtvEns >= LIMITE_ITEM_UM
 					&& !jorTra.equals(EnumJornadaTrabalho.jornada20)
 					|| jorTra.equals(EnumJornadaTrabalho.jornada20)) {
 				return true;
-			} else if (mediaAtvEns > 80 && mediaAtvEns < 160) {
-				mediaRequerida = 40 - mediaAtvEns / 4;
+			} else if (mediaAtvEns > LIMITE_MINIMO
+					&& mediaAtvEns < LIMITE_ITEM_UM) {
+				mediaRequerida = LIMITE_MEDIA - mediaAtvEns / DIVISOR;
 				return (mediaProdIntel >= mediaRequerida);
 			} else {
 				return false;
@@ -273,11 +284,12 @@ public final class VerificaExigencias {
 		private static boolean verificaExigenciaI(final double medAtvEns,
 				final boolean desenvPosGrad, final double pontosAtvAcad,
 				final boolean cargoDirecao, final boolean afastado) {
-
+			final int PONTOS = 20;
 			double media = 80;
 
-			if (desenvPosGrad && pontosAtvAcad >= 20) {
-				media = 60;
+			if (desenvPosGrad && pontosAtvAcad >= PONTOS) {
+				final int MEDIA_FINAL = 60;
+				media = MEDIA_FINAL;
 			}
 
 			return cargoDirecao || afastado || medAtvEns >= media;
@@ -313,14 +325,16 @@ public final class VerificaExigencias {
 		private static boolean verificaExigenciaII(final double medAtvEns,
 				final double medAtvInt, final boolean cargoDirecao,
 				final EnumJornadaTrabalho jorTra, final boolean afastado) {
-
+			final int LIMITE_MINIMO = 80;
+			final int LIMITE_MAXIMO = 160;
+			final int TOPO_SUBTRACAO = 40;
 			double pontos = 20;
 
-			if (medAtvEns > 80 && medAtvEns < 160) {
-				pontos = 40 - medAtvEns / 4;
+			if (medAtvEns > LIMITE_MINIMO && medAtvEns < LIMITE_MAXIMO) {
+				pontos = TOPO_SUBTRACAO - medAtvEns / DIVISOR;
 			}
 
-			return afastado || cargoDirecao || medAtvEns == 160
+			return afastado || cargoDirecao || medAtvEns == LIMITE_MAXIMO
 					|| medAtvInt >= pontos
 					|| jorTra.equals(EnumJornadaTrabalho.jornada20);
 		}
@@ -336,7 +350,5 @@ public final class VerificaExigencias {
 		private static boolean verificaExigenciaIII(final Nota notaGlobal) {
 			return notaGlobal.getNota() >= ProgressaoHorizontal.MEDIA_GLOBAL;
 		}
-
 	}
-
 }
