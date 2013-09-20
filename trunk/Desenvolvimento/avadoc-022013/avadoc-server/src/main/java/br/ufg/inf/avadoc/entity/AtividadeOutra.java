@@ -1,16 +1,16 @@
-package br.ufg.inf.avadoc.model;
+package br.ufg.inf.avadoc.entity;
 
 import java.io.Serializable;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
-import br.ufg.inf.avadoc.entity.AbstractEntity;
-import br.ufg.inf.avadoc.entity.IAtividade;
-import br.ufg.inf.avadoc.entity.Producao;
 import br.ufg.inf.avadoc.model.enums.EnumTipoAtividade;
 import br.ufg.inf.avadoc.model.enums.EnumTipoProducao;
 
@@ -21,8 +21,7 @@ import br.ufg.inf.avadoc.model.enums.EnumTipoProducao;
  * 
  */
 @Entity
-public class AtividadeOutra extends AbstractEntity implements IAtividade,
-		Serializable {
+public class AtividadeOutra extends AbstractAtividade implements Serializable {
 	private static final long serialVersionUID = 5832616413995668556L;
 	
 	@Id
@@ -32,26 +31,23 @@ public class AtividadeOutra extends AbstractEntity implements IAtividade,
 	/**
 	 * Atividades Acadêmicas - Orientação
 	 */
+	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	private Producao orientacao;
 	/**
 	 * Atividades Acadêmicas – Bancas e Cursos
 	 */
+	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	private Producao bancaCurso;
 	/**
 	 * Atividades de Aprendizado e Aperfeiçoamento
 	 */
+	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	private Producao aprendizadoAperfeicoamento;
 
 	public AtividadeOutra() {
 		orientacao = new Producao();
 		bancaCurso = new Producao();
 		aprendizadoAperfeicoamento = new Producao();
-	}
-
-	@Override
-	public double getPontos() {
-		return orientacao.getPontos() + bancaCurso.getPontos()
-				+ aprendizadoAperfeicoamento.getPontos();
 	}
 
 	/**

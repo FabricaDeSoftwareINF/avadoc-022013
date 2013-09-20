@@ -1,15 +1,16 @@
-package br.ufg.inf.avadoc.model;
+package br.ufg.inf.avadoc.entity;
 
 import java.io.Serializable;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
-import br.ufg.inf.avadoc.entity.AbstractAtividade;
-import br.ufg.inf.avadoc.entity.Producao;
 import br.ufg.inf.avadoc.model.enums.EnumTipoAtividade;
 import br.ufg.inf.avadoc.model.enums.EnumTipoProducao;
 
@@ -34,18 +35,22 @@ public class AtividadeAdministrativaRepresentacao extends AbstractAtividade
 	 * Atividades de dire&ccedil;&atilde;o ou de fun&ccedil;&atilde;o
 	 * gratificada
 	 */
+	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	private Producao direcaoFuncaoGratificada;
 	/**
 	 * Atividades administrativas
 	 */
+	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	private Producao administrativa;
 	/**
 	 * Outras atividades administrativas
 	 */
+	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	private Producao outraAdministrativa;
 	/**
 	 * Atividades de representa&ccedil;&atilde;o fora da UFG
 	 */
+	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	private Producao representacaoFora;
 
 	public AtividadeAdministrativaRepresentacao() {
@@ -53,13 +58,6 @@ public class AtividadeAdministrativaRepresentacao extends AbstractAtividade
 		administrativa = new Producao();
 		outraAdministrativa = new Producao();
 		representacaoFora = new Producao();
-	}
-
-	@Override
-	public double getPontos() {
-		return direcaoFuncaoGratificada.getPontos()
-				+ administrativa.getPontos() + outraAdministrativa.getPontos()
-				+ representacaoFora.getPontos();
 	}
 
 	/**
