@@ -86,7 +86,13 @@ public final class VerificaExigencias {
 			final boolean exigIV = verificaExigenciaIV(participaPrograma);
 			final boolean exigV = verificaExigenciaV(notaFinal);
 
-			return exigI && exigII && exigIII && exigIV && exigV;
+			if (exigI && exigII) {
+				if (exigIII && exigIV && exigV) {
+					return true;
+				}
+			}
+			
+			return false;
 		}
 
 		/**
