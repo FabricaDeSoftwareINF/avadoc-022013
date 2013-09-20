@@ -30,26 +30,24 @@ public class ImportacaoManagedBean extends AbstractManagedBean {
 	private UploadedFile arquivo;
 
 	public void upload() {
-		if (this.importacao) {
+		if (this.importacao && this.arquivo != null) {
+			this.arquivo.getFileName();
+			final byte[] bytes = this.arquivo.getContents();
+			final InputStream is = new ByteArrayInputStream(bytes);
+			String xmlStr = "";
 
-			if (this.arquivo != null) {
-				this.arquivo.getFileName();
-				final byte[] bytes = this.arquivo.getContents();
-				final InputStream is = new ByteArrayInputStream(bytes);
-				String xmlStr = "";
-
-				try {
-					xmlStr = IOUtils.toString(is);
-				} catch (final IOException e) {
-					Logger.getLogger("IOException");
-				}
-
-				XmlExtratoAtividades.getExtrato(xmlStr);
-
-				final FacesMessage msg = new FacesMessage("Succesful", this.arquivo.getFileName() + " is uploaded.");
-
-				FacesContext.getCurrentInstance().addMessage(null, msg);
+			try {
+				xmlStr = IOUtils.toString(is);
+			} catch (final IOException e) {
+				Logger.getLogger("IOException");
 			}
+
+			XmlExtratoAtividades.getExtrato(xmlStr);
+
+			final FacesMessage msg = new FacesMessage("Succesful",
+					this.arquivo.getFileName() + " is uploaded.");
+
+			FacesContext.getCurrentInstance().addMessage(null, msg);
 		}
 	}
 

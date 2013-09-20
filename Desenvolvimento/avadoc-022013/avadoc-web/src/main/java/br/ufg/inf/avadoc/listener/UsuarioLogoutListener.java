@@ -38,21 +38,14 @@ public class UsuarioLogoutListener implements PhaseListener {
 
 		final FacesContext facesContext = event.getFacesContext();
 
-		if (facesContext.isPostback()) {
-
-			if (!UtilObjeto.isReferencia(this.getUsuarioLogado())) {
-
-				try {
-
-					this.redirecionar(this.getRequest(facesContext)
-							.getContextPath().concat("/login.jsf"),
-							facesContext);
-
-					facesContext.responseComplete();
-
-				} catch (final IOException e) {
-					Logger.getLogger("IOException");
-				}
+		if (facesContext.isPostback()
+				&& !UtilObjeto.isReferencia(this.getUsuarioLogado())) {
+			try {
+				this.redirecionar(this.getRequest(facesContext)
+						.getContextPath().concat("/login.jsf"), facesContext);
+				facesContext.responseComplete();
+			} catch (final IOException e) {
+				Logger.getLogger("IOException");
 			}
 		}
 	}

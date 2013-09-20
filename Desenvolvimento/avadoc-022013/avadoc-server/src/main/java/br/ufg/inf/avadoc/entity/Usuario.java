@@ -18,18 +18,18 @@ import br.ufg.inf.avadoc.model.enums.EnumTipoUsuario;
 
 @Entity
 public class Usuario extends AbstractEntity implements Serializable {
-
+	private static final int LIMITE = 45;
 	private static final long serialVersionUID = -4634824486948432121L;
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id_usuario")
 	private Long id;
-	@Column (name = "nome", length = 45, nullable = false)
+	@Column (name = "nome", length = LIMITE, nullable = false)
 	private String nome;
-	@Column (name = "login", length = 45, nullable = false)
+	@Column (name = "login", length = LIMITE, nullable = false)
 	private String login;
-	@Column (name = "nome", length = 45, nullable = false)
+	@Column (name = "nome", length = LIMITE, nullable = false)
 	private String senha;
 
 	@ElementCollection(targetClass = EnumTipoUsuario.class)

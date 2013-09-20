@@ -18,6 +18,7 @@ import javax.persistence.TemporalType;
  */
 @Entity
 public class Docente extends AbstractEntity implements Serializable {
+	private static final int LIMITE = 50;
 	private static final long serialVersionUID = 1556372292607007986L;
 
 	/**
@@ -37,7 +38,7 @@ public class Docente extends AbstractEntity implements Serializable {
 	/**
 	 * Nome do docente avaliado
 	 */
-	@Column(length=50, nullable=false)
+	@Column(length=LIMITE, nullable=false)
 	private String nome;
 	
 	/**
