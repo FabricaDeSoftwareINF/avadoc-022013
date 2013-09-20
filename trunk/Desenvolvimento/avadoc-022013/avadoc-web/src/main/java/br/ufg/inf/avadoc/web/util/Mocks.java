@@ -1,4 +1,4 @@
-package br.ufg.inf.avadoc.util;
+package br.ufg.inf.avadoc.web.util;
 
 import java.util.Calendar;
 import br.ufg.inf.avadoc.entity.Docente;

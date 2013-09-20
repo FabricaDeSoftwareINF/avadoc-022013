@@ -61,14 +61,16 @@ public abstract class AbstractManagedBean implements Serializable {
 	 * Obtem o objeto de requisição
 	 */
 	public HttpServletRequest getRequest() {
-		return (HttpServletRequest) this.getFacesContext().getExternalContext().getRequest();
+		return (HttpServletRequest) this.getFacesContext().getExternalContext()
+				.getRequest();
 	}
 
 	/**
 	 * Obtem o objeto de resposta
 	 */
 	public HttpServletResponse getResponse() {
-		return (HttpServletResponse) this.getFacesContext().getExternalContext().getResponse();
+		return (HttpServletResponse) this.getFacesContext()
+				.getExternalContext().getResponse();
 	}
 
 	/**
@@ -99,7 +101,8 @@ public abstract class AbstractManagedBean implements Serializable {
 	@SuppressWarnings("unchecked")
 	public <T> T getFromSessao(final String key, final Class<T> clazz) {
 		try {
-			return (T) this.getFacesContext().getExternalContext().getSessionMap().get(key);
+			return (T) this.getFacesContext().getExternalContext()
+					.getSessionMap().get(key);
 		} catch (final Exception e) {
 			this.logger.log(Level.SEVERE, e.getMessage());
 		}
@@ -164,5 +167,4 @@ public abstract class AbstractManagedBean implements Serializable {
 	protected String voltarInicio() {
 		return this.abreIniciar();
 	}
-
 }

@@ -1,5 +1,4 @@
 package br.ufg.inf.avadoc.entity;
-
  
 /**
  * Entidade abstrata para persistência
@@ -8,9 +7,8 @@ package br.ufg.inf.avadoc.entity;
 public abstract class AbstractEntity {
  
     /**
-     * Retorna id da entidade
-     * @return
+     * Retorna id da entidade.
+     * @return Id da entidade.
      */
-    public abstract Long getId();
-   
+    public abstract Long getId();   
 }

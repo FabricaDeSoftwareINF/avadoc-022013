@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import br.ufg.inf.avadoc.entity.Docente;
-import br.ufg.inf.avadoc.util.Mocks;
+import br.ufg.inf.avadoc.web.util.Mocks;
 
 @Scope("session")
 @Component(AvaliacaoManagedBean.KEY_COMPONENT)
