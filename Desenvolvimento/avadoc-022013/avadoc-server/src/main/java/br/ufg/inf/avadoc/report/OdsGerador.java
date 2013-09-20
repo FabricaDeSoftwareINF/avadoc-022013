@@ -19,7 +19,7 @@ import br.ufg.inf.avadoc.entity.ExtratoAtividades;
  * Responsável por gerar planilha .ODS do quadro sumário da avaliação.
  * 
  */
-public class OdsGerador {
+public final class OdsGerador {
 
 	private OdsGerador(){		
 	}

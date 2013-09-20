@@ -38,16 +38,6 @@ public class AtividadePesquisaExtensao extends AbstractAtividade implements
 	 */
 	private Producao extensao;
 
-	
-	@Override
-	public double getPontos() {
-		return super.getPontos();
-	}
-
-	public void setPontos(double pontos) {
-		super.setPontos(pontos);
-	}
-
 	/**
 	 * Sub-atividade referente a atividades de pesquisa.
 	 * 
