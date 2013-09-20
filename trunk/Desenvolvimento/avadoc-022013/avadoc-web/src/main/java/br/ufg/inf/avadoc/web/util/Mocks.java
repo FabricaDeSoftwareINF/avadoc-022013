@@ -8,15 +8,15 @@ public final class Mocks {
 	private Mocks() {		
 	}
 	
-	public static Docente obtenhaDocentePorMatricula(String matricula) {
-		int ano;
+	public static Docente obtenhaDocentePorMatricula(String matricula) {		
 		Docente docente = new Docente();
 		Calendar cal = Calendar.getInstance();
 		
 		if (matricula.equals("1")) {
 			docente.setNome("Fulano de Tal");
-			ano = 2009;
-			cal.set(ano, Calendar.DECEMBER, 12);
+			final int ano = 2009;
+			final int dia = 12;
+			cal.set(ano, Calendar.DECEMBER, dia);
 			docente.setClasse("B");
 			docente.setDataIngresso(cal);			
 			docente.setLotacao("Faculdade de Letras - UFG");
@@ -24,8 +24,9 @@ public final class Mocks {
 			docente.setNivel("I");
 		} else if (matricula.equals("2")){
 			docente.setNome("Joaquim das Quintas");
-			ano = 2010;
-			cal.set(ano, Calendar.JANUARY, 1);
+			final int ano = 2010;
+			final int dia = 1;
+			cal.set(ano, Calendar.JANUARY, dia);
 			docente.setClasse("A");
 			docente.setDataIngresso(cal);
 			docente.setLotacao("Instituto de Informática - UFG");
