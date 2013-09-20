@@ -25,6 +25,11 @@ public class AtividadePesquisaExtensao extends AbstractAtividade implements
 		Serializable {
 	private static final long serialVersionUID = -7628360259213604614L;
 	
+	public AtividadePesquisaExtensao() {
+		pesquisa = new Producao();
+		extensao = new Producao();
+	}
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id_atividade_pesquisa_extensao")
