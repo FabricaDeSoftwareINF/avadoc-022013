@@ -86,20 +86,24 @@ public final class VerificaExigencias {
 
 			final boolean exigII = verificaExigenciaII(medAtvInt, jorTra,
 					medAtvEns);
-			if (!exigII)
+			if (!exigII) {
 				resultado = false;
+			}
 
 			final boolean exigIII = verificaExigenciaIII(mediaN2, mediaN3);
-			if (!exigIII)
+			if (!exigIII) {
 				resultado = false;
+			}
 
 			final boolean exigIV = verificaExigenciaIV(participaPrograma);
-			if (!exigIV)
+			if (!exigIV) {
 				resultado = false;
+			}
 
 			final boolean exigV = verificaExigenciaV(notaFinal);
-			if (!exigV)
+			if (!exigV) {
 				resultado = false;
+			}
 
 			return resultado;
 		}
@@ -356,10 +360,29 @@ public final class VerificaExigencias {
 			if (medAtvEns > limiteMinimo && medAtvEns < limiteMaximo) {
 				pontos = topoSubtracao - medAtvEns / DIVISOR;
 			}
+			boolean resultado = true;
 
-			return afastado || cargoDirecao || medAtvEns == limiteMaximo
-					|| medAtvInt >= pontos
-					|| jorTra.equals(EnumJornadaTrabalho.jornada20);
+			if (!afastado) {
+				return false;
+			}
+			
+			if (!cargoDirecao) {
+				return false;
+			}
+			
+			if (medAtvEns != limiteMaximo) {
+				return false;
+			}
+			
+			if (medAtvInt < pontos) {
+				return false;
+			}
+			
+			if (!jorTra.equals(EnumJornadaTrabalho.jornada20)) {
+				return false;
+			}
+			
+			return true;
 		}
 
 		/**
