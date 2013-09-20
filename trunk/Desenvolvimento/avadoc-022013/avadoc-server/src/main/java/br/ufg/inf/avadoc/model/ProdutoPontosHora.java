@@ -48,7 +48,11 @@ public class ProdutoPontosHora extends Produto {
 	 */
 	@Override
 	public double getPontos() {
-		return (int) ((horas * super.getPontos()) / HORAS_ANUAIS);
+		return super.getPontos();
+	}
+
+	public static int getHorasAnuais() {
+		return HORAS_ANUAIS;
 	}
 
 }
